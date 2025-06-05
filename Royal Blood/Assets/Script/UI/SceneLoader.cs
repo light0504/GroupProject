@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement; // Quan trọng: Namespace để quản lý S
 using UnityEditor; // Quan trọng: Namespace cho SceneAsset, chỉ dùng trong Editor
 #endif
 
-public class SceneLoader : MonoBehaviour
+public class SceneLoader: MonoBehaviour
 {
     // Mảng các Scene Asset để kéo thả trong Inspector (chỉ hoạt động trong Editor)
 #if UNITY_EDITOR
