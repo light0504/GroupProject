@@ -1,29 +1,71 @@
 Using pre-set license
 Built from '6000.0/staging' branch; Version is '6000.0.49f1 (840e0a9776d9) revision 8654346'; Using compiler version '193933523'; Build Type 'Release'
+<<<<<<< Updated upstream
 OS: 'Windows 11  (10.0.26100) 64bit CoreSingleLanguage' Language: 'en' Physical Memory: 16004 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
 D:\Unity\6000.0.49f1\Editor\Unity.exe
+=======
+<<<<<<< HEAD
+OS: 'Windows 11  (10.0.26100) 64bit CoreSingleLanguage' Language: 'vi' Physical Memory: 16003 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.0.49f1\Editor\Unity.exe
+=======
+OS: 'Windows 11  (10.0.26100) 64bit CoreSingleLanguage' Language: 'en' Physical Memory: 16004 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+D:\Unity\6000.0.49f1\Editor\Unity.exe
+>>>>>>> 8911d2771ff6b8d1e872c90a3ecaa8aedc6f8a7d
+>>>>>>> Stashed changes
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
+<<<<<<< Updated upstream
 D:/Unity/GroupProject/Royal Blood
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
 64858
+=======
+<<<<<<< HEAD
+E:/Semester 7/PRU222/GroupProject/GroupProject/Royal Blood
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+60913
+=======
+D:/Unity/GroupProject/Royal Blood
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+64858
+>>>>>>> 8911d2771ff6b8d1e872c90a3ecaa8aedc6f8a7d
+>>>>>>> Stashed changes
 -job-worker-count
 7
 -background-job-worker-count
 8
 -gc-helper-count
 1
+<<<<<<< Updated upstream
 Successfully changed project path to: D:/Unity/GroupProject/Royal Blood
 D:/Unity/GroupProject/Royal Blood
+=======
+<<<<<<< HEAD
+Successfully changed project path to: E:/Semester 7/PRU222/GroupProject/GroupProject/Royal Blood
+E:/Semester 7/PRU222/GroupProject/GroupProject/Royal Blood
+=======
+Successfully changed project path to: D:/Unity/GroupProject/Royal Blood
+D:/Unity/GroupProject/Royal Blood
+>>>>>>> 8911d2771ff6b8d1e872c90a3ecaa8aedc6f8a7d
+>>>>>>> Stashed changes
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -59,14 +101,33 @@ D:/Unity/GroupProject/Royal Blood
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
+<<<<<<< Updated upstream
+Player connection [37712]  Target information:
+=======
+<<<<<<< HEAD
+Player connection [37480]  Target information:
+>>>>>>> Stashed changes
+
+Player connection [37712]  * "[IP] 10.87.26.109 [Port] 0 [Flags] 2 [Guid] 3324946913 [EditorId] 3324946913 [Version] 1048832 [Id] WindowsEditor(7,MyPC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+<<<<<<< Updated upstream
+=======
+Player connection [37480] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [37480] Host joined alternative multi-casting on [225.0.0.222:34997]...
+=======
 Player connection [37712]  Target information:
 
 Player connection [37712]  * "[IP] 10.87.26.109 [Port] 0 [Flags] 2 [Guid] 3324946913 [EditorId] 3324946913 [Version] 1048832 [Id] WindowsEditor(7,MyPC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
+>>>>>>> Stashed changes
 Player connection [37712]  * "[IP] 192.168.137.1 [Port] 0 [Flags] 2 [Guid] 3324946913 [EditorId] 3324946913 [Version] 1048832 [Id] WindowsEditor(7,MyPC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
 Player connection [37712] Host joined multi-casting on [225.0.0.222:54997]...
 Player connection [37712] Host joined alternative multi-casting on [225.0.0.222:34997]...
+<<<<<<< Updated upstream
+=======
+>>>>>>> 8911d2771ff6b8d1e872c90a3ecaa8aedc6f8a7d
+>>>>>>> Stashed changes
 JobSystem: Creating JobQueue using job-worker-count value 7
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -78,16 +139,72 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
+<<<<<<< Updated upstream
 Refreshing native plugins compatible for Editor in 305.85 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.0.49f1 (840e0a9776d9)
 [Subsystems] Discovering subsystems at path D:/Unity/6000.0.49f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path D:/Unity/GroupProject/Royal Blood/Assets
+=======
+<<<<<<< HEAD
+Refreshing native plugins compatible for Editor in 0.85 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 6000.0.49f1 (840e0a9776d9)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.49f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path E:/Semester 7/PRU222/GroupProject/GroupProject/Royal Blood/Assets
+=======
+Refreshing native plugins compatible for Editor in 305.85 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 6000.0.49f1 (840e0a9776d9)
+[Subsystems] Discovering subsystems at path D:/Unity/6000.0.49f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Unity/GroupProject/Royal Blood/Assets
+>>>>>>> 8911d2771ff6b8d1e872c90a3ecaa8aedc6f8a7d
+>>>>>>> Stashed changes
 GfxDevice: creating device client; kGfxThreadingModeNonThreaded
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
     Renderer: NVIDIA GeForce RTX 3060 Laptop GPU (ID=0x2520)
     Vendor:   NVIDIA
+<<<<<<< Updated upstream
+    VRAM:     5996 MB
+=======
+<<<<<<< HEAD
+    VRAM:     3964 MB
+>>>>>>> Stashed changes
+    Driver:   32.0.15.6607
+Initialize mono
+Mono path[0] = 'D:/Unity/6000.0.49f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity/6000.0.49f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Unity/6000.0.49f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56928
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+<<<<<<< Updated upstream
+Register platform support module: D:/Unity/6000.0.49f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001535 seconds.
+- Loaded All Assemblies, in  0.477 seconds
+=======
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.49f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.49f1/Editor/Data/PlaybackEngines/VisionOSPlayer/UnityEditor.VisionOS.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.49f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.49f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.49f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.49f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.49f1/Editor/Data/PlaybackEngines/AppleTVSupport/UnityEditor.AppleTV.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.49f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
+Registered in 0.007117 seconds.
+- Loaded All Assemblies, in  0.308 seconds
+Native extension for LinuxStandalone target not found
+[usbmuxd] Start listen thread
+[usbmuxd] Listen thread started
+Native extension for AppleTV target not found
+[usbmuxd] Start listen thread
+[usbmuxd] Listen thread started
+Native extension for iOS target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 192 ms
+Native extension for UWP target not found
+=======
     VRAM:     5996 MB
     Driver:   32.0.15.6607
 Initialize mono
@@ -100,16 +217,63 @@ Registering precompiled unity dll's ...
 Register platform support module: D:/Unity/6000.0.49f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Registered in 0.001535 seconds.
 - Loaded All Assemblies, in  0.477 seconds
+>>>>>>> 8911d2771ff6b8d1e872c90a3ecaa8aedc6f8a7d
+>>>>>>> Stashed changes
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
+<<<<<<< Updated upstream
 - Finished resetting the current domain, in  0.516 seconds
 Domain Reload Profiling: 993ms
 	BeginReloadAssembly (201ms)
+=======
+<<<<<<< HEAD
+- Finished resetting the current domain, in  0.539 seconds
+Domain Reload Profiling: 846ms
+	BeginReloadAssembly (99ms)
+=======
+- Finished resetting the current domain, in  0.516 seconds
+Domain Reload Profiling: 993ms
+	BeginReloadAssembly (201ms)
+>>>>>>> 8911d2771ff6b8d1e872c90a3ecaa8aedc6f8a7d
+>>>>>>> Stashed changes
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
+<<<<<<< Updated upstream
+	RebuildCommonClasses (44ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (45ms)
+	LoadAllAssembliesAndSetupDomain (173ms)
+		LoadAssemblies (200ms)
+=======
+<<<<<<< HEAD
+	RebuildCommonClasses (28ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (43ms)
+	LoadAllAssembliesAndSetupDomain (127ms)
+		LoadAssemblies (99ms)
+>>>>>>> Stashed changes
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (171ms)
+			TypeCache.Refresh (169ms)
+				TypeCache.ScanAssembly (155ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (516ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (462ms)
+			LogAssemblyErrors (0ms)
+<<<<<<< Updated upstream
+=======
+			InitializePlatformSupportModulesInManaged (306ms)
+			SetLoadedEditorAssemblies (3ms)
+			BeforeProcessingInitializeOnLoad (46ms)
+			ProcessInitializeOnLoadAttributes (95ms)
+			ProcessInitializeOnLoadMethodAttributes (48ms)
+=======
 	RebuildCommonClasses (44ms)
 	RebuildNativeTypeToScriptingClass (13ms)
 	initialDomainReloadingComplete (45ms)
@@ -126,11 +290,16 @@ Domain Reload Profiling: 993ms
 		RebuildScriptCaches (0ms)
 		SetupLoadedEditorAssemblies (462ms)
 			LogAssemblyErrors (0ms)
+>>>>>>> Stashed changes
 			InitializePlatformSupportModulesInManaged (85ms)
 			SetLoadedEditorAssemblies (5ms)
 			BeforeProcessingInitializeOnLoad (87ms)
 			ProcessInitializeOnLoadAttributes (200ms)
 			ProcessInitializeOnLoadMethodAttributes (83ms)
+<<<<<<< Updated upstream
+=======
+>>>>>>> 8911d2771ff6b8d1e872c90a3ecaa8aedc6f8a7d
+>>>>>>> Stashed changes
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -139,13 +308,35 @@ Domain Reload Profiling: 993ms
 Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
 Begin MonoManager ReloadAssembly
+<<<<<<< Updated upstream
 - Loaded All Assemblies, in  0.913 seconds
 Refreshing native plugins compatible for Editor in 0.69 ms, found 2 plugins.
+=======
+<<<<<<< HEAD
+- Loaded All Assemblies, in  0.729 seconds
+Refreshing native plugins compatible for Editor in 1.26 ms, found 2 plugins.
+Native extension for LinuxStandalone target not found
+Native extension for AppleTV target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for UWP target not found
+=======
+- Loaded All Assemblies, in  0.913 seconds
+Refreshing native plugins compatible for Editor in 0.69 ms, found 2 plugins.
+>>>>>>> 8911d2771ff6b8d1e872c90a3ecaa8aedc6f8a7d
+>>>>>>> Stashed changes
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
+<<<<<<< Updated upstream
 - Finished resetting the current domain, in  0.821 seconds
 Domain Reload Profiling: 1734ms
 	BeginReloadAssembly (210ms)
+=======
+<<<<<<< HEAD
+- Finished resetting the current domain, in  0.682 seconds
+Domain Reload Profiling: 1408ms
+	BeginReloadAssembly (146ms)
+>>>>>>> Stashed changes
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (9ms)
 		BackupInstance (0ms)
@@ -259,9 +450,145 @@ Number of updated asset objects reloaded before import = 0Number of asset object
 ========================================================================
 Received Import Request.
   Time since last request: 0.000029 seconds.
+<<<<<<< Updated upstream
   path: Assets/Fantasy Wooden GUI  Free/normal_ui_set A/UI board Large stone.png
   artifactKey: Guid(7066e0747291df44fa5c2bf93bee3a6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Fantasy Wooden GUI  Free/normal_ui_set A/UI board Large stone.png using Guid(7066e0747291df44fa5c2bf93bee3a6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c6c62d9af6fd4cbbb02b9d79e47e313b') in 0.0341524 seconds
+=======
+  path: Assets/Hero and Opponents/Sprites/Enemy2/attack-A11.png
+  artifactKey: Guid(906ed0f1417ccd64887507e1f585665e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Enemy2/attack-A11.png using Guid(906ed0f1417ccd64887507e1f585665e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '54b9b4030f8df8e21fd3b485f7ec56e3') in 0.0225178 seconds
+=======
+- Finished resetting the current domain, in  0.821 seconds
+Domain Reload Profiling: 1734ms
+	BeginReloadAssembly (210ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (9ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (34ms)
+	RebuildCommonClasses (47ms)
+	RebuildNativeTypeToScriptingClass (18ms)
+	initialDomainReloadingComplete (45ms)
+	LoadAllAssembliesAndSetupDomain (591ms)
+		LoadAssemblies (430ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (278ms)
+			TypeCache.Refresh (195ms)
+				TypeCache.ScanAssembly (180ms)
+			BuildScriptInfoCaches (68ms)
+			ResolveRequiredComponents (12ms)
+	FinalizeReload (822ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (657ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (15ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (170ms)
+			ProcessInitializeOnLoadAttributes (324ms)
+			ProcessInitializeOnLoadMethodAttributes (141ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (9ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Refreshing native plugins compatible for Editor in 1.22 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 214 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6222 unused Assets / (24.3 MB). Loaded Objects now: 6953.
+Memory consumption went from 179.8 MB to 155.5 MB.
+Total: 13.281300 ms (FindLiveObjects: 1.624400 ms CreateObjectMapping: 0.909700 ms MarkObjects: 7.605200 ms  DeleteObjects: 3.140000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 431990.472062 seconds.
+  path: Assets/UniversalRenderPipelineGlobalSettings.asset
+  artifactKey: Guid(93b439a37f63240aca3dd4e01d978a9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniversalRenderPipelineGlobalSettings.asset using Guid(93b439a37f63240aca3dd4e01d978a9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '094a486eb8f57be9507c2edc77445054') in 0.0247884 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 101.054642 seconds.
+  path: Assets/Scrip
+  artifactKey: Guid(eb186f64a762ff0418c8cc829b421721) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scrip using Guid(eb186f64a762ff0418c8cc829b421721) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b2e10313949dbfbd22973d06d0f1dea0') in 0.0010275 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.397744 seconds.
+  path: Assets/Scrips
+  artifactKey: Guid(eb186f64a762ff0418c8cc829b421721) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scrips using Guid(eb186f64a762ff0418c8cc829b421721) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6e4492d518398cfd26b77de00a8f891f') in 0.0004702 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.590959 seconds.
+  path: Assets/Scenes
+  artifactKey: Guid(109e9bdd0fcc649c5bc59085c35bdc83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes using Guid(109e9bdd0fcc649c5bc59085c35bdc83) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '73258d2a0164082a0def4806f88e2269') in 0.0005428 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.117104 seconds.
+  path: Assets/Scenes/TestScene.unity
+  artifactKey: Guid(8c9cfa26abfee488c85f1582747f6a02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/TestScene.unity using Guid(8c9cfa26abfee488c85f1582747f6a02) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ee9dd1cb6472d8c80c97af2e1f9a2c9d') in 0.0006837 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.321787 seconds.
+  path: Assets/Animation/Player/Player.controller
+  artifactKey: Guid(5d3e12db5c3cc1448bd786b3a6a121ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/Player/Player.controller using Guid(5d3e12db5c3cc1448bd786b3a6a121ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '42ff785b620a8c197b3b4fce653968d4') in 0.0053782 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 29
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.145457 seconds.
+  path: Assets/Animation/Player
+  artifactKey: Guid(37e5b1e750ce097428f9edc78a1659e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/Player using Guid(37e5b1e750ce097428f9edc78a1659e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '97bcb156537f6dd51f20aef6024d5419') in 0.000636 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.824919 seconds.
+  path: Assets/Fantasy Wooden GUI  Free/normal_ui_set A/1_normal_ui_set free.psd
+  artifactKey: Guid(1ab331a196bae1046b7a75ed7e3f6b46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Wooden GUI  Free/normal_ui_set A/1_normal_ui_set free.psd using Guid(1ab331a196bae1046b7a75ed7e3f6b46) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '498248bf2f20b801919d88f7631cbf61') in 0.1157068 seconds
+>>>>>>> 8911d2771ff6b8d1e872c90a3ecaa8aedc6f8a7d
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+<<<<<<< HEAD
+  Time since last request: 0.000016 seconds.
+  path: Assets/Hero and Opponents/Sprites/Enemy2/attack-A10.png
+  artifactKey: Guid(cc36c6fa15513914c9052f6b8bce3c4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Enemy2/attack-A10.png using Guid(cc36c6fa15513914c9052f6b8bce3c4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '87a5f39a793c3c58e77fcb6020dfbed6') in 0.0225999 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.368555 seconds.
+  path: Assets/Hero and Opponents/Sprites/Enemy3/attack-A2.png
+  artifactKey: Guid(4996548b77a338642aa3c0ae23843ffd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Enemy3/attack-A2.png using Guid(4996548b77a338642aa3c0ae23843ffd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '20b90df1287904b1ebdcb4033f4f4f44') in 0.0201915 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Hero and Opponents/Sprites/Enemy3/attack-A6.png
+  artifactKey: Guid(54e44dcb5a49be04b8115b401cd78d2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Enemy3/attack-A6.png using Guid(54e44dcb5a49be04b8115b401cd78d2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '66183de71a288b048bf9474709dab63a') in 0.0205578 seconds
+>>>>>>> Stashed changes
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
@@ -283,30 +610,349 @@ Number of updated asset objects reloaded before import = 0Number of asset object
 ========================================================================
 Received Import Request.
   Time since last request: 0.000015 seconds.
+<<<<<<< Updated upstream
   path: Assets/Fantasy Wooden GUI  Free/normal_ui_set A/Exclamation_Red.png
   artifactKey: Guid(e9d4143c19529834981ac6821a04aecd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Fantasy Wooden GUI  Free/normal_ui_set A/Exclamation_Red.png using Guid(e9d4143c19529834981ac6821a04aecd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '18c0f8188effd1bcb45631bc94c95bae') in 0.0269043 seconds
+=======
+  path: Assets/Hero and Opponents/Sprites/Player/Attacks/attack-D10.png
+  artifactKey: Guid(5eb724b8862643c438fe18f2775f1694) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/Attacks/attack-D10.png using Guid(5eb724b8862643c438fe18f2775f1694) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b57460aa9482b6362cfd303df1327319') in 0.0235492 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Fantasy Wooden GUI  Free/normal_ui_set A/TextBTN_New-Start.png
-  artifactKey: Guid(ca45d178d188e034aa96a68aceeef41b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Fantasy Wooden GUI  Free/normal_ui_set A/TextBTN_New-Start.png using Guid(ca45d178d188e034aa96a68aceeef41b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c2b9a820ba94a73bc5f3c90af7dc3b4f') in 0.0315199 seconds
+  Time since last request: 0.000015 seconds.
+  path: Assets/Hero and Opponents/Sprites/Player/Attacks/jump-attack-2.png
+  artifactKey: Guid(f181f1c3441012349ae19f386d9eaa6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/Attacks/jump-attack-2.png using Guid(f181f1c3441012349ae19f386d9eaa6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7b6d5162a04de383282e83d56789d5d5') in 0.0203731 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Fantasy Wooden GUI  Free/normal_ui_set A/Exclamation_Gray.png
-  artifactKey: Guid(f73f68fe6815f5548a6c2a61b9e49add) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Fantasy Wooden GUI  Free/normal_ui_set A/Exclamation_Gray.png using Guid(f73f68fe6815f5548a6c2a61b9e49add) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1d38e231ca87e27cbc79fc16ed06e9ce') in 0.019221 seconds
+  Time since last request: 0.000027 seconds.
+  path: Assets/Hero and Opponents/Sprites/Player/Attacks/kick-3.png
+  artifactKey: Guid(80290f8df7847e648bf0db72f630e82e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/Attacks/kick-3.png using Guid(80290f8df7847e648bf0db72f630e82e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '623d2b13bbc52a32cd1bb2dffc13eac5') in 0.0198821 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Hero and Opponents/Sprites/Player/Attacks/attack-D12.png
+  artifactKey: Guid(2706664c02e5234478fa1f763f8a8f0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/Attacks/attack-D12.png using Guid(2706664c02e5234478fa1f763f8a8f0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e3056337f7a5bc7cc1b4a6f990ce9a6f') in 0.0207236 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000017 seconds.
+  path: Assets/Hero and Opponents/Sprites/Player/Attacks/jump-attack-5.png
+  artifactKey: Guid(9733e5dcb1481ff4fa75ac1d65d762ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/Attacks/jump-attack-5.png using Guid(9733e5dcb1481ff4fa75ac1d65d762ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9fbbda4c26bd5ecb53fec36e82eb52cb') in 0.0276336 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Hero and Opponents/Sprites/Player/Attacks/jump-attack-6.png
+  artifactKey: Guid(cdf45098f362fd242982205a69fcb47e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/Attacks/jump-attack-6.png using Guid(cdf45098f362fd242982205a69fcb47e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c9c9f4908476e02b7cb8c920c44e68e9') in 0.0212731 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Hero and Opponents/Sprites/Player/Attacks/kick-1.png
+  artifactKey: Guid(b14aad481da71d14f8c2c56c9570e616) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/Attacks/kick-1.png using Guid(b14aad481da71d14f8c2c56c9570e616) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '355d55dfc20acdb0b0db167b0bdca9a7') in 0.0203242 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Hero and Opponents/Sprites/Player/Attacks/attack-D4.png
+  artifactKey: Guid(a481e1bb8536f8842b3713674702ff87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/Attacks/attack-D4.png using Guid(a481e1bb8536f8842b3713674702ff87) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6c4256c92326eb7dac1d74ef94598008') in 0.0140955 seconds
+=======
+  Time since last request: 0.000025 seconds.
+  path: Assets/Fantasy Wooden GUI  Free/normal_ui_set A/TextBTN_Big.png
+  artifactKey: Guid(2be7b70e984b51444aca9c12ae4723a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Wooden GUI  Free/normal_ui_set A/TextBTN_Big.png using Guid(2be7b70e984b51444aca9c12ae4723a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8934a51efaa33ff71f51cdf5192d7882') in 0.0297197 seconds
+>>>>>>> 8911d2771ff6b8d1e872c90a3ecaa8aedc6f8a7d
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+<<<<<<< HEAD
+  path: Assets/Hero and Opponents/Sprites/Player/Attacks/jump-attack-4.png
+  artifactKey: Guid(552199d301ea36b43b6d7e0da5ab9b35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/Attacks/jump-attack-4.png using Guid(552199d301ea36b43b6d7e0da5ab9b35) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0313d85557e1458299693b4f0bb3c9a7') in 0.0209309 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Hero and Opponents/Sprites/Player/Attacks/attack-D11.png
+  artifactKey: Guid(71a48f9a9d1a7a1439232b4fa0efec3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/Attacks/attack-D11.png using Guid(71a48f9a9d1a7a1439232b4fa0efec3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '190ac77fae8f7311fb2f39ad0065bb8c') in 0.0249047 seconds
+=======
+  path: Assets/Fantasy Wooden GUI  Free/normal_ui_set A/UI board Large stone.png
+  artifactKey: Guid(7066e0747291df44fa5c2bf93bee3a6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Wooden GUI  Free/normal_ui_set A/UI board Large stone.png using Guid(7066e0747291df44fa5c2bf93bee3a6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c6c62d9af6fd4cbbb02b9d79e47e313b') in 0.0341524 seconds
+>>>>>>> 8911d2771ff6b8d1e872c90a3ecaa8aedc6f8a7d
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+<<<<<<< HEAD
+  path: Assets/Hero and Opponents/Sprites/Player/Attacks/jump-attack-7.png
+  artifactKey: Guid(8628be3f2758cb14dacd6695466b3389) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/Attacks/jump-attack-7.png using Guid(8628be3f2758cb14dacd6695466b3389) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ad7accb0c9825f79232b9a4c01e60b1b') in 0.0228814 seconds
+=======
+  path: Assets/Fantasy Wooden GUI  Free/normal_ui_set A/IRONY TITLE  empty.png
+  artifactKey: Guid(4d6a99baee23b654f9e4bb672ae0b438) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Wooden GUI  Free/normal_ui_set A/IRONY TITLE  empty.png using Guid(4d6a99baee23b654f9e4bb672ae0b438) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7310c2762eb9c7b742bfced06d31d3bf') in 0.0271197 seconds
+>>>>>>> 8911d2771ff6b8d1e872c90a3ecaa8aedc6f8a7d
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+<<<<<<< HEAD
+  Time since last request: 0.000019 seconds.
+  path: Assets/Hero and Opponents/Sprites/Player/Attacks/attack-D8.png
+  artifactKey: Guid(99fb8e319c5877a4c8449236c2486431) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/Attacks/attack-D8.png using Guid(99fb8e319c5877a4c8449236c2486431) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '429c509ad9c301db9ef943d628370591') in 0.023881 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Hero and Opponents/Sprites/Player/Attacks/attack-C2.png
+  artifactKey: Guid(6687a7c1420ad444e8f351d51df00211) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/Attacks/attack-C2.png using Guid(6687a7c1420ad444e8f351d51df00211) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2ffa39bf0dc6e5ad0dcc3582ca4006da') in 0.0229096 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Hero and Opponents/Sprites/Player/Climb/climb-2.png
+  artifactKey: Guid(d4b7aa9a611f5ce44becdf761cc2744e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/Climb/climb-2.png using Guid(d4b7aa9a611f5ce44becdf761cc2744e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'dc2bd32dcd045a57a9d071cad1c83ae2') in 0.0218172 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Hero and Opponents/Sprites/Player/Climb/climb-6.png
+  artifactKey: Guid(20811766e0f6e594795af1d743a50721) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/Climb/climb-6.png using Guid(20811766e0f6e594795af1d743a50721) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '21251162b33ac1dec021305667bb71cb') in 0.0210553 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Hero and Opponents/Sprites/Player/Climb/climb-12.png
+  artifactKey: Guid(8e8d67400f3fc40489de2f3fc5b23abd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/Climb/climb-12.png using Guid(8e8d67400f3fc40489de2f3fc5b23abd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e5a9cd431537adf2aba5597a7756e9e7') in 0.0187321 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Hero and Opponents/Sprites/Player/Climb/climb-11.png
+  artifactKey: Guid(d29cf872189c53e4b8f1d2e4f2272d95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/Climb/climb-11.png using Guid(d29cf872189c53e4b8f1d2e4f2272d95) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd5335e49b76727d0b25bd23677d7ef65') in 0.0207599 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Hero and Opponents/Sprites/Player/Climb/climb-3.png
+  artifactKey: Guid(329528d544214db4c8c755843d140f57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/Climb/climb-3.png using Guid(329528d544214db4c8c755843d140f57) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '41396085726fa10fdcb98ea2f9b9ee4f') in 0.0229687 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Hero and Opponents/Sprites/Player/Climb/climb-15.png
+  artifactKey: Guid(b9e91622f6c3e034dadc0f390f57de3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/Climb/climb-15.png using Guid(b9e91622f6c3e034dadc0f390f57de3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '75b1e1b52d5914778d6bfde4a6515afc') in 0.0211426 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Hero and Opponents/Sprites/Player/Climb/climb-7.png
+  artifactKey: Guid(7bc81b241fda9574aaaa29a968b5b0c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/Climb/climb-7.png using Guid(7bc81b241fda9574aaaa29a968b5b0c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '06081af25773f1a7b194862b404fc066') in 0.0081716 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Hero and Opponents/Sprites/Player/Climb/climb-4.png
+  artifactKey: Guid(39f55a272d5da1f48ad3add662b0034d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/Climb/climb-4.png using Guid(39f55a272d5da1f48ad3add662b0034d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2067ea9148ccec067b5a8c3a1a331012') in 0.0218879 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Hero and Opponents/Sprites/Player/Attacks/jump-attack-8.png
+  artifactKey: Guid(695e3940dc17da54fa27b05e3677a382) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/Attacks/jump-attack-8.png using Guid(695e3940dc17da54fa27b05e3677a382) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '12c5d4b55dbd9e4296f9be65c42ada1c') in 0.0201337 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Hero and Opponents/Sprites/Player/Attacks/attack-D2.png
+  artifactKey: Guid(36ff4776eed36264a95eab36f8c635e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/Attacks/attack-D2.png using Guid(36ff4776eed36264a95eab36f8c635e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3b507a658c4f198dcb98061d77e636e2') in 0.0219225 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.415159 seconds.
+  path: Assets/Hero and Opponents/Sprites/Player/ShieldBlock/shield-block-activ-2.png
+  artifactKey: Guid(85664466a9d97cc40bd53bab3381718d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/ShieldBlock/shield-block-activ-2.png using Guid(85664466a9d97cc40bd53bab3381718d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'eaa25e4a96ec66f9530a3032f7007311') in 0.0206139 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000201 seconds.
+  path: Assets/Hero and Opponents/Sprites/Player/ShieldBlock/shield-block-up-1.png
+  artifactKey: Guid(694358f58ad6f1a4fa64018b1c782a82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/ShieldBlock/shield-block-up-1.png using Guid(694358f58ad6f1a4fa64018b1c782a82) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '60ffef75f50e832236cd20345a1ffad3') in 0.0243415 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Hero and Opponents/Sprites/Player/ShieldBlock/shield-block-up-2.png
+  artifactKey: Guid(2577f675978ad5948b0d8b5bdcc9abd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/ShieldBlock/shield-block-up-2.png using Guid(2577f675978ad5948b0d8b5bdcc9abd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '63794bf01f6c395890b03bfc8349d1cb') in 0.0250477 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.461153 seconds.
+  path: Assets/Hero and Opponents/Sprites/Player/Run/run-2.png
+  artifactKey: Guid(1166160f1abf9db46ad2ebce82009b98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/Run/run-2.png using Guid(1166160f1abf9db46ad2ebce82009b98) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0b13fffa3b164a0edd78df552098ace3') in 0.0220108 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Hero and Opponents/Sprites/Player/Run/run-6.png
+  artifactKey: Guid(6ffe6083715713a4db7320163e627383) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/Run/run-6.png using Guid(6ffe6083715713a4db7320163e627383) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3a9bf7bb1a70a7a929e56189f9ca4d8c') in 0.0245641 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Hero and Opponents/Sprites/Player/Run/run-9.png
+  artifactKey: Guid(c67d009a7232ab744bddab00f039ec19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/Run/run-9.png using Guid(c67d009a7232ab744bddab00f039ec19) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c896ae4c859ecf30ae277bb0151adf25') in 0.0237742 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Hero and Opponents/Sprites/Player/Run/run-7.png
+  artifactKey: Guid(3c3b5c48cc534724194e0d9487af6ab1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/Run/run-7.png using Guid(3c3b5c48cc534724194e0d9487af6ab1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7707f4377424ff35ca076dfced8bc2fe') in 0.021302 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Hero and Opponents/Sprites/Player/Run/run-8.png
+  artifactKey: Guid(a56d2e2b734653747a2e9caabbde728d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/Run/run-8.png using Guid(a56d2e2b734653747a2e9caabbde728d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '79101a70376be183492ee77868ea0e40') in 0.0209619 seconds
+=======
+  Time since last request: 0.000018 seconds.
+  path: Assets/Fantasy Wooden GUI  Free/normal_ui_set A/notice.png
+  artifactKey: Guid(86adaa715d8969e48975ca3343ddaedd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Wooden GUI  Free/normal_ui_set A/notice.png using Guid(86adaa715d8969e48975ca3343ddaedd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7c7715c096d09899a5515da9aa77f468') in 0.022126 seconds
+>>>>>>> 8911d2771ff6b8d1e872c90a3ecaa8aedc6f8a7d
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+<<<<<<< HEAD
+  path: Assets/Hero and Opponents/Sprites/Player/Run/run-12.png
+  artifactKey: Guid(fe212c6a236cf1b499647c8d29a68315) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/Run/run-12.png using Guid(fe212c6a236cf1b499647c8d29a68315) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '35727ff1a640230a50f262dced80bcb3') in 0.0236598 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.458034 seconds.
+  path: Assets/Hero and Opponents/Sprites/Player/Jump/attack-in-air-A2.png
+  artifactKey: Guid(ed15c6ea79bbc484a93e2cf13bacde62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/Jump/attack-in-air-A2.png using Guid(ed15c6ea79bbc484a93e2cf13bacde62) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8b0ef08861ad08fff37d372970f9547c') in 0.0207114 seconds
+=======
+  path: Assets/Fantasy Wooden GUI  Free/normal_ui_set A/Exclamation_Red.png
+  artifactKey: Guid(e9d4143c19529834981ac6821a04aecd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Wooden GUI  Free/normal_ui_set A/Exclamation_Red.png using Guid(e9d4143c19529834981ac6821a04aecd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '18c0f8188effd1bcb45631bc94c95bae') in 0.0269043 seconds
+>>>>>>> 8911d2771ff6b8d1e872c90a3ecaa8aedc6f8a7d
+>>>>>>> Stashed changes
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+<<<<<<< Updated upstream
+  path: Assets/Fantasy Wooden GUI  Free/normal_ui_set A/TextBTN_New-Start.png
+  artifactKey: Guid(ca45d178d188e034aa96a68aceeef41b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Wooden GUI  Free/normal_ui_set A/TextBTN_New-Start.png using Guid(ca45d178d188e034aa96a68aceeef41b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c2b9a820ba94a73bc5f3c90af7dc3b4f') in 0.0315199 seconds
+=======
+<<<<<<< HEAD
+  path: Assets/Hero and Opponents/Sprites/Player/Jump/attack-in-air-A6.png
+  artifactKey: Guid(c59630400be80954cb8d3a082495ab71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/Jump/attack-in-air-A6.png using Guid(c59630400be80954cb8d3a082495ab71) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '59f24e95a705ab0c0c9adcf777bd99b2') in 0.0206361 seconds
+=======
+  path: Assets/Fantasy Wooden GUI  Free/normal_ui_set A/TextBTN_New-Start.png
+  artifactKey: Guid(ca45d178d188e034aa96a68aceeef41b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Wooden GUI  Free/normal_ui_set A/TextBTN_New-Start.png using Guid(ca45d178d188e034aa96a68aceeef41b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c2b9a820ba94a73bc5f3c90af7dc3b4f') in 0.0315199 seconds
+>>>>>>> 8911d2771ff6b8d1e872c90a3ecaa8aedc6f8a7d
+>>>>>>> Stashed changes
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+  Time since last request: 0.000024 seconds.
+  path: Assets/Hero and Opponents/Sprites/Player/Jump/jump-1.png
+  artifactKey: Guid(a1a13d5b507f5484c8106c6707393750) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/Jump/jump-1.png using Guid(a1a13d5b507f5484c8106c6707393750) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ab38fe2bdc0d1b1858494d7bdf05689c') in 0.0199335 seconds
+=======
+>>>>>>> Stashed changes
+  Time since last request: 0.000026 seconds.
+  path: Assets/Fantasy Wooden GUI  Free/normal_ui_set A/Exclamation_Gray.png
+  artifactKey: Guid(f73f68fe6815f5548a6c2a61b9e49add) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Wooden GUI  Free/normal_ui_set A/Exclamation_Gray.png using Guid(f73f68fe6815f5548a6c2a61b9e49add) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1d38e231ca87e27cbc79fc16ed06e9ce') in 0.019221 seconds
+<<<<<<< Updated upstream
+=======
+>>>>>>> 8911d2771ff6b8d1e872c90a3ecaa8aedc6f8a7d
+>>>>>>> Stashed changes
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+<<<<<<< Updated upstream
   path: Assets/Fantasy Wooden GUI  Free/normal_ui_set A/UI board Small  parchment.png
   artifactKey: Guid(a454050719005b444b59a84eaafba779) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Fantasy Wooden GUI  Free/normal_ui_set A/UI board Small  parchment.png using Guid(a454050719005b444b59a84eaafba779) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2dbd71d129ce07118ba7d50d6f3dce90') in 0.0242436 seconds
@@ -374,10 +1020,21 @@ Received Import Request.
   path: Assets/Hero and Opponents/Sprites/Enemy1/attack-B2.png
   artifactKey: Guid(cfa1a9013ddeca5458ec3c60edcae52c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Hero and Opponents/Sprites/Enemy1/attack-B2.png using Guid(cfa1a9013ddeca5458ec3c60edcae52c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9e7603eab9d31c15ea564b2b1cb23d4c') in 0.0310502 seconds
+=======
+<<<<<<< HEAD
+  path: Assets/Hero and Opponents/Sprites/Player/Jump/jump-7.png
+  artifactKey: Guid(598ba34d3e14edd479106081a2c6008f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/Jump/jump-7.png using Guid(598ba34d3e14edd479106081a2c6008f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f2209507a0dfc3423273f8ec5d7e1a24') in 0.021277 seconds
+=======
+  path: Assets/Fantasy Wooden GUI  Free/normal_ui_set A/UI board Small  parchment.png
+  artifactKey: Guid(a454050719005b444b59a84eaafba779) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Wooden GUI  Free/normal_ui_set A/UI board Small  parchment.png using Guid(a454050719005b444b59a84eaafba779) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2dbd71d129ce07118ba7d50d6f3dce90') in 0.0242436 seconds
+>>>>>>> Stashed changes
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
+<<<<<<< Updated upstream
   Time since last request: 0.000024 seconds.
   path: Assets/Hero and Opponents/Sprites/Enemy1/attack-B11.png
   artifactKey: Guid(177a5a7b72a3cfe4da806bafa83ed1ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
@@ -390,50 +1047,249 @@ Received Import Request.
   path: Assets/Hero and Opponents/Sprites/Enemy1/hit-2.png
   artifactKey: Guid(b030faf6265062844a0f5eb84eb77a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Hero and Opponents/Sprites/Enemy1/hit-2.png using Guid(b030faf6265062844a0f5eb84eb77a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e35dc306ced51b8e775f7af39d786eec') in 0.0238067 seconds
+=======
+  Time since last request: 0.000019 seconds.
+  path: Assets/Fantasy Wooden GUI  Free/normal_ui_set A/UI board Large  parchment.png
+  artifactKey: Guid(43a7d98bd4222b64e933596512dc09ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Wooden GUI  Free/normal_ui_set A/UI board Large  parchment.png using Guid(43a7d98bd4222b64e933596512dc09ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ed14586b76f4157a3c69bdc4c0719739') in 0.0222824 seconds
+>>>>>>> Stashed changes
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
+<<<<<<< Updated upstream
   Time since last request: 0.000020 seconds.
   path: Assets/Hero and Opponents/Sprites/Enemy1/dead-4.png
   artifactKey: Guid(9f4540e95b5dfac44a0e1b9c675311b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Hero and Opponents/Sprites/Enemy1/dead-4.png using Guid(9f4540e95b5dfac44a0e1b9c675311b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6bf3457145f62e9a07852a111363eaba') in 0.0250482 seconds
+=======
+  Time since last request: 0.000016 seconds.
+  path: Assets/Fantasy Wooden GUI  Free/normal_ui_set A/IRONY TITLE  Large.png
+  artifactKey: Guid(054411784c3fdf74d9db120b4a792a71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Wooden GUI  Free/normal_ui_set A/IRONY TITLE  Large.png using Guid(054411784c3fdf74d9db120b4a792a71) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fe14bc4b3146c6f306a24c577bf75da5') in 0.0247108 seconds
+>>>>>>> Stashed changes
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Hero and Opponents/Sprites/Enemy1/dead-2.png
-  artifactKey: Guid(96be1249c10d64242837e53bbc712bc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Hero and Opponents/Sprites/Enemy1/dead-2.png using Guid(96be1249c10d64242837e53bbc712bc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b5058aa1a6cb0b09ddbb31322de7fdfc') in 0.0214269 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Hero and Opponents/Sprites/Enemy1/idle-3.png
-  artifactKey: Guid(d7b196a6a0ae82848883d1590bd02311) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Hero and Opponents/Sprites/Enemy1/idle-3.png using Guid(d7b196a6a0ae82848883d1590bd02311) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fab68919e74ea1ebcf52ffd87d0915a9') in 0.0121213 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.585179 seconds.
-  path: Assets/Hero and Opponents/Sprites/Enemy1/jump-3.png
-  artifactKey: Guid(6c04d3baf60efaa46ba5088cea8c4fa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Hero and Opponents/Sprites/Enemy1/jump-3.png using Guid(6c04d3baf60efaa46ba5088cea8c4fa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '67f185f6582a16c99ca7a6c021c706b6') in 0.0236654 seconds
+<<<<<<< Updated upstream
+=======
+  Time since last request: 0.000020 seconds.
+  path: Assets/Fantasy Wooden GUI  Free/normal_ui_set A/UI board Large Set.png
+  artifactKey: Guid(90a2dde0942123c4ebb9c4af580c5818) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Wooden GUI  Free/normal_ui_set A/UI board Large Set.png using Guid(90a2dde0942123c4ebb9c4af580c5818) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a34a6a6627f8395900510dd1b9993285') in 0.025281 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000019 seconds.
-  path: Assets/Hero and Opponents/Sprites/Enemy1/walk-1.png
-  artifactKey: Guid(1ff3bb5d141c2204ea7a71ac5fed23ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Hero and Opponents/Sprites/Enemy1/walk-1.png using Guid(1ff3bb5d141c2204ea7a71ac5fed23ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '23d497556cae895230df30eb287043f7') in 0.0238119 seconds
+  path: Assets/Fantasy Wooden GUI  Free/normal_ui_set A/UI board Small  stone.png
+  artifactKey: Guid(8dd861a6e819de241bca68a36048a6bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Wooden GUI  Free/normal_ui_set A/UI board Small  stone.png using Guid(8dd861a6e819de241bca68a36048a6bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0dd51cbad31a37c77a1834dc6d4ca34c') in 0.0212918 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
+  Time since last request: 1.940443 seconds.
+  path: Assets/Hero and Opponents/Sprites
+  artifactKey: Guid(2e64d8f37aea0384a975e1145368d947) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites using Guid(2e64d8f37aea0384a975e1145368d947) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cf2c06bcb9f8cf6604d3d7b4ab7a1ff2') in 0.0006965 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.196075 seconds.
+  path: Assets/Hero and Opponents/Sprites/Enemy1/attack-A2.png
+  artifactKey: Guid(a31b80b129768c647af8a375fe0a00a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Enemy1/attack-A2.png using Guid(a31b80b129768c647af8a375fe0a00a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '82fa73d86ddb803629d1b804fc6bc2f9') in 0.0337196 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Hero and Opponents/Sprites/Enemy1/attack-A5.png
+  artifactKey: Guid(2c5ce848148293b4ab8396450d89a900) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Enemy1/attack-A5.png using Guid(2c5ce848148293b4ab8396450d89a900) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7598f2afd8aca590b0feb8a0e34222ed') in 0.0206708 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Hero and Opponents/Sprites/Enemy1/attack-B2.png
+  artifactKey: Guid(cfa1a9013ddeca5458ec3c60edcae52c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Enemy1/attack-B2.png using Guid(cfa1a9013ddeca5458ec3c60edcae52c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9e7603eab9d31c15ea564b2b1cb23d4c') in 0.0310502 seconds
+>>>>>>> 8911d2771ff6b8d1e872c90a3ecaa8aedc6f8a7d
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+<<<<<<< HEAD
+  path: Assets/Hero and Opponents/Sprites/Player/Jump/jump-14.png
+  artifactKey: Guid(5a4297540b6509b499b74b6c44365494) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/Jump/jump-14.png using Guid(5a4297540b6509b499b74b6c44365494) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd3025b9877cc9eafa4458701ca60dd05') in 0.0192933 seconds
+=======
+  path: Assets/Hero and Opponents/Sprites/Enemy1/attack-B11.png
+  artifactKey: Guid(177a5a7b72a3cfe4da806bafa83ed1ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Enemy1/attack-B11.png using Guid(177a5a7b72a3cfe4da806bafa83ed1ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '89e6c20577fb81eb90cc5d04b8d5009b') in 0.0197422 seconds
+>>>>>>> 8911d2771ff6b8d1e872c90a3ecaa8aedc6f8a7d
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+<<<<<<< HEAD
+  Time since last request: 0.000021 seconds.
+  path: Assets/Hero and Opponents/Sprites/Player/Jump/attack-in-air-B3.png
+  artifactKey: Guid(423e26db14d00eb42828c42e1b76f782) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/Jump/attack-in-air-B3.png using Guid(423e26db14d00eb42828c42e1b76f782) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '69c12b93e95ed002908cc4661fdf0cfa') in 0.0229581 seconds
+=======
+  Time since last request: 0.000025 seconds.
+  path: Assets/Hero and Opponents/Sprites/Enemy1/hit-2.png
+  artifactKey: Guid(b030faf6265062844a0f5eb84eb77a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Enemy1/hit-2.png using Guid(b030faf6265062844a0f5eb84eb77a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e35dc306ced51b8e775f7af39d786eec') in 0.0238067 seconds
+>>>>>>> 8911d2771ff6b8d1e872c90a3ecaa8aedc6f8a7d
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+<<<<<<< HEAD
+  Time since last request: 0.000016 seconds.
+  path: Assets/Hero and Opponents/Sprites/Player/Jump/jump-11.png
+  artifactKey: Guid(89c4d36345166d244a32eddb9446e811) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/Jump/jump-11.png using Guid(89c4d36345166d244a32eddb9446e811) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd88452376afd1a68f6cd2f7e5d7971aa') in 0.0202815 seconds
+=======
+  Time since last request: 0.000020 seconds.
+  path: Assets/Hero and Opponents/Sprites/Enemy1/dead-4.png
+  artifactKey: Guid(9f4540e95b5dfac44a0e1b9c675311b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Enemy1/dead-4.png using Guid(9f4540e95b5dfac44a0e1b9c675311b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6bf3457145f62e9a07852a111363eaba') in 0.0250482 seconds
+>>>>>>> 8911d2771ff6b8d1e872c90a3ecaa8aedc6f8a7d
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+<<<<<<< HEAD
+  Time since last request: 0.000032 seconds.
+  path: Assets/Hero and Opponents/Sprites/Player/Jump/attack-in-air-B1.png
+  artifactKey: Guid(740d0599547bcfd47bc53bd7465b68ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/Jump/attack-in-air-B1.png using Guid(740d0599547bcfd47bc53bd7465b68ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '72d4d0387d66f7af00fe0437a1f3de37') in 0.0181913 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Hero and Opponents/Sprites/Player/Jump/jump-5.png
+  artifactKey: Guid(988d68af02c46b44381013b90d079154) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/Jump/jump-5.png using Guid(988d68af02c46b44381013b90d079154) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b630c1236857040caa3fb0b9592a764a') in 0.0214936 seconds
+=======
+>>>>>>> Stashed changes
+  Time since last request: 0.000017 seconds.
+  path: Assets/Hero and Opponents/Sprites/Enemy1/dead-2.png
+  artifactKey: Guid(96be1249c10d64242837e53bbc712bc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Enemy1/dead-2.png using Guid(96be1249c10d64242837e53bbc712bc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b5058aa1a6cb0b09ddbb31322de7fdfc') in 0.0214269 seconds
+<<<<<<< Updated upstream
+=======
+>>>>>>> 8911d2771ff6b8d1e872c90a3ecaa8aedc6f8a7d
+>>>>>>> Stashed changes
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+<<<<<<< Updated upstream
+  path: Assets/Hero and Opponents/Sprites/Enemy1/idle-3.png
+  artifactKey: Guid(d7b196a6a0ae82848883d1590bd02311) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Enemy1/idle-3.png using Guid(d7b196a6a0ae82848883d1590bd02311) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fab68919e74ea1ebcf52ffd87d0915a9') in 0.0121213 seconds
+=======
+<<<<<<< HEAD
+  path: Assets/Hero and Opponents/Sprites/Player/Jump/attack-in-air-A7.png
+  artifactKey: Guid(518c9ffe57a64f34f94a5210149fea38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/Jump/attack-in-air-A7.png using Guid(518c9ffe57a64f34f94a5210149fea38) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '69e57aa608cde80367f607bea984dec8') in 0.0226757 seconds
+=======
+  path: Assets/Hero and Opponents/Sprites/Enemy1/idle-3.png
+  artifactKey: Guid(d7b196a6a0ae82848883d1590bd02311) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Enemy1/idle-3.png using Guid(d7b196a6a0ae82848883d1590bd02311) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fab68919e74ea1ebcf52ffd87d0915a9') in 0.0121213 seconds
+>>>>>>> 8911d2771ff6b8d1e872c90a3ecaa8aedc6f8a7d
+>>>>>>> Stashed changes
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+  Time since last request: 0.000016 seconds.
+  path: Assets/Hero and Opponents/Sprites/Player/Jump/attack-in-air-B5.png
+  artifactKey: Guid(6aeb49a8dab9ddd46b4d409e1bd1aff2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/Jump/attack-in-air-B5.png using Guid(6aeb49a8dab9ddd46b4d409e1bd1aff2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0c90ceec8bb070ce9520af37e48617aa') in 0.0230978 seconds
+=======
+>>>>>>> Stashed changes
+  Time since last request: 8.585179 seconds.
+  path: Assets/Hero and Opponents/Sprites/Enemy1/jump-3.png
+  artifactKey: Guid(6c04d3baf60efaa46ba5088cea8c4fa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Enemy1/jump-3.png using Guid(6c04d3baf60efaa46ba5088cea8c4fa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '67f185f6582a16c99ca7a6c021c706b6') in 0.0236654 seconds
+<<<<<<< Updated upstream
+=======
+>>>>>>> 8911d2771ff6b8d1e872c90a3ecaa8aedc6f8a7d
+>>>>>>> Stashed changes
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+  Time since last request: 0.000017 seconds.
+  path: Assets/Hero and Opponents/Sprites/Player/Jump/attack-in-air-B2.png
+  artifactKey: Guid(0679c0a40adf6444c87a145de970616d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/Jump/attack-in-air-B2.png using Guid(0679c0a40adf6444c87a145de970616d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2b2578f576dbd490a37fc33542da62a7') in 0.0225791 seconds
+=======
+>>>>>>> Stashed changes
+  Time since last request: 0.000019 seconds.
+  path: Assets/Hero and Opponents/Sprites/Enemy1/walk-1.png
+  artifactKey: Guid(1ff3bb5d141c2204ea7a71ac5fed23ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Enemy1/walk-1.png using Guid(1ff3bb5d141c2204ea7a71ac5fed23ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '23d497556cae895230df30eb287043f7') in 0.0238119 seconds
+<<<<<<< Updated upstream
+=======
+>>>>>>> 8911d2771ff6b8d1e872c90a3ecaa8aedc6f8a7d
+>>>>>>> Stashed changes
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+<<<<<<< Updated upstream
+  Time since last request: 0.000018 seconds.
+  path: Assets/Hero and Opponents/Sprites/Enemy1/walk-5.png
+  artifactKey: Guid(13f222e87a142f8429bdf50c087e22a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Enemy1/walk-5.png using Guid(13f222e87a142f8429bdf50c087e22a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7ac4f951f407ed2fc9b2c28c55bcdd5e') in 0.0281657 seconds
+=======
+<<<<<<< HEAD
+  Time since last request: 0.000027 seconds.
+  path: Assets/Hero and Opponents/Sprites/Player/Jump/jump-3.png
+  artifactKey: Guid(792365c5282439949b585c4c528b7aa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Player/Jump/jump-3.png using Guid(792365c5282439949b585c4c528b7aa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f1b15795a787f37d7c130895efc22b39') in 0.018655 seconds
+>>>>>>> Stashed changes
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.423615 seconds.
+  path: Assets/Hero and Opponents/Sprites/Enemy2/attack-A2.png
+  artifactKey: Guid(e76ba54d0ba86fa40a3e016e7fdccb41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Enemy2/attack-A2.png using Guid(e76ba54d0ba86fa40a3e016e7fdccb41) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5c107459ecc9c6c3c1e9e533b6460b57') in 0.022974 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Hero and Opponents/Sprites/Enemy2/attack-A6.png
+  artifactKey: Guid(74d7c0a55400a7d43be83812cc815dcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hero and Opponents/Sprites/Enemy2/attack-A6.png using Guid(74d7c0a55400a7d43be83812cc815dcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '50ee1d7a11406e34946bfa4301af1aa5') in 0.0226386 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+<<<<<<< Updated upstream
+=======
+Prepare: number of updated asset objects reloaded= 0
+=======
   Time since last request: 0.000018 seconds.
   path: Assets/Hero and Opponents/Sprites/Enemy1/walk-5.png
   artifactKey: Guid(13f222e87a142f8429bdf50c087e22a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
@@ -456,6 +1312,7 @@ Received Import Request.
 Start importing Assets/Hero and Opponents/Sprites/Enemy2/attack-A6.png using Guid(74d7c0a55400a7d43be83812cc815dcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '50ee1d7a11406e34946bfa4301af1aa5') in 0.0226386 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
+>>>>>>> Stashed changes
 ========================================================================
 Received Import Request.
   Time since last request: 0.000015 seconds.
@@ -515,4 +1372,9 @@ Number of updated asset objects reloaded before import = 0Number of asset object
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting
+<<<<<<< Updated upstream
 Exiting without the bug reporter. Application will terminate with return code 0
+=======
+Exiting without the bug reporter. Application will terminate with return code 0
+>>>>>>> 8911d2771ff6b8d1e872c90a3ecaa8aedc6f8a7d
+>>>>>>> Stashed changes

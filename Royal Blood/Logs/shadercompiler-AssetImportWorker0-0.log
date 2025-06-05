@@ -1,4 +1,12 @@
+<<<<<<< Updated upstream
 Base path: 'D:/Unity/6000.0.49f1/Editor/Data', plugins path 'D:/Unity/6000.0.49f1/Editor/Data/PlaybackEngines'
+=======
+<<<<<<< HEAD
+Base path: 'C:/Program Files/Unity/Hub/Editor/6000.0.49f1/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/6000.0.49f1/Editor/Data/PlaybackEngines'
+=======
+Base path: 'D:/Unity/6000.0.49f1/Editor/Data', plugins path 'D:/Unity/6000.0.49f1/Editor/Data/PlaybackEngines'
+>>>>>>> 8911d2771ff6b8d1e872c90a3ecaa8aedc6f8a7d
+>>>>>>> Stashed changes
 Cmd: initializeCompiler
 
 Unhandled exception: Protocol error - failed to read magic number. Error code 0x80000004 (Not connected). (transferred 0/4)
