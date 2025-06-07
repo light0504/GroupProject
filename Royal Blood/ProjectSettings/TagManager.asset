@@ -11,8 +11,8 @@ TagManager:
   - Ground
   - Water
   - UI
-  - Layer1
-  - Layer2
+  - BackGround
+  - 
   - NoColider
   - 
   - 
@@ -41,11 +41,8 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Layer1
-    uniqueID: 3411872651
-    locked: 0
-  - name: Layer2
-    uniqueID: 3190109805
+  - name: Ground
+    uniqueID: 2126236017
     locked: 0
   - name: Player
     uniqueID: 871789637
