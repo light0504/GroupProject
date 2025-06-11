@@ -22,7 +22,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-=======
   m_GameObject: {fileID: 3959563363970507100}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -46,10 +45,10 @@ GameObject:
   - component: {fileID: 153743859797547980}
   - component: {fileID: 7572238171735916724}
   - component: {fileID: 9178753784682197236}
-  - component: {fileID: 826419617916436633}
+  - component: {fileID: 7377393809949819981}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -242,7 +241,7 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &826419617916436633
+--- !u!114 &7377393809949819981
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -251,11 +250,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5062040388453449919}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abddc0173e90a714bb7eb13f3cff54fc, type: 3}
+  m_Script: {fileID: 11500000, guid: 4d02abbddef5ee24290f3d37b9c35ece, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  jumpForce: 15
+  jumpForce: 10
   groundCheckPoint: {fileID: 8624915859265298961}
   groundCheckRadius: 0.2
   whatIsGround:
