@@ -45,10 +45,10 @@ GameObject:
   - component: {fileID: 153743859797547980}
   - component: {fileID: 7572238171735916724}
   - component: {fileID: 9178753784682197236}
-  - component: {fileID: 7377393809949819981}
+  - component: {fileID: 8174047462467164800}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,7 +112,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 871789637
-  m_SortingLayer: 3
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 4723107735738678597, guid: 174209194dbf2fb44aef1ea1ba76a2f1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -241,7 +241,7 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &7377393809949819981
+--- !u!114 &8174047462467164800
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -250,11 +250,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5062040388453449919}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d02abbddef5ee24290f3d37b9c35ece, type: 3}
+  m_Script: {fileID: 11500000, guid: abddc0173e90a714bb7eb13f3cff54fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  jumpForce: 10
+  jumpForce: 15
   groundCheckPoint: {fileID: 8624915859265298961}
   groundCheckRadius: 0.2
   whatIsGround:
@@ -268,7 +268,7 @@ MonoBehaviour:
   attackDamage: 40
   enemyLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
 --- !u!1 &7274522297861067947
 GameObject:
   m_ObjectHideFlags: 0
