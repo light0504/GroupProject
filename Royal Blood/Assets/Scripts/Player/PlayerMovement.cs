@@ -13,6 +13,10 @@ public class PlayerMovement : MonoBehaviour
     private float moveInput;
     private bool isFacingRight = true;
 
+    [Header("Jump Settings")]
+    public int maxJumpCount = 2;
+    private int jumpCount;
+
     [Header("Ground Check")]
     public Transform groundCheckPoint;
     public float groundCheckRadius = 0.2f;
@@ -20,11 +24,11 @@ public class PlayerMovement : MonoBehaviour
     private bool isGrounded;
 
     [Header("Dashing")]
-    public float dashSpeed = 20f;         
-    public float dashDuration = 0.2f;     
-    public float dashCooldown = 1f;       
+    public float dashSpeed = 20f;
+    public float dashDuration = 0.2f;
+    public float dashCooldown = 1f;
 
-    private bool isDashing;               
+    private bool isDashing;
     private float dashCooldownTimer;
 
     [Header("Attacking")]
@@ -48,11 +52,6 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
-        if (isDashing)
-        {
-            return;
-        }
-
         if (animator.GetBool("isDeath"))
         {
             rb.linearVelocity = Vector2.zero;
@@ -68,10 +67,14 @@ public class PlayerMovement : MonoBehaviour
 
         isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, whatIsGround);
 
+        // Reset jump count khi chạm đất
+        if (isGrounded)
+        {
+            jumpCount = 0;
+        }
+
         UpdateAnimatorParameters();
-
         HandlePlayerInput();
-
         FlipCharacter();
     }
 
@@ -86,15 +89,16 @@ public class PlayerMovement : MonoBehaviour
     private void UpdateAnimatorParameters()
     {
         animator.SetBool("isRunning", moveInput != 0 && isGrounded);
-
         animator.SetBool("isFalling", !isGrounded && rb.linearVelocity.y < -0.1f);
     }
 
     private void HandlePlayerInput()
     {
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        // Double Jump logic
+        if (Input.GetButtonDown("Jump") && jumpCount < maxJumpCount)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            jumpCount++;
             animator.SetTrigger("Jump");
         }
 
@@ -103,7 +107,7 @@ public class PlayerMovement : MonoBehaviour
             StartCoroutine(Dash());
         }
 
-        if (Input.GetButtonDown("Fire1")) // "Fire1" thường là nút chuột trái hoặc Left Ctrl
+        if (Input.GetButtonDown("Fire1"))
         {
             Attack();
         }
@@ -111,7 +115,6 @@ public class PlayerMovement : MonoBehaviour
 
     private System.Collections.IEnumerator Dash()
     {
-        // 1. Thiết lập các trạng thái khi bắt đầu Dash
         isDashing = true;
         dashCooldownTimer = dashCooldown;
         animator.SetTrigger("Dash");
@@ -120,30 +123,18 @@ public class PlayerMovement : MonoBehaviour
         rb.gravityScale = 0f;
 
         float dashDirection = isFacingRight ? 1f : -1f;
-
         rb.linearVelocity = new Vector2(dashDirection * dashSpeed, 0f);
-
-        // (Tùy chọn) Bật chế độ bất tử ở đây nếu muốn
-        // ví dụ: gameObject.layer = LayerMask.NameToLayer("InvinciblePlayer");
 
         yield return new WaitForSeconds(dashDuration);
 
         rb.gravityScale = originalGravity;
         isDashing = false;
-
-        // Nếu bạn muốn nhân vật dừng lại đột ngột sau khi dash, thêm dòng này
-        // rb.velocity = Vector2.zero;
-
-        // (Tùy chọn) Tắt chế độ bất tử ở đây
-        // ví dụ: gameObject.layer = LayerMask.NameToLayer("Player");
     }
 
     void Attack()
     {
-        // 1. Kích hoạt animation và trạng thái tấn công
         isAttacking = true;
         animator.SetTrigger("Attack");
-        // Chúng ta sẽ gọi hàm gây sát thương từ Animation Event
     }
 
     public void TakeHit()
@@ -165,25 +156,18 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-
     public void DealDamageToEnemies()
     {
-        // Phát hiện tất cả kẻ thù trong một vòng tròn tại attackPoint
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
-        // Gây sát thương cho tất cả kẻ thù tìm thấy
         foreach (Collider2D enemy in hitEnemies)
         {
             Debug.Log("We hit " + enemy.name);
-
-            /*
-            // Giả sử kẻ thù có một script tên là "EnemyHealth" với hàm TakeDamage(int damage)
-            EnemyHealth enemyHealth = enemy.GetComponent<EnemyHealth>();
-            if (enemyHealth != null)
-            {
-                enemyHealth.TakeDamage(attackDamage);
-            }
-            */
+            // EnemyHealth enemyHealth = enemy.GetComponent<EnemyHealth>();
+            // if (enemyHealth != null)
+            // {
+            //     enemyHealth.TakeDamage(attackDamage);
+            // }
         }
     }
 
