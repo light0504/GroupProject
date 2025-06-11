@@ -3,7 +3,8 @@
 # =============== #
 
 # This .gitignore file should be placed at the root of your Unity project directory
-
+Royal Blood/Logs/
+Royal Blood/UserSettings/
 # Ignore user-specific and system files
 .DS_Store
 Thumbs.db
