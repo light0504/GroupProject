@@ -11072,7 +11072,7 @@ GameObject:
   - component: {fileID: 1272665173}
   - component: {fileID: 1272665172}
   - component: {fileID: 1272665174}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Elevator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89891,22 +89891,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1365921506813419117, guid: d44dde570368b2b4baaa2488ee0401b9, type: 3}
-      propertyPath: moveSpeed
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 3248453805242167373, guid: d44dde570368b2b4baaa2488ee0401b9, type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5000511228707159868, guid: d44dde570368b2b4baaa2488ee0401b9, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5000511228707159868, guid: d44dde570368b2b4baaa2488ee0401b9, type: 3}
-      propertyPath: m_DefaultControlScheme
-      value: Keyboard&Mouse
-      objectReference: {fileID: 0}
     - target: {fileID: 4164593703914598509, guid: 5214d9105636b1841b2ec63ab4868f29, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.31
@@ -89954,6 +89938,22 @@ PrefabInstance:
     - target: {fileID: 5062040388453449919, guid: 5214d9105636b1841b2ec63ab4868f29, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1365921506813419117, guid: d44dde570368b2b4baaa2488ee0401b9, type: 3}
+      propertyPath: moveSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3248453805242167373, guid: d44dde570368b2b4baaa2488ee0401b9, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5000511228707159868, guid: d44dde570368b2b4baaa2488ee0401b9, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5000511228707159868, guid: d44dde570368b2b4baaa2488ee0401b9, type: 3}
+      propertyPath: m_DefaultControlScheme
+      value: Keyboard&Mouse
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
