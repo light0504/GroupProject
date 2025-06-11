@@ -11,8 +11,8 @@ TagManager:
   - Ground
   - Water
   - UI
-  - Layer1
-  - Layer2
+  - BackGround
+  - 
   - NoColider
   - 
   - 
