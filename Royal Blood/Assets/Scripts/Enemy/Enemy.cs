@@ -3,18 +3,25 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [Header("AI References")]
-    public Transform player; // K�o ??i t??ng Player v�o ?�y
+    public Transform player;
     private Animator animator;
     private Rigidbody2D rb;
 
     [Header("AI Settings")]
     public float moveSpeed = 2f;
-    public float detectionRange = 10f; // T?m ph�t hi?n ng??i ch?i
-    public float attackRange = 1.5f;   // T?m ?? t?n c�ng
-    public LayerMask playerLayer;      // Layer c?a ng??i ch?i
+    public float detectionRange = 10f;
+    public float attackRange = 1.5f;
+
+    [Header("Jumping & Navigation")]
+    public float jumpForce = 8f; // The force applied for a jump.
+    public Transform groundCheckPoint; // A point below the enemy to check for ground.
+    public Transform obstacleCheckPoint; // A point in front of the enemy to check for obstacles.
+    public float groundCheckRadius = 0.2f; // Radius of the ground check circle.
+    public float obstacleCheckDistance = 0.5f; // How far the obstacle check raycast looks.
+    public LayerMask groundLayer; // Defines what layer is considered ground/obstacles.
 
     [Header("Attack Settings")]
-    public float attackRate = 2f; // T?n c�ng 1 l?n m?i 2 gi�y
+    public float attackRate = 2f;
     private float nextAttackTime = 0f;
 
     [Header("Health")]
@@ -23,140 +30,163 @@ public class Enemy : MonoBehaviour
 
     private bool isFacingRight = true;
     private bool isDead = false;
+    private bool isGrounded; // To store the ground status.
 
     void Awake()
     {
-        // L?y c�c component c?n thi?t
         animator = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>(); // Corrected from previous error.
         currentHealth = maxHealth;
     }
 
-    // N?u b?n ch?a g�n Player, h�y th? t�m b?ng Tag
     void Start()
     {
         if (player == null)
         {
-            player = GameObject.FindGameObjectWithTag("Player").transform;
+            player = GameObject.FindGameObjectWithTag("Player")?.transform;
         }
     }
 
     void Update()
     {
-        // N?u ?� ch?t, kh�ng l�m g� c?
         if (isDead || player == null)
         {
-            // D?ng m?i chuy?n ??ng khi ch?t
             animator.SetBool("isWalking", false);
             rb.linearVelocity = Vector2.zero;
             return;
         }
 
-        // T�nh kho?ng c�ch t?i ng??i ch?i
+        // The AI logic remains the same.
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
-        // Logic AI
         if (distanceToPlayer <= attackRange)
         {
-            // 1. ? trong t?m t?n c�ng -> T?n c�ng
-            animator.SetBool("isWalking", false); // D?ng ?i b? ?? t?n c�ng
-            rb.linearVelocity = Vector2.zero; // D?ng di chuy?n
-
-            if (Time.time >= nextAttackTime)
-            {
-                Attack();
-                nextAttackTime = Time.time + 1f / attackRate;
-            }
+            AttackBehavior();
         }
         else if (distanceToPlayer <= detectionRange)
         {
-            // 2. ? trong t?m ph�t hi?n -> ?u?i theo
-            ChasePlayer();
+            ChaseBehavior();
         }
         else
         {
-            // 3. ? ngo�i t?m -> ??ng y�n
-            animator.SetBool("isWalking", false);
-            rb.linearVelocity = Vector2.zero;
+            IdleBehavior();
         }
 
-        // L?t m?t ?? lu�n nh�n v? ph�a ng??i ch?i
         FlipTowardsPlayer();
     }
 
-    void ChasePlayer()
+    // FixedUpdate is used for physics checks.
+    void FixedUpdate()
     {
+        if (isDead) return;
+        CheckGroundStatus();
+    }
+
+    private void CheckGroundStatus()
+    {
+        // Check if the groundCheckPoint is colliding with anything on the groundLayer.
+        isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, groundLayer);
+    }
+
+    private bool IsObstacleAhead()
+    {
+        // Shoots a raycast forward from the obstacleCheckPoint.
+        // `transform.right` points in the local 'right' direction, which is forward for a 2D character.
+        RaycastHit2D hit = Physics2D.Raycast(obstacleCheckPoint.position, transform.right, obstacleCheckDistance, groundLayer);
+
+        // Return true if the raycast hits something.
+        return hit.collider != null;
+    }
+
+    private void Jump()
+    {
+        if (!isGrounded) return; // Can only jump if grounded.
+
+        // Apply upward force and trigger animation.
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+        animator.SetTrigger("Jump");
+    }
+
+    private void IdleBehavior()
+    {
+        animator.SetBool("isWalking", false);
+        rb.linearVelocity = new Vector2(0, rb.linearVelocity.y); // Stop horizontal movement but allow falling.
+    }
+
+    private void ChaseBehavior()
+    {
+        // Check for obstacles before moving.
+        if (IsObstacleAhead() && isGrounded)
+        {
+            Jump();
+        }
+
+        // Standard chase logic.
         animator.SetBool("isWalking", true);
         Vector2 targetDirection = (player.position - transform.position).normalized;
         rb.linearVelocity = new Vector2(targetDirection.x * moveSpeed, rb.linearVelocity.y);
     }
 
-    void Attack()
+    private void AttackBehavior()
     {
-        // H�m n�y ch? k�ch ho?t animation
-        // Vi?c g�y s�t th??ng n�n ???c x? l� b?ng Animation Event
-        animator.SetTrigger("Attack");
+        animator.SetBool("isWalking", false);
+        rb.linearVelocity = Vector2.zero;
+
+        if (Time.time >= nextAttackTime)
+        {
+            animator.SetTrigger("Attack");
+            nextAttackTime = Time.time + 1f / attackRate;
+        }
     }
 
+    // --- The rest of the functions (Flip, TakeDamage, Die) remain the same ---
     void FlipTowardsPlayer()
     {
         float playerDirection = player.position.x - transform.position.x;
-
-        if (playerDirection > 0 && !isFacingRight)
-        {
-            // Ng??i ch?i ? b�n ph?i, nh?ng skeleton ?ang nh�n sang tr�i -> l?t
-            Flip();
-        }
-        else if (playerDirection < 0 && isFacingRight)
-        {
-            // Ng??i ch?i ? b�n tr�i, nh?ng skeleton ?ang nh�n sang ph?i -> l?t
-            Flip();
-        }
+        if (playerDirection > 0 && !isFacingRight) Flip();
+        else if (playerDirection < 0 && isFacingRight) Flip();
     }
-
     void Flip()
     {
         isFacingRight = !isFacingRight;
         transform.Rotate(0f, 180f, 0f);
     }
-
-    // H�m n�y ph?i l� public ?? script c?a ng??i ch?i c� th? g?i
     public void TakeDamage(int damage)
     {
         if (isDead) return;
-
         currentHealth -= damage;
         animator.SetTrigger("Hit");
-
-        if (currentHealth <= 0)
-        {
-            Die();
-        }
+        if (currentHealth <= 0) Die();
     }
-
     void Die()
     {
-        Debug.Log("Skeleton died!");
         isDead = true;
-
-        // K�ch ho?t animation ch?t
         animator.SetBool("isDead", true);
-
-        // V� hi?u h�a v?t l� v� collider ?? kh�ng c?n ???ng ng??i ch?i
         GetComponent<Collider2D>().enabled = false;
-        if (rb != null) rb.bodyType = RigidbodyType2D.Static; // Ng?n kh�ng b? ?nh h??ng b?i tr?ng l?c
-
-        // H?y ??i t??ng sau 2 gi�y ?? animation ch?t c� th? di?n ra
+        if (rb != null) rb.bodyType = RigidbodyType2D.Static;
         Destroy(gameObject, 2f);
     }
 
-    // V? gizmo trong Editor ?? d? d�ng tinh ch?nh t?m AI
+    // Gizmos for easy setup in the editor.
     void OnDrawGizmosSelected()
     {
+        // Draw the attack and detection ranges.
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, detectionRange);
-
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, attackRange);
+
+        // Draw the ground and obstacle check gizmos.
+        if (groundCheckPoint != null)
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawWireSphere(groundCheckPoint.position, groundCheckRadius);
+        }
+        if (obstacleCheckPoint != null)
+        {
+            Gizmos.color = Color.blue;
+            Vector3 rayDirection = transform.right * obstacleCheckDistance;
+            Gizmos.DrawLine(obstacleCheckPoint.position, obstacleCheckPoint.position + rayDirection);
+        }
     }
 }
