@@ -6,6 +6,10 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     private Rigidbody2D rb;
 
+    [Header("Player Stats")]
+    public int maxHealth = 100;
+    private int currentHealth;
+
     [Header("Movement Settings")]
     public float moveSpeed = 5f;
     public float jumpForce = 5f;
@@ -43,6 +47,7 @@ public class PlayerMovement : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        currentHealth = maxHealth;
     }
 
     void Update()
@@ -137,14 +142,38 @@ public class PlayerMovement : MonoBehaviour
         animator.SetTrigger("Attack");
     }
 
-    public void TakeHit()
+    public void TakeDamage(int damage)
     {
-        animator.SetTrigger("TakeHit");
+        // Check if player is already dead or maybe invincible (e.g., during a dash).
+        if (currentHealth <= 0 || isDashing)
+        {
+            return;
+        }
+
+        currentHealth -= damage;
+        animator.SetTrigger("TakeHit"); // Play the player's "get hit" animation.
+        Debug.Log("Player health: " + currentHealth);
+
+        // Optional: Add a knockback effect here.
+        // rb.AddForce(new Vector2(knockbackX, knockbackY), ForceMode2D.Impulse);
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
     }
 
-    public void Die()
+    private void Die()
     {
+        Debug.Log("Player has died!");
         animator.SetBool("isDeath", true);
+
+        // Disable player movement script and physics.
+        this.enabled = false; // This disables the Update() loop of this script.
+        GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+        GetComponent<Collider2D>().enabled = false;
+
+        // Optional: Add logic for a "Game Over" screen here after a delay.
     }
 
     private void FlipCharacter()
@@ -158,16 +187,27 @@ public class PlayerMovement : MonoBehaviour
 
     public void DealDamageToEnemies()
     {
+        // 1. Detect all colliders within the attack range that are on the "Enemy" layer.
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
-        foreach (Collider2D enemy in hitEnemies)
+        // 2. Loop through every enemy that was hit.
+        foreach (Collider2D enemyCollider in hitEnemies)
         {
-            Debug.Log("We hit " + enemy.name);
-            // EnemyHealth enemyHealth = enemy.GetComponent<EnemyHealth>();
-            // if (enemyHealth != null)
-            // {
-            //     enemyHealth.TakeDamage(attackDamage);
-            // }
+            // 3. Try to get the AI script from the enemy object.
+            // You might need to check for multiple types of enemies here in the future.
+            Range_Enemy enemyAI = enemyCollider.GetComponent<Range_Enemy>();
+            if (enemyAI != null)
+            {
+                // 4. Call the enemy's public TakeDamage function.
+                enemyAI.TakeDamage(attackDamage);
+                continue; // Move to the next enemy in the list.
+            }
+
+            Enemy skeletonAI = enemyCollider.GetComponent<Enemy>();
+            if (skeletonAI != null)
+            {
+                skeletonAI.TakeDamage(attackDamage);
+            }
         }
     }
 

@@ -28,6 +28,11 @@ public class Enemy : MonoBehaviour
     public int maxHealth = 100;
     private int currentHealth;
 
+    [Header("Melee Attack")]
+    public Transform attackPoint;
+    public int attackDamage = 20;
+    public LayerMask playerLayer; // Set this to the "Player" layer in the Inspector.
+
     private bool isFacingRight = true;
     private bool isDead = false;
     private bool isGrounded; // To store the ground status.
@@ -136,6 +141,24 @@ public class Enemy : MonoBehaviour
         {
             animator.SetTrigger("Attack");
             nextAttackTime = Time.time + 1f / attackRate;
+        }
+    }
+
+    // --- This is the function for the Animation Event ---
+    public void DealMeleeDamage()
+    {
+        // Create a circle to detect the player.
+        Collider2D hitPlayer = Physics2D.OverlapCircle(attackPoint.position, attackRange, playerLayer);
+
+        // If the player was detected...
+        if (hitPlayer != null)
+        {
+            // ...get their controller script and call TakeDamage.
+            PlayerMovement player = hitPlayer.GetComponent<PlayerMovement>();
+            if (player != null)
+            {
+                player.TakeDamage(attackDamage);
+            }
         }
     }
 

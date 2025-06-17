@@ -33,18 +33,19 @@ public class Arrow : MonoBehaviour
     // H�m n�y ???c g?i khi m?i t�n va ch?m v?i m?t ??i t??ng kh�c c� Collider2D
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        // Ki?m tra xem ??i t??ng va ch?m c� ph?i l� ng??i ch?i kh�ng
+        // 1. Check if the object we hit has a PlayerController script.
         PlayerMovement player = hitInfo.GetComponent<PlayerMovement>();
         if (player != null)
         {
-            // N?u ?�ng, g�y s�t th??ng cho ng??i ch?i
-            // Gi? s? PlayerController c?a b?n c� m?t h�m public t�n l� TakeDamage(int damage)
-            // player.TakeDamage(damage); 
-            Debug.Log("Arrow hit the player!");
+            // 2. If it does, call the player's TakeDamage function.
+            player.TakeDamage(damage);
+
+            // 3. Destroy the arrow after hitting the player.
+            Destroy(gameObject);
+            return; // Stop further execution.
         }
 
-        // T? h?y khi va ch?m v?i b?t c? th? g� (tr? c�c k? th� kh�c)
-        // ?i?u n�y ng?n m?i t�n t? h?y khi v?a ra kh?i cung th?
+        // Destroy the arrow if it hits anything that isn't another enemy.
         if (!hitInfo.CompareTag("Enemy"))
         {
             Destroy(gameObject);

@@ -14,8 +14,8 @@ TagManager:
   - Water
   - UI
   - BackGround
-  - Enemy
   - Player
+  - Enemy
   - NoColider
   - 
   - 
