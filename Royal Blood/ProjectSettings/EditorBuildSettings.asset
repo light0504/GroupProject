@@ -6,8 +6,20 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/TestScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Scenes/FirstLevel.unity
+    guid: b28d26d4cef876f4a824400e878ccc2f
+  - enabled: 1
+    path: Assets/Scenes/Dungeon Gate.unity
+    guid: 96678e25729e03a4c817d9a2183b463c
+  - enabled: 1
+    path: Assets/Scenes/Dungeon.unity
+    guid: eff966d0d0d4518439f3b9ad61556cfb
+  - enabled: 1
+    path: Assets/Scenes/Main menu.unity
+    guid: 4a06e84928e4d44418bb6ea7a5ac81e7
+  - enabled: 1
+    path: Assets/Scenes/Dungeon Gate2.unity
+    guid: eccb914420f7fcd419f468c7068a3cfe
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Portal
   layers:
   - Default
   - TransparentFX
@@ -12,7 +13,7 @@ TagManager:
   - Water
   - UI
   - BackGround
-  - 
+  - Enemy
   - NoColider
   - 
   - 
@@ -41,11 +42,20 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: View
+    uniqueID: 1375101949
+    locked: 0
+  - name: BackGround
+    uniqueID: 1946845007
+    locked: 0
   - name: ForeGround
-    uniqueID: 3542467613
+    uniqueID: 3411872651
     locked: 0
   - name: Ground
-    uniqueID: 2126236017
+    uniqueID: 3190109805
+    locked: 0
+  - name: Items
+    uniqueID: 3846251667
     locked: 0
   - name: Player
     uniqueID: 871789637
