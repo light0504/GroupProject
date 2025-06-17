@@ -31,12 +31,6 @@ public class PlayerMovement : MonoBehaviour
     private bool isDashing;
     private float dashCooldownTimer;
 
-    [Header("Attacking")]
-    public Transform attackPoint;
-    public float attackRange = 0.5f;
-    public int attackDamage = 40;
-    public LayerMask enemyLayers;
-
     private bool isAttacking;
 
     void Awake()
@@ -153,21 +147,6 @@ public class PlayerMovement : MonoBehaviour
         {
             isFacingRight = !isFacingRight;
             transform.Rotate(0f, 180f, 0f);
-        }
-    }
-
-    public void DealDamageToEnemies()
-    {
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
-
-        foreach (Collider2D enemy in hitEnemies)
-        {
-            Debug.Log("We hit " + enemy.name);
-            // EnemyHealth enemyHealth = enemy.GetComponent<EnemyHealth>();
-            // if (enemyHealth != null)
-            // {
-            //     enemyHealth.TakeDamage(attackDamage);
-            // }
         }
     }
 

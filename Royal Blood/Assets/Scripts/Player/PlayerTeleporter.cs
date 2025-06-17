@@ -1,19 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-/// <summary>
-/// Quản lý việc giữ Player tồn tại giữa các scene và định vị Player
-/// tại một EntryPoint cụ thể dựa trên tên được cung cấp bởi Portal.
-/// </summary>
+[RequireComponent(typeof(PlayerState))]
 public class PlayerTeleporter : MonoBehaviour
 {
     public static PlayerTeleporter Instance { get; private set; }
-
-    /// <summary>
-    /// Tên của EntryPoint ở scene đích.
-    /// Được thiết lập bởi Portal trước khi tải scene.
-    /// </summary>
+    public static GameData dataToLoad = null;
     public string TargetEntryPointNameOnNextSceneLoad { get; set; }
+    public static string StartingCheckpointName = null;
 
     private bool hasBeenPositionedThisScene = false;
 
@@ -22,12 +16,11 @@ public class PlayerTeleporter : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(gameObject); // Bắt buộc cho mô hình này
         }
         else if (Instance != this)
         {
             Destroy(gameObject);
-            return;
         }
     }
 
@@ -41,19 +34,58 @@ public class PlayerTeleporter : MonoBehaviour
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
-    /// <summary>
-    /// Được gọi tự động mỗi khi một scene mới hoàn tất việc tải.
-    /// </summary>
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         hasBeenPositionedThisScene = false;
-
-        TryPositionPlayerAtEntryPoint();
+        PositionPlayerOnSceneLoad();
     }
 
-    /// <summary>
-    /// Tìm kiếm và di chuyển Player đến EntryPoint được chỉ định.
-    /// </summary>
+    private void PositionPlayerOnSceneLoad()
+    {
+        if (hasBeenPositionedThisScene) return;
+
+        if (dataToLoad != null)
+        {
+            Debug.Log(1);
+            ApplyLoadedData();
+        }
+        else if (!string.IsNullOrEmpty(StartingCheckpointName))
+        {
+            Debug.Log(2);
+            MoveToStartingCheckpoint();
+        }
+        else if (!string.IsNullOrEmpty(TargetEntryPointNameOnNextSceneLoad))
+        {
+            Debug.Log(3);
+            TryPositionPlayerAtEntryPoint();
+        }
+
+        if (TryGetComponent<Rigidbody2D>(out var rb)) { rb.linearVelocity = Vector2.zero; }
+
+        dataToLoad = null;
+        TargetEntryPointNameOnNextSceneLoad = null;
+        StartingCheckpointName = null;
+    }
+
+    private void ApplyLoadedData()
+    {
+        transform.position = new Vector2(dataToLoad.playerPosition[0], dataToLoad.playerPosition[1]);
+        GetComponent<PlayerState>().ApplyLoadedData(dataToLoad);
+    }
+
+    private void MoveToStartingCheckpoint()
+    {
+        Checkpoint[] allCheckpoints = FindObjectsOfType<Checkpoint>();
+        foreach (var checkpoint in allCheckpoints)
+        {
+            if (checkpoint.checkpointName == StartingCheckpointName)
+            {
+                transform.position = checkpoint.transform.position;
+                GetComponent<PlayerState>().SetNewCheckpoint(transform.position);
+                return;
+            }
+        }
+    }
     void TryPositionPlayerAtEntryPoint()
     {
         if (hasBeenPositionedThisScene) return;
@@ -90,10 +122,6 @@ public class PlayerTeleporter : MonoBehaviour
         TargetEntryPointNameOnNextSceneLoad = null;
     }
 
-    /// <summary>
-    /// Hủy instance Player đang tồn tại.
-    /// Dùng khi quay về Main Menu hoặc reset game.
-    /// </summary>
     public static void KillInstance()
     {
         if (Instance != null)
