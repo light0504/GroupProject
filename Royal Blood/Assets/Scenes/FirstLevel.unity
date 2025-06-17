@@ -11075,6 +11075,11 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 12.087048, y: 2.4902458}
   m_EdgeRadius: 0
+--- !u!4 &769446897 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7772609694837789827, guid: fe15dfcf704c61044bbbfba504c63bf4, type: 3}
+  m_PrefabInstance: {fileID: 5633242087455511169}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1272665170
 GameObject:
   m_ObjectHideFlags: 0
@@ -90280,16 +90285,40 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2271215190662164575, guid: fe15dfcf704c61044bbbfba504c63bf4, type: 3}
+      propertyPath: entryPoint
+      value: 
+      objectReference: {fileID: 769446897}
+    - target: {fileID: 2271215190662164575, guid: fe15dfcf704c61044bbbfba504c63bf4, type: 3}
       propertyPath: sceneLoader
       value: 
       objectReference: {fileID: 1981214622}
     - target: {fileID: 2271215190662164575, guid: fe15dfcf704c61044bbbfba504c63bf4, type: 3}
+      propertyPath: entryDirection
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2271215190662164575, guid: fe15dfcf704c61044bbbfba504c63bf4, type: 3}
+      propertyPath: destinationText
+      value: 
+      objectReference: {fileID: 5633242087455511170}
+    - target: {fileID: 2271215190662164575, guid: fe15dfcf704c61044bbbfba504c63bf4, type: 3}
+      propertyPath: entryPointDirection
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2271215190662164575, guid: fe15dfcf704c61044bbbfba504c63bf4, type: 3}
       propertyPath: targetEntryPointName
       value: Gate 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2271215190662164575, guid: fe15dfcf704c61044bbbfba504c63bf4, type: 3}
+      propertyPath: destinationDisplayName
+      value: Dungeon Gate
       objectReference: {fileID: 0}
     - target: {fileID: 2624126627729831008, guid: fe15dfcf704c61044bbbfba504c63bf4, type: 3}
       propertyPath: m_Name
       value: Portal
+      objectReference: {fileID: 0}
+    - target: {fileID: 2830413848602803779, guid: fe15dfcf704c61044bbbfba504c63bf4, type: 3}
+      propertyPath: entryName
+      value: Gate 1
       objectReference: {fileID: 0}
     - target: {fileID: 7470763945246830231, guid: fe15dfcf704c61044bbbfba504c63bf4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -90331,72 +90360,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7772609694837789827, guid: fe15dfcf704c61044bbbfba504c63bf4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7772609694837789827, guid: fe15dfcf704c61044bbbfba504c63bf4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe15dfcf704c61044bbbfba504c63bf4, type: 3}
---- !u!1001 &8739691721236421226
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2414546951417223899, guid: 16d59d3c8142a8243ac54389ee081413, type: 3}
-      propertyPath: entryName
-      value: Gate 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7861117369177436187, guid: 16d59d3c8142a8243ac54389ee081413, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 29
-      objectReference: {fileID: 0}
-    - target: {fileID: 7861117369177436187, guid: 16d59d3c8142a8243ac54389ee081413, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -27
-      objectReference: {fileID: 0}
-    - target: {fileID: 7861117369177436187, guid: 16d59d3c8142a8243ac54389ee081413, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7861117369177436187, guid: 16d59d3c8142a8243ac54389ee081413, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7861117369177436187, guid: 16d59d3c8142a8243ac54389ee081413, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7861117369177436187, guid: 16d59d3c8142a8243ac54389ee081413, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7861117369177436187, guid: 16d59d3c8142a8243ac54389ee081413, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7861117369177436187, guid: 16d59d3c8142a8243ac54389ee081413, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7861117369177436187, guid: 16d59d3c8142a8243ac54389ee081413, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7861117369177436187, guid: 16d59d3c8142a8243ac54389ee081413, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8238733646666595268, guid: 16d59d3c8142a8243ac54389ee081413, type: 3}
-      propertyPath: m_Name
-      value: EntryPoint
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 16d59d3c8142a8243ac54389ee081413, type: 3}
+--- !u!114 &5633242087455511170 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3901608786712581883, guid: fe15dfcf704c61044bbbfba504c63bf4, type: 3}
+  m_PrefabInstance: {fileID: 5633242087455511169}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -90415,4 +90402,3 @@ SceneRoots:
   - {fileID: 645091706}
   - {fileID: 5633242087455511169}
   - {fileID: 2063823096}
-  - {fileID: 8739691721236421226}

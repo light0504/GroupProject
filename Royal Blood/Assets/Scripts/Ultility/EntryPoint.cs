@@ -12,12 +12,9 @@ public class EntryPoint : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        // Vẽ một quả cầu màu xanh tại vị trí của EntryPoint
         Gizmos.color = new Color(0, 1, 1, 0.75f); // Màu Cyan với độ trong suốt
         Gizmos.DrawSphere(transform.position, 0.5f);
 
-        // Vẽ một mũi tên chỉ hướng "tiến" (hữu ích cho việc xác định hướng nhìn của nhân vật khi xuất hiện)
-        // Trong game 2D, thường là hướng sang phải (transform.right)
         Gizmos.color = Color.yellow;
         Vector3 arrowEndPosition = transform.position + transform.right * 1.0f; // Hướng sang phải 1 đơn vị
         Gizmos.DrawLine(transform.position, arrowEndPosition);

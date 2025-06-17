@@ -1,12 +1,18 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Quản lý việc giữ Player tồn tại giữa các scene và định vị Player
+/// tại một EntryPoint cụ thể dựa trên tên được cung cấp bởi Portal.
+/// </summary>
 public class PlayerTeleporter : MonoBehaviour
 {
     public static PlayerTeleporter Instance { get; private set; }
 
-    // Tên của EntryPoint mà Player sẽ xuất hiện ở scene tiếp theo
-    // Được set bởi Portal trước khi load scene
+    /// <summary>
+    /// Tên của EntryPoint ở scene đích.
+    /// Được thiết lập bởi Portal trước khi tải scene.
+    /// </summary>
     public string TargetEntryPointNameOnNextSceneLoad { get; set; }
 
     private bool hasBeenPositionedThisScene = false;
@@ -17,99 +23,83 @@ public class PlayerTeleporter : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            Debug.Log($"PlayerTeleporter '{gameObject.name}' is now DontDestroyOnLoad. Primary instance.");
         }
         else if (Instance != this)
         {
-            Debug.LogWarning($"Another PlayerTeleporter instance ('{Instance.gameObject.name}') already exists. Destroying this new Player GameObject ('{gameObject.name}').");
             Destroy(gameObject);
             return;
         }
     }
 
-    void OnEnable()
+    private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
-        Debug.Log($"PlayerTeleporter '{gameObject.name}' enabled, subscribed to sceneLoaded.");
     }
 
-    void OnDisable()
+    private void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
-        Debug.Log($"PlayerTeleporter '{gameObject.name}' disabled, unsubscribed from sceneLoaded.");
     }
 
-    void Start()
-    {
-        // Có thể không cần làm gì nhiều ở Start nếu logic chính nằm trong OnSceneLoaded
-        // Reset cờ vị trí cho lần đầu tiên (hoặc khi được enable lại trong cùng scene)
-        hasBeenPositionedThisScene = false;
-        // Thử định vị ngay, phòng trường hợp scene đầu tiên có entry point được set từ trước
-        TryPositionPlayerAtEntryPoint();
-    }
-
-
-    // Được gọi mỗi khi một scene mới hoàn tất việc load
+    /// <summary>
+    /// Được gọi tự động mỗi khi một scene mới hoàn tất việc tải.
+    /// </summary>
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log($"PlayerTeleporter: Scene '{scene.name}' loaded. Target Entry: '{TargetEntryPointNameOnNextSceneLoad}'");
-        // Reset cờ cho scene mới này để Player có thể được định vị lại
         hasBeenPositionedThisScene = false;
-        TryPositionPlayerAtEntryPoint();
 
-        // Sau khi đã sử dụng (hoặc cố gắng sử dụng) TargetEntryPointNameOnNextSceneLoad,
-        // bạn có thể muốn xóa nó đi để nó không ảnh hưởng đến lần load scene tiếp theo
-        // nếu không phải do Portal kích hoạt (ví dụ: reload scene thủ công).
-        // TargetEntryPointNameOnNextSceneLoad = null; // Cân nhắc dòng này
+        TryPositionPlayerAtEntryPoint();
     }
 
+    /// <summary>
+    /// Tìm kiếm và di chuyển Player đến EntryPoint được chỉ định.
+    /// </summary>
     void TryPositionPlayerAtEntryPoint()
     {
-        if (hasBeenPositionedThisScene)
-        {
-            Debug.Log("PlayerTeleporter: Already positioned in this scene.");
-            return;
-        }
+        if (hasBeenPositionedThisScene) return;
 
-        if (string.IsNullOrEmpty(TargetEntryPointNameOnNextSceneLoad))
-        {
-            Debug.Log("PlayerTeleporter: No TargetEntryPointName specified for this scene load. Player remains at current/last position.");
-            hasBeenPositionedThisScene = true; // Đánh dấu đã "xử lý" để không cố gắng định vị lại
-            return;
-        }
+        hasBeenPositionedThisScene = true;
 
-        EntryPoint[] entryPoints = FindObjectsOfType<EntryPoint>();
-        bool foundEntryPoint = false;
-        foreach (EntryPoint entry in entryPoints)
+        Debug.Log($"PlayerTeleporter: Đang tìm kiếm EntryPoint có tên '{TargetEntryPointNameOnNextSceneLoad}'...");
+
+        EntryPoint[] allEntryPoints = FindObjectsOfType<EntryPoint>();
+        bool foundTarget = false;
+
+        foreach (var entryPoint in allEntryPoints)
         {
-            if (entry.entryName == TargetEntryPointNameOnNextSceneLoad)
+            if (entryPoint.entryName == TargetEntryPointNameOnNextSceneLoad)
             {
-                Debug.Log($"PlayerTeleporter: Positioning Player at EntryPoint '{entry.entryName}' at {entry.transform.position}");
-                transform.position = entry.transform.position; // Di chuyển Player đến vị trí của EntryPoint
+                this.transform.position = entryPoint.transform.position;
 
-                // Nếu Player có Rigidbody, bạn có thể muốn reset vận tốc
-                Rigidbody2D rb = GetComponent<Rigidbody2D>();
-                if (rb != null)
+                if (TryGetComponent<Rigidbody2D>(out var rb))
                 {
                     rb.linearVelocity = Vector2.zero;
-                    rb.angularVelocity = 0f;
                 }
 
-                hasBeenPositionedThisScene = true; // Đánh dấu Player đã được định vị trong scene này
-                foundEntryPoint = true;
+                Debug.Log($"Thành công! Player đã được dịch chuyển đến EntryPoint '{entryPoint.entryName}'.");
+                foundTarget = true;
                 break;
             }
         }
 
-        if (!foundEntryPoint)
+        if (!foundTarget)
         {
-            Debug.LogWarning($"PlayerTeleporter: EntryPoint '{TargetEntryPointNameOnNextSceneLoad}' NOT FOUND in scene '{SceneManager.GetActiveScene().name}'. Player remains at current/last position.");
-            hasBeenPositionedThisScene = true; // Vẫn đánh dấu đã xử lý
+            Debug.LogWarning($"LỖI: Không tìm thấy EntryPoint nào có tên '{TargetEntryPointNameOnNextSceneLoad}' trong scene '{SceneManager.GetActiveScene().name}'. Player sẽ giữ nguyên vị trí.");
         }
 
-        // Cân nhắc xóa TargetEntryPointNameOnNextSceneLoad sau khi đã dùng:
-        // Điều này ngăn việc Player bị đặt lại vị trí nếu scene được load lại
-        // mà không thông qua portal.
-        // TargetEntryPointNameOnNextSceneLoad = null;
+        TargetEntryPointNameOnNextSceneLoad = null;
+    }
+
+    /// <summary>
+    /// Hủy instance Player đang tồn tại.
+    /// Dùng khi quay về Main Menu hoặc reset game.
+    /// </summary>
+    public static void KillInstance()
+    {
+        if (Instance != null)
+        {
+            Destroy(Instance.gameObject);
+            Instance = null;
+        }
     }
 }
