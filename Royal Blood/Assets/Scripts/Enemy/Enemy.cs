@@ -212,4 +212,5 @@ public class Enemy : MonoBehaviour
             Gizmos.DrawLine(obstacleCheckPoint.position, obstacleCheckPoint.position + rayDirection);
         }
     }
+
 }
