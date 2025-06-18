@@ -6,6 +6,10 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     private Rigidbody2D rb;
 
+    [Header("Player Stats")]
+    public int maxHealth = 100;
+    private int currentHealth;
+
     [Header("Movement Settings")]
     public float moveSpeed = 5f;
     public float jumpForce = 5f;
@@ -37,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        currentHealth = maxHealth;
     }
 
     void Update()
@@ -131,14 +136,38 @@ public class PlayerMovement : MonoBehaviour
         animator.SetTrigger("Attack");
     }
 
-    public void TakeHit()
+    public void TakeDamage(int damage)
     {
-        animator.SetTrigger("TakeHit");
+        // Check if player is already dead or maybe invincible (e.g., during a dash).
+        if (currentHealth <= 0 || isDashing)
+        {
+            return;
+        }
+
+        currentHealth -= damage;
+        animator.SetTrigger("TakeHit"); // Play the player's "get hit" animation.
+        Debug.Log("Player health: " + currentHealth);
+
+        // Optional: Add a knockback effect here.
+        // rb.AddForce(new Vector2(knockbackX, knockbackY), ForceMode2D.Impulse);
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
     }
 
-    public void Die()
+    private void Die()
     {
+        Debug.Log("Player has died!");
         animator.SetBool("isDeath", true);
+
+        // Disable player movement script and physics.
+        this.enabled = false; // This disables the Update() loop of this script.
+        GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+        GetComponent<Collider2D>().enabled = false;
+
+        // Optional: Add logic for a "Game Over" screen here after a delay.
     }
 
     private void FlipCharacter()
