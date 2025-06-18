@@ -1,74 +1,39 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class MainMenuController : MonoBehaviour // Đổi tên class
+public class MainMenuController : MonoBehaviour
 {
-    [Header("Dependencies")]
-    [Tooltip("Drag the GameObject containing the NotificationController script here.")]
-    [SerializeField] private NotificationController notificationPopup;
+    [SerializeField] private Button continueButton;
+    [SerializeField] private string firstLevelSceneName;
+    [SerializeField] private string startingCheckpointName = "StartPoint";
 
-    [Tooltip("Drag the GameObject containing the SceneLoader script here.")]
+    // Các tham chiếu gốc của bạn
+    [SerializeField] private NotificationController notificationPopup;
     [SerializeField] private SceneLoader sceneLoader;
 
     void Start()
     {
-        if (notificationPopup == null) Debug.LogError("NotificationPopup is not assigned in MainMenuController!", this);
-        if (sceneLoader == null) Debug.LogError("SceneLoader is not assigned in MainMenuController!", this);
+        if (continueButton != null)
+            continueButton.interactable = (SaveSystem.LoadGame() != null);
     }
 
-    public void OnStartButtonPressed(int index)
+    public void OnContinueButtonPressed()
     {
-        if (sceneLoader != null)
+        GameManager.Instance.ContinueGame();
+    }
+
+    public void OnNewGameButtonPressed()
+    {
+        if (SaveSystem.LoadGame() != null && notificationPopup != null)
         {
-            Debug.Log($"MainMenuController: Requesting to load Gameplay scene with index: {index}");
-            sceneLoader.LoadConfiguredSceneFromArray(index);
+            notificationPopup.ShowNotification(
+                "Starting a new game will delete your progress. Are you sure?",
+                () => { GameManager.Instance.StartNewGame(firstLevelSceneName, startingCheckpointName); ; }
+            );
         }
         else
         {
-            Debug.LogError("SceneLoader is not assigned. Cannot load scene!");
+            GameManager.Instance.StartNewGame(firstLevelSceneName, startingCheckpointName); ;
         }
-    }
-
-    public void OnHowToPlayButtonPressed(int index)
-    {
-        if (notificationPopup == null)
-        {
-            Debug.LogError("NotificationPopup is not assigned. Cannot show notification!");
-            return;
-        }
-        if (sceneLoader == null)
-        {
-            Debug.LogError("SceneLoader is not assigned. Cannot configure notification action!");
-            return;
-        }
-
-        notificationPopup.ShowNotification(
-            "Do you want to view the How To Play instructions?", // Thông báo tiếng Anh
-            () => { // YES action
-                sceneLoader.LoadConfiguredSceneFromArray(index);
-            }
-        );
-    }
-
-    public void OnExitButtonPressed()
-    {
-        if (notificationPopup == null)
-        {
-            Debug.LogError("NotificationPopup is not assigned. Cannot show notification!");
-            return;
-        }
-        if (sceneLoader == null)
-        {
-            Debug.LogError("SceneLoader is not assigned. Cannot configure notification action!");
-            return;
-        }
-
-        notificationPopup.ShowNotification(
-            "Are you sure you want to quit the game?",
-            () => {
-                Debug.Log("MainMenuController: User chose to quit the game.");
-                sceneLoader.QuitGame();
-            }
-        );
     }
 }
