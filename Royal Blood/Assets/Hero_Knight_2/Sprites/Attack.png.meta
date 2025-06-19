@@ -164,12 +164,12 @@ TextureImporter:
       name: Attack_0
       rect:
         serializedVersion: 2
-        x: 58
+        x: 55
         y: 57
-        width: 25
+        width: 30
         height: 61
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -188,10 +188,10 @@ TextureImporter:
         serializedVersion: 2
         x: 196
         y: 57
-        width: 27
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 30
+        height: 61
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -210,10 +210,10 @@ TextureImporter:
         serializedVersion: 2
         x: 331
         y: 57
-        width: 33
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 30
+        height: 61
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -232,10 +232,10 @@ TextureImporter:
         serializedVersion: 2
         x: 472
         y: 57
-        width: 31
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 30
+        height: 61
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -255,9 +255,9 @@ TextureImporter:
         x: 593
         y: 57
         width: 86
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 61
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -277,9 +277,9 @@ TextureImporter:
         x: 733
         y: 57
         width: 48
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 61
+      alignment: 9
+      pivot: {x: 0.5, y: 0.32}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []

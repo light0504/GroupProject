@@ -10,16 +10,27 @@ public class PlayerAttack : MonoBehaviour
 
     public void DealDamageToEnemies()
     {
+        // 1. Detect all colliders within the attack range that are on the "Enemy" layer.
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
-        foreach (Collider2D enemy in hitEnemies)
+        // 2. Loop through every enemy that was hit.
+        foreach (Collider2D enemyCollider in hitEnemies)
         {
-            Debug.Log("We hit " + enemy.name);
-            // EnemyHealth enemyHealth = enemy.GetComponent<EnemyHealth>();
-            // if (enemyHealth != null)
-            // {
-            //     enemyHealth.TakeDamage(attackDamage);
-            // }
+            // 3. Try to get the AI script from the enemy object.
+            // You might need to check for multiple types of enemies here in the future.
+            Range_Enemy enemyAI = enemyCollider.GetComponent<Range_Enemy>();
+            if (enemyAI != null)
+            {
+                // 4. Call the enemy's public TakeDamage function.
+                enemyAI.TakeDamage(attackDamage);
+                continue; // Move to the next enemy in the list.
+            }
+
+            Enemy skeletonAI = enemyCollider.GetComponent<Enemy>();
+            if (skeletonAI != null)
+            {
+                skeletonAI.TakeDamage(attackDamage);
+            }
         }
     }
 
