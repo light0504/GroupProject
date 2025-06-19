@@ -9,19 +9,12 @@ using UnityEngine.UI;
 /// </summary>
 public class SettingsManager : MonoBehaviour
 {
-    // Biến static để các script khác có thể kiểm tra xem game có đang pause không
     public static bool IsGamePaused = false;
 
-    [Header("Main Panel")]
+    [Header("UI Panels & Components")]
     [Tooltip("Panel chính chứa toàn bộ giao diện của menu cài đặt.")]
     [SerializeField] private GameObject mainPanel;
-    /*
-    [Header("Page Panels")]
-    [Tooltip("Panel chứa các cài đặt Âm thanh.")]
-    [SerializeField] private GameObject soundPage;
-    [Tooltip("Panel chứa các cài đặt Điều khiển.")]
-    [SerializeField] private GameObject controlsPage;
-    */
+
     [Header("In-Game Only Buttons")]
     [Tooltip("Nút 'Save Game', sẽ bị ẩn trong Main Menu.")]
     [SerializeField] private Button saveGameButton;
@@ -29,7 +22,13 @@ public class SettingsManager : MonoBehaviour
     [Tooltip("Nút 'Exit to Menu', sẽ bị ẩn trong Main Menu.")]
     [SerializeField] private Button exitToMenuButton;
 
-    [Header("Scene Configuration")]
+    // --- SỬA LỖI QUAN TRỌNG ---
+    // Phải là một tham chiếu để kéo thả, không dùng new().
+    [Header("Dependencies")]
+    [Tooltip("Kéo GameObject chứa script NotificationController vào đây.")]
+    [SerializeField] private NotificationController notificationPopup;
+
+    [Header("Configuration")]
     [Tooltip("Tên chính xác của scene Main Menu của bạn.")]
     [SerializeField] private string mainMenuSceneName = "Main menu";
 
@@ -37,6 +36,10 @@ public class SettingsManager : MonoBehaviour
 
     void Start()
     {
+        // Kiểm tra xem các dependency đã được gán chưa để tránh lỗi
+        if (notificationPopup == null) Debug.LogError("NotificationPopup chưa được gán trong SettingsManager!", this);
+
+        // Ban đầu, ẩn panel đi
         mainPanel.SetActive(false);
     }
 
@@ -55,23 +58,14 @@ public class SettingsManager : MonoBehaviour
 
     #region Main Menu Control (Pause/Resume)
 
-    /// <summary>
-    /// Mở menu cài đặt và tạm dừng game.
-    /// </summary>
     public void PauseGame()
     {
         mainPanel.SetActive(true);
         Time.timeScale = 0f;
         IsGamePaused = true;
-
         CheckCurrentScene();
-
-        ShowSoundPage();
     }
 
-    /// <summary>
-    /// Đóng menu cài đặt và tiếp tục game.
-    /// </summary>
     public void ResumeGame()
     {
         mainPanel.SetActive(false);
@@ -79,9 +73,6 @@ public class SettingsManager : MonoBehaviour
         IsGamePaused = false;
     }
 
-    /// <summary>
-    /// Hàm này được gán cho nút "Settings" chính trong game để bật/tắt menu.
-    /// </summary>
     public void OnSettingsButtonPressed()
     {
         if (IsGamePaused) ResumeGame();
@@ -91,69 +82,47 @@ public class SettingsManager : MonoBehaviour
     private void CheckCurrentScene()
     {
         bool isInMainMenu = SceneManager.GetActiveScene().name == mainMenuSceneName;
-
         if (saveGameButton != null) saveGameButton.gameObject.SetActive(!isInMainMenu);
         if (exitToMenuButton != null) exitToMenuButton.gameObject.SetActive(!isInMainMenu);
     }
 
     #endregion
 
-    #region Page Navigation
-
-    private void HideAllPages()
-    {
-        //if (soundPage != null) soundPage.SetActive(false);
-        //if (controlsPage != null) controlsPage.SetActive(false);
-    }
-
-    /// <summary>
-    /// Gán cho nút bấm để hiển thị trang Âm thanh.
-    /// </summary>
-    public void ShowSoundPage()
-    {
-        HideAllPages();
-        //if (soundPage != null) soundPage.SetActive(true);
-    }
-
-    /// <summary>
-    /// Gán cho nút bấm để hiển thị trang Điều khiển.
-    /// </summary>
-    public void ShowControlsPage()
-    {
-        HideAllPages();
-        //if (controlsPage != null) controlsPage.SetActive(true);
-    }
-
-    #endregion
-
     #region Functionality Buttons
 
-    // --- SOUND PAGE ---
-    /// <summary>
-    /// Gán cho sự kiện OnValueChanged của Slider âm lượng.
-    /// </summary>
     public void OnMasterVolumeChanged(float volume)
     {
         AudioListener.volume = volume;
-        PlayerPrefs.SetFloat("MasterVolume", volume); // Lưu cài đặt đơn giản
+        PlayerPrefs.SetFloat("MasterVolume", volume);
     }
 
-    // --- GAME ACTIONS ---
-    /// <summary>
-    /// Gán cho nút "Save Game".
-    /// </summary>
     public void OnSaveGameButtonPressed()
     {
         if (PlayerState.Instance != null)
         {
             PlayerState.Instance.TriggerSaveGame();
+            // (Tùy chọn) Hiển thị thông báo "Game Saved!" qua NotificationPopup
+            // notificationPopup.ShowNotification("Game Saved!", null, true); // Ví dụ: thông báo tự tắt
         }
     }
 
-    /// <summary>
-    /// Gán cho nút "Exit to Menu".
-    /// </summary>
     public void OnExitToMenuButtonPressed()
+    {
+        if (notificationPopup == null)
+        {
+            PerformExitToMenu();
+            return;
+        }
+
+        notificationPopup.ShowNotification(
+            "Progress since last save will be lost. Are you sure you want to exit to the main menu?",
+            () => {
+                PerformExitToMenu();
+            }
+        );
+    }
+
+    private void PerformExitToMenu()
     {
         ResumeGame();
         PlayerTeleporter.KillInstance();
