@@ -570,9 +570,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   continueButton: {fileID: 1120137431}
-  firstLevelSceneName: FirstLevel
   notificationPopup: {fileID: 1550951330}
   sceneLoader: {fileID: 4759926230401003656}
+  firstLevelSceneName: FirstLevel
+  startingCheckpointName: StartPoint
 --- !u!4 &673821126
 Transform:
   m_ObjectHideFlags: 0
@@ -727,7 +728,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneLoader: {fileID: 1962042979169688829, guid: 2d3d1b316291a0a499113746abbfa9ad, type: 3}
-  mainMenuSceneName: Main menu
 --- !u!4 &959648479
 Transform:
   m_ObjectHideFlags: 0
@@ -1678,6 +1678,10 @@ PrefabInstance:
     - target: {fileID: 6472834308291151690, guid: 9dee9ea46428ca54a9311c4d82d70677, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106314131177806255, guid: 9dee9ea46428ca54a9311c4d82d70677, type: 3}
+      propertyPath: m_SortingOrder
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

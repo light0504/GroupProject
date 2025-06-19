@@ -180,6 +180,7 @@ MonoBehaviour:
   mainPanel: {fileID: 5325580644026848477}
   saveGameButton: {fileID: 3525491911708602100}
   exitToMenuButton: {fileID: 4532918346878845102}
+  notificationPopup: {fileID: 1896511463746867097}
   mainMenuSceneName: Main menu
 --- !u!1 &480660704451230428
 GameObject:
@@ -518,6 +519,7 @@ Transform:
   m_Children:
   - {fileID: 8396887805898762421}
   - {fileID: 1993773034418366663}
+  - {fileID: 8381227533226948259}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5325580644026848477
@@ -690,7 +692,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 37220150661109677, guid: 8ca6a2e4dfa05414e85e53d75f1eedce, type: 3}
+  m_Sprite: {fileID: -6449211087582412584, guid: f4a88e8fd0a81bd4383fa68a2bbde87d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1242,3 +1244,76 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1001 &1787188261658189464
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6472834308291151690}
+    m_Modifications:
+    - target: {fileID: 7826486805101111355, guid: 7dd6698003d38934bab0ce5bcc9c0178, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 485.57727
+      objectReference: {fileID: 0}
+    - target: {fileID: 7826486805101111355, guid: 7dd6698003d38934bab0ce5bcc9c0178, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 150.75641
+      objectReference: {fileID: 0}
+    - target: {fileID: 7826486805101111355, guid: 7dd6698003d38934bab0ce5bcc9c0178, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.1695287
+      objectReference: {fileID: 0}
+    - target: {fileID: 7826486805101111355, guid: 7dd6698003d38934bab0ce5bcc9c0178, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7826486805101111355, guid: 7dd6698003d38934bab0ce5bcc9c0178, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7826486805101111355, guid: 7dd6698003d38934bab0ce5bcc9c0178, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7826486805101111355, guid: 7dd6698003d38934bab0ce5bcc9c0178, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7826486805101111355, guid: 7dd6698003d38934bab0ce5bcc9c0178, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7826486805101111355, guid: 7dd6698003d38934bab0ce5bcc9c0178, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7826486805101111355, guid: 7dd6698003d38934bab0ce5bcc9c0178, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8787449913981088146, guid: 7dd6698003d38934bab0ce5bcc9c0178, type: 3}
+      propertyPath: m_Name
+      value: Notification Controller
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7dd6698003d38934bab0ce5bcc9c0178, type: 3}
+--- !u!114 &1896511463746867097 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 188198326661075201, guid: 7dd6698003d38934bab0ce5bcc9c0178, type: 3}
+  m_PrefabInstance: {fileID: 1787188261658189464}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d61285889c006b54ba9b399efa0b4f35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &8381227533226948259 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7826486805101111355, guid: 7dd6698003d38934bab0ce5bcc9c0178, type: 3}
+  m_PrefabInstance: {fileID: 1787188261658189464}
+  m_PrefabAsset: {fileID: 0}
