@@ -183,11 +183,29 @@ public class Enemy : MonoBehaviour
     }
     void Die()
     {
+        Debug.Log(gameObject.name + " died!");
         isDead = true;
-        animator.SetBool("isDead", true);
+
+        // 1. Trigger the animation.
+        animator.SetTrigger("Dead");
+
+        // 2. Disable the object's ability to collide or be a physical object.
+        // This prevents the dead body from blocking the player.
         GetComponent<Collider2D>().enabled = false;
-        if (rb != null) rb.bodyType = RigidbodyType2D.Static;
-        Destroy(gameObject, 2f);
+        if (rb != null)
+        {
+            rb.simulated = false; // A better way to disable physics than setting to Static.
+            rb.linearVelocity = Vector2.zero;
+        }
+
+        // 3. REMOVE the Destroy(gameObject, 2f); line from here.
+    }
+
+    public void OnDeathAnimationFinished()
+    {
+        // This function will be called by the animation event.
+        // Now it's safe to destroy the object.
+        Destroy(gameObject);
     }
 
     // Gizmos for easy setup in the editor.
