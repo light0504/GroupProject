@@ -89,7 +89,6 @@ public class ElevatorController : MonoBehaviour
         if (other.CompareTag("Player") && !isMoving && !isPlayerOnboard)
         {
             isPlayerOnboard = true;
-            // Tự động di chuyển đến điểm còn lại
             Transform destination = (currentTarget == destination_A) ? destination_B : destination_A;
             CallTo(destination);
         }
@@ -109,6 +108,7 @@ public class ElevatorController : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.transform.SetParent(null);
+            DontDestroyOnLoad(collision.gameObject);
             isPlayerOnboard = false;
             UpdateCallButtons();
         }
