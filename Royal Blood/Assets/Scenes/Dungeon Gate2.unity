@@ -1127,7 +1127,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2271215190662164575, guid: fe15dfcf704c61044bbbfba504c63bf4, type: 3}
       propertyPath: destinationDisplayName
-      value: Dunggeon Gate
+      value: The Bridge
       objectReference: {fileID: 0}
     - target: {fileID: 2624126627729831008, guid: fe15dfcf704c61044bbbfba504c63bf4, type: 3}
       propertyPath: m_Name
