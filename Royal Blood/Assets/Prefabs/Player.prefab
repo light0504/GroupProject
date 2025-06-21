@@ -257,7 +257,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abddc0173e90a714bb7eb13f3cff54fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
   moveSpeed: 5
   jumpForce: 15
   maxJumpCount: 1
@@ -298,7 +297,7 @@ MonoBehaviour:
   attackDamage: 40
   enemyLayers:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 256
 --- !u!114 &3160923799397698424
 MonoBehaviour:
   m_ObjectHideFlags: 0

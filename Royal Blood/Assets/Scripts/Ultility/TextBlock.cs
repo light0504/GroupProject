@@ -8,7 +8,7 @@ public class TextBlock : MonoBehaviour
     [Header("Hiển thị Thông tin Portal")]
     public string textDisplayed;
     public TextMeshProUGUI destinationText;
-    public bool canReview;
+    //public bool canReview;
     public float trackRadius;
 
     private CircleCollider2D infoCollider;
@@ -42,19 +42,12 @@ public class TextBlock : MonoBehaviour
     {
         if (other.CompareTag("Player") && destinationText != null)
         {
-            if (!canReview)
-            {
-                Destroy(this.gameObject);
-            }
+            //if (!canReview)
+            //{
+            //    Destroy(this.gameObject);
+            //}
             
             destinationText.gameObject.SetActive(false);
         }
     }
-
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, trackRadius);
-    }
-
 }

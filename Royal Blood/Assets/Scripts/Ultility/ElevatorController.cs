@@ -30,9 +30,9 @@ public class ElevatorController : MonoBehaviour
             return;
         }
 
-        // Bắt đầu tại vị trí của Destination_A
-        transform.position = destination_A.position;
-        currentTarget = destination_A;
+        // Bắt đầu tại vị trí của Destination_B
+        transform.position = destination_B.position;
+        currentTarget = destination_B;
         UpdateCallButtons();
     }
 

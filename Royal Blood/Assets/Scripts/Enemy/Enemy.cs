@@ -42,6 +42,7 @@ public class Enemy : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>(); // Corrected from previous error.
         currentHealth = maxHealth;
+        player = AutoTrackPlayer.TrackPlayer().transform;
     }
 
     void Start()
@@ -157,7 +158,7 @@ public class Enemy : MonoBehaviour
             PlayerMovement player = hitPlayer.GetComponent<PlayerMovement>();
             if (player != null)
             {
-                player.TakeDamage(attackDamage);
+                player.GetComponentInChildren<PlayerHealth>().TakeDamage(attackDamage);
             }
         }
     }
