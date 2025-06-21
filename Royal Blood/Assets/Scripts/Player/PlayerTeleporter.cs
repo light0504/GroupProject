@@ -90,7 +90,7 @@ public class PlayerTeleporter : MonoBehaviour
     {
         if (hasBeenPositionedThisScene) return;
 
-        hasBeenPositionedThisScene = true;
+        hasBeenPositionedThisScene = false;
 
         Debug.Log($"PlayerTeleporter: Đang tìm kiếm EntryPoint có tên '{TargetEntryPointNameOnNextSceneLoad}'...");
 

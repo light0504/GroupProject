@@ -60,6 +60,7 @@ public class Range_Enemy : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
+        player = AutoTrackPlayer.TrackPlayer().transform;
     }
 
     void Start()

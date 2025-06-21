@@ -34,11 +34,11 @@ public class Arrow : MonoBehaviour
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
         // 1. Check if the object we hit has a PlayerController script.
-        PlayerMovement player = hitInfo.GetComponent<PlayerMovement>();
+        PlayerHealth player = hitInfo.GetComponent<PlayerHealth>();
         if (player != null)
         {
             // 2. If it does, call the player's TakeDamage function.
-            player.TakeDamage(damage);
+            player.GetComponentInChildren<PlayerHealth>().TakeDamage(damage);
 
             // 3. Destroy the arrow after hitting the player.
             Destroy(gameObject);
