@@ -6,10 +6,6 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     private Rigidbody2D rb;
 
-    [Header("Player Stats")]
-    public int maxHealth = 100;
-    private int currentHealth;
-
     [Header("Movement Settings")]
     public float moveSpeed = 5f;
     public float jumpForce = 5f;
@@ -25,23 +21,22 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheckPoint;
     public float groundCheckRadius = 0.2f;
     public LayerMask whatIsGround;
-    private bool isGrounded;
+    private bool isGrounded = false;
 
     [Header("Dashing")]
     public float dashSpeed = 20f;
     public float dashDuration = 0.2f;
     public float dashCooldown = 1f;
 
-    private bool isDashing;
+    private bool isDashing = false;
     private float dashCooldownTimer;
 
-    private bool isAttacking;
+    private bool isAttacking = false;
 
     void Awake()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        currentHealth = maxHealth;
     }
 
     void Update()
@@ -136,40 +131,6 @@ public class PlayerMovement : MonoBehaviour
         animator.SetTrigger("Attack");
     }
 
-    public void TakeDamage(int damage)
-    {
-        // Check if player is already dead or maybe invincible (e.g., during a dash).
-        if (currentHealth <= 0 || isDashing)
-        {
-            return;
-        }
-
-        currentHealth -= damage;
-        animator.SetTrigger("TakeHit"); // Play the player's "get hit" animation.
-        Debug.Log("Player health: " + currentHealth);
-
-        // Optional: Add a knockback effect here.
-        // rb.AddForce(new Vector2(knockbackX, knockbackY), ForceMode2D.Impulse);
-
-        if (currentHealth <= 0)
-        {
-            Die();
-        }
-    }
-
-    private void Die()
-    {
-        Debug.Log("Player has died!");
-        animator.SetBool("isDeath", true);
-
-        // Disable player movement script and physics.
-        this.enabled = false; // This disables the Update() loop of this script.
-        GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
-        GetComponent<Collider2D>().enabled = false;
-
-        // Optional: Add logic for a "Game Over" screen here after a delay.
-    }
-
     private void FlipCharacter()
     {
         if ((isFacingRight && moveInput < 0) || (!isFacingRight && moveInput > 0))
@@ -192,4 +153,6 @@ public class PlayerMovement : MonoBehaviour
             Gizmos.DrawWireSphere(groundCheckPoint.position, groundCheckRadius);
         }
     }
+
+    public bool GetDash() => isDashing;
 }

@@ -3232,7 +3232,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2271215190662164575, guid: fe15dfcf704c61044bbbfba504c63bf4, type: 3}
       propertyPath: destinationDisplayName
-      value: In Front Of the Dungeon
+      value: Dungeon Gate
       objectReference: {fileID: 0}
     - target: {fileID: 2624126627729831008, guid: fe15dfcf704c61044bbbfba504c63bf4, type: 3}
       propertyPath: m_Name
@@ -3388,7 +3388,7 @@ Transform:
   m_GameObject: {fileID: 994387355}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.050011, y: 0.08675766, z: -10}
+  m_LocalPosition: {x: -12, y: 0.08675766, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
