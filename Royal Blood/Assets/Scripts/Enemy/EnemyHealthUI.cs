@@ -1,0 +1,56 @@
+﻿using UnityEngine;
+using UnityEngine.UI;
+using TMPro; // Nên dùng TextMeshPro
+
+public class EnemyHealthUI : MonoBehaviour
+{
+    [Header("UI References")]
+    [SerializeField] private Slider healthSlider;
+
+    [Header("Target")]
+    [Tooltip("Tham chiếu đến script PlayerHealth cần theo dõi. Sẽ tự tìm nếu để trống.")]
+    [SerializeField] private Enemy enemy;
+    [SerializeField] private Range_Enemy rangeEnemy;
+
+    void Start()
+    {
+        rangeEnemy = GetComponentInParent<Range_Enemy>();
+        if (rangeEnemy != null)
+        {
+            rangeEnemy.OnHealthChanged += UpdateHealthUI;
+            UpdateHealthUI(rangeEnemy.GetHealth(), rangeEnemy.GetMaxHealth());
+        }
+        else
+        {
+            enemy = GetComponentInParent<Enemy>();
+            if (enemy != null)
+            {
+                enemy.OnHealthChanged += UpdateHealthUI;
+                UpdateHealthUI(enemy.GetHealth(), enemy.GetMaxHealth());
+            }
+        }
+
+    }
+
+    void OnDestroy()
+    {
+        if (enemy != null)
+        {
+            enemy.OnHealthChanged -= UpdateHealthUI;
+        }
+        if (rangeEnemy != null)
+        {
+            rangeEnemy.OnHealthChanged -= UpdateHealthUI;
+        }
+    }
+
+    private void UpdateHealthUI(int currentHp, int maxHp)
+    {
+        Debug.Log("Updated " + currentHp + " " + maxHp);
+        if (healthSlider != null)
+        {
+            healthSlider.maxValue = maxHp;
+            healthSlider.value = currentHp;
+        }
+    }
+}

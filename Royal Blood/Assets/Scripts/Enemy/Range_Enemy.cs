@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Range_Enemy : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class Range_Enemy : MonoBehaviour
     public Transform arrowSpawnPoint;
     private Animator animator;
     private Rigidbody2D rb;
+    private EnemyHealthUI healthUI;
 
     // SECTION: AI Behavior Settings
     // These values control how the AI perceives its environment and makes decisions.
@@ -52,6 +54,7 @@ public class Range_Enemy : MonoBehaviour
     private bool isDead = false;
     private bool isGrounded;
 
+    public event Action<int, int> OnHealthChanged;
     // --- UNITY LIFECYCLE METHODS ---
 
     void Awake()
@@ -61,6 +64,8 @@ public class Range_Enemy : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
         player = AutoTrackPlayer.TrackPlayer().transform;
+        healthUI = GetComponentInChildren<EnemyHealthUI>();
+        OnHealthChanged?.Invoke(currentHealth, maxHealth);
     }
 
     void Start()
@@ -74,6 +79,7 @@ public class Range_Enemy : MonoBehaviour
                 player = playerObject.transform;
             }
         }
+        OnHealthChanged?.Invoke(currentHealth, maxHealth);
     }
 
     void Update()
@@ -84,9 +90,13 @@ public class Range_Enemy : MonoBehaviour
             rb.linearVelocity = new Vector2(0, rb.linearVelocity.y); // Stop horizontal movement.
             return;
         }
-
+        if (healthUI != null)
+        {
+            healthUI.gameObject.SetActive(!(maxHealth == currentHealth));
+        }
         // The core AI decision-making loop.
         DecideAction();
+        TakeDamage(1);  
     }
 
     void FixedUpdate()
@@ -230,7 +240,7 @@ public class Range_Enemy : MonoBehaviour
 
         currentHealth -= damage;
         animator.SetTrigger("Hit");
-
+        OnHealthChanged(currentHealth, maxHealth);
         if (currentHealth <= 0)
         {
             Die();
@@ -275,4 +285,7 @@ public class Range_Enemy : MonoBehaviour
             Gizmos.DrawLine(obstacleCheckPoint.position, obstacleCheckPoint.position + rayDirection);
         }
     }
+
+    public int GetMaxHealth() => maxHealth;
+    public int GetHealth() => currentHealth;
 }
