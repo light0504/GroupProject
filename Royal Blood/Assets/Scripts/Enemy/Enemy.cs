@@ -166,11 +166,15 @@ public class Enemy : MonoBehaviour
         // If the player was detected...
         if (hitPlayer != null)
         {
+            Debug.Log("Player detected in attack range!" );
             // ...get their controller script and call TakeDamage.
-            PlayerMovement player = hitPlayer.GetComponent<PlayerMovement>();
+            GameObject playerGO = GameObject.FindGameObjectWithTag("Player");
+            PlayerHealth player = playerGO.GetComponent<PlayerHealth>();
+            Debug. Log("Player found: " + player);
             if (player != null)
             {
-                player.GetComponentInChildren<PlayerHealth>().TakeDamage(attackDamage);
+                Debug.Log("Enemy attacking player!");
+                player.TakeDamage(attackDamage);
             }
         }
     }
@@ -192,7 +196,8 @@ public class Enemy : MonoBehaviour
         if (isDead) return;
         currentHealth -= damage;
         animator.SetTrigger("Hit");
-        OnHealthChanged(currentHealth, maxHealth);
+        Debug.Log(gameObject.name + " took " + damage + " damage! Current health: " + currentHealth);
+        OnHealthChanged?.Invoke(currentHealth, maxHealth);
         if (currentHealth <= 0) Die();
     }
     void Die()
@@ -213,6 +218,7 @@ public class Enemy : MonoBehaviour
         }
 
         // 3. REMOVE the Destroy(gameObject, 2f); line from here.
+        OnDeathAnimationFinished();
     }
 
     public void OnDeathAnimationFinished()

@@ -236,14 +236,11 @@ public class Range_Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         if (isDead) return;
-
         currentHealth -= damage;
         animator.SetTrigger("Hit");
-        OnHealthChanged(currentHealth, maxHealth);
-        if (currentHealth <= 0)
-        {
-            Die();
-        }
+        Debug.Log(gameObject.name + " took " + damage + " damage! Current health: " + currentHealth);
+        OnHealthChanged?.Invoke(currentHealth, maxHealth);
+        if (currentHealth <= 0) Die();
     }
 
     void Die()
@@ -264,6 +261,7 @@ public class Range_Enemy : MonoBehaviour
         }
 
         // 3. REMOVE the Destroy(gameObject, 2f); line from here.
+        OnDeathAnimationFinished();
     }
 
     public void OnDeathAnimationFinished()
