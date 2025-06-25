@@ -96,7 +96,6 @@ public class Range_Enemy : MonoBehaviour
         }
         // The core AI decision-making loop.
         DecideAction();
-        TakeDamage(1);  
     }
 
     void FixedUpdate()
