@@ -45,7 +45,7 @@ public class PlayerHealth : MonoBehaviour
         {
             return;
         }
-
+        Debug.Log("Player takes damage: " + damage);
         currentHealth -= damage;
         animator.SetTrigger("TakeHit"); // Play the player's "get hit" animation.
         OnHealthChanged(currentHealth, maxHealth);
@@ -67,9 +67,8 @@ public class PlayerHealth : MonoBehaviour
         isDead = true;
         Debug.Log("Player has died!");
         animator.SetBool("isDeath", true);
-
         // Vô hiệu hóa điều khiển và vật lý TẠM THỜI
-        playerMovement.enabled = false;
+        //playerMovement.enabled = false;
         rb.linearVelocity = Vector2.zero;
         rb.isKinematic = true; // Ngăn các lực khác tác động
         playerCollider.enabled = false;
