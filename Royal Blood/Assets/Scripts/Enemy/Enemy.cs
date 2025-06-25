@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Enemy : MonoBehaviour
 {
@@ -6,6 +8,7 @@ public class Enemy : MonoBehaviour
     public Transform player;
     private Animator animator;
     private Rigidbody2D rb;
+    private EnemyHealthUI healthUI;
 
     [Header("AI Settings")]
     public float moveSpeed = 2f;
@@ -37,12 +40,14 @@ public class Enemy : MonoBehaviour
     private bool isDead = false;
     private bool isGrounded; // To store the ground status.
 
+    public event Action<int, int> OnHealthChanged;
     void Awake()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>(); // Corrected from previous error.
         currentHealth = maxHealth;
         player = AutoTrackPlayer.TrackPlayer().transform;
+        healthUI = GetComponentInChildren<EnemyHealthUI>();
     }
 
     void Start()
@@ -51,6 +56,7 @@ public class Enemy : MonoBehaviour
         {
             player = GameObject.FindGameObjectWithTag("Player")?.transform;
         }
+        OnHealthChanged?.Invoke(currentHealth, maxHealth);
     }
 
     void Update()
@@ -77,6 +83,12 @@ public class Enemy : MonoBehaviour
         {
             IdleBehavior();
         }
+
+        if (healthUI != null)
+        {
+            healthUI.gameObject.SetActive(!(maxHealth == currentHealth));
+        }
+
 
         FlipTowardsPlayer();
     }
@@ -180,6 +192,7 @@ public class Enemy : MonoBehaviour
         if (isDead) return;
         currentHealth -= damage;
         animator.SetTrigger("Hit");
+        OnHealthChanged(currentHealth, maxHealth);
         if (currentHealth <= 0) Die();
     }
     void Die()
@@ -232,4 +245,6 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    public int GetMaxHealth() => maxHealth;
+    public int GetHealth() => currentHealth;
 }
