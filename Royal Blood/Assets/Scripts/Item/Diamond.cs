@@ -1,16 +1,9 @@
 using UnityEngine;
 
-public class Diamond : MonoBehaviour
+public class Diamond : BaseItem
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    protected override void OnCollected(GameObject playerObject)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        throw new System.NotImplementedException();
     }
 }

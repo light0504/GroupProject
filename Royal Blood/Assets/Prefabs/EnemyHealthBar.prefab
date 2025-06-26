@@ -194,7 +194,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5971567352920005880}
   m_Father: {fileID: 0}
@@ -281,7 +281,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthSlider: {fileID: 2259580429313590955}
   enemy: {fileID: 0}
-  rangeEnemy: {fileID: 0}
 --- !u!1 &5757077872485013678
 GameObject:
   m_ObjectHideFlags: 0

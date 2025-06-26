@@ -9,27 +9,16 @@ public class EnemyHealthUI : MonoBehaviour
 
     [Header("Target")]
     [Tooltip("Tham chiếu đến script PlayerHealth cần theo dõi. Sẽ tự tìm nếu để trống.")]
-    [SerializeField] private Enemy enemy;
-    [SerializeField] private Range_Enemy rangeEnemy;
+    [SerializeField] private BaseEnemy enemy;
 
     void Start()
     {
-        rangeEnemy = GetComponentInParent<Range_Enemy>();
-        if (rangeEnemy != null)
+        enemy = GetComponentInParent<BaseEnemy>();
+        if (enemy != null)
         {
-            rangeEnemy.OnHealthChanged += UpdateHealthUI;
-            UpdateHealthUI(rangeEnemy.GetHealth(), rangeEnemy.GetMaxHealth());
+            enemy.OnHealthChanged += UpdateHealthUI;
+            UpdateHealthUI(enemy.GetHealth(), enemy.GetMaxHealth());
         }
-        else
-        {
-            enemy = GetComponentInParent<Enemy>();
-            if (enemy != null)
-            {
-                enemy.OnHealthChanged += UpdateHealthUI;
-                UpdateHealthUI(enemy.GetHealth(), enemy.GetMaxHealth());
-            }
-        }
-
     }
 
     void OnDestroy()
@@ -37,10 +26,6 @@ public class EnemyHealthUI : MonoBehaviour
         if (enemy != null)
         {
             enemy.OnHealthChanged -= UpdateHealthUI;
-        }
-        if (rangeEnemy != null)
-        {
-            rangeEnemy.OnHealthChanged -= UpdateHealthUI;
         }
     }
 
