@@ -34,8 +34,10 @@ public class SceneDataManager : MonoBehaviour
 
     public bool CanMoveNextScene()
     {
-        var gameData = SaveSystem.LoadGame();
-        Debug.Log(diamondCollected >= diamondsRequired && keysCollected >= keysRequired);
+        if (IsUnlocked())
+        {
+            return true;
+        }
         return diamondCollected >= diamondsRequired && keysCollected >= keysRequired;
     }
 
@@ -60,7 +62,7 @@ public class SceneDataManager : MonoBehaviour
         {
             var gameData = SaveSystem.LoadGame();
             if (gameData == null) return;
-            SaveSystem.SaveGame(new GameData(gameData.lastSceneName, new Vector3(gameData.playerPosition[0], gameData.playerPosition[1]), gameData.playerCurrentHealth, gameData.playerMaxHealth, gameData.playerAttackPower, gameData.totalDiamondsCollected, nextScene, 0, 0));
+            SaveSystem.SaveGame(new GameData(gameData.lastSceneName, new Vector3(gameData.playerPosition[0], gameData.playerPosition[1]), gameData.playerCurrentHealth, gameData.playerMaxHealth, gameData.playerAttackPower, gameData.totalDiamondsCollected, currentSceneName, nextScene, 0, 0));
         }
         uIManager.UpdateCollectiblesUI();
     }
@@ -74,7 +76,7 @@ public class SceneDataManager : MonoBehaviour
         {
             var gameData = SaveSystem.LoadGame();
             if (gameData == null) return;
-            SaveSystem.SaveGame(new GameData(nextScene, new Vector3(gameData.playerPosition[0], gameData.playerPosition[1]), gameData.playerCurrentHealth, gameData.playerMaxHealth, gameData.playerAttackPower, gameData.totalDiamondsCollected, nextScene, 0, 0));
+            SaveSystem.SaveGame(new GameData(nextScene, new Vector3(gameData.playerPosition[0], gameData.playerPosition[1]), gameData.playerCurrentHealth, gameData.playerMaxHealth, gameData.playerAttackPower, gameData.totalDiamondsCollected, currentSceneName, nextScene, 0, 0));
         }
 
         uIManager.UpdateCollectiblesUI();

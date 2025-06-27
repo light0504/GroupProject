@@ -105,6 +105,7 @@ public class PlayerState : MonoBehaviour
             playerAttack.GetAttack(),
             itemPicker.GetTotalDiamonds(),
             gameData.lastSceneName,
+            gameData.nextScene,
             gameData.lastSceneDiamonds,
             gameData.lastSceneKey
         ));

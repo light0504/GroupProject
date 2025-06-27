@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 
 // Lớp abstract không thể được kéo thả trực tiếp vào GameObject.
@@ -14,8 +15,9 @@ public abstract class BaseEnemy : MonoBehaviour
     protected Rigidbody2D rb;
     protected EnemyHealthUI healthUI;
 
-
-    public float respawnDelay = 10f;
+    [Header("Base References")]
+    [SerializeField] private float respawnDelay = 10f;
+    [SerializeField] private bool canRespawn = true;
 
     // SECTION: Movement & Navigation (chung)
     [Header("Base Movement & Navigation")]
@@ -179,7 +181,16 @@ public abstract class BaseEnemy : MonoBehaviour
             rb.simulated = false;
         }
         HandleItemDrop();
-        StartCoroutine(RespawnRoutine());
+        if (canRespawn)
+        {
+            
+            StartCoroutine(RespawnRoutine());
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+        
     }
 
     // Được gọi bởi Animation Event ở cuối clip animation "Dead"

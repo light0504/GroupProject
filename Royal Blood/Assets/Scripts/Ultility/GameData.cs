@@ -9,6 +9,7 @@ public class GameData
     public int lastSceneKey;
 
     public List<string> unlockedScenes = new List<string>();
+    public string nextScene;
     public string lastSceneName;
     public float[] playerPosition;
     public int playerCurrentHealth;
@@ -16,11 +17,12 @@ public class GameData
     public int playerAttackPower;
     public int totalDiamondsCollected;
 
-    public GameData(string savedScene, Vector3 pPos, int currentHealth, int maxHealth, int attack, int totalDiamonds, string lastScene, int lastSceneDiamonds, int lastSceneKey)
+    public GameData(string savedScene, Vector3 pPos, int currentHealth, int maxHealth, int attack, int totalDiamonds, string lastSceneUnlocked, string nextScene, int nextSceneDiamonds, int nextSceneKey)
     {
-        unlockedScenes.Add(lastScene);
-        this.lastSceneDiamonds = lastSceneDiamonds;
-        this.lastSceneKey = lastSceneKey;
+        unlockedScenes.Add(lastSceneUnlocked);
+        this.nextScene = nextScene;
+        this.lastSceneDiamonds = nextSceneDiamonds;
+        this.lastSceneKey = nextSceneKey;
 
         lastSceneName = savedScene;
         playerPosition = new float[2] { pPos.x, pPos.y };
