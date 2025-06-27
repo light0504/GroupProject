@@ -3,6 +3,9 @@
 [RequireComponent(typeof(CircleCollider2D))]
 public class ItemPicker : MonoBehaviour
 {
+    public int totalDiamonds = 0;
+
+
     private void Awake()
     {
         // Đảm bảo collider này luôn là trigger
@@ -21,4 +24,7 @@ public class ItemPicker : MonoBehaviour
             }
         }
     }
+
+    public int GetTotalDiamonds() => totalDiamonds;
+    public void LootDiamonds() => totalDiamonds++;
 }

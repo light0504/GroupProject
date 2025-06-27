@@ -61,7 +61,7 @@ public class PlayerAttack : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!isActive) return;
+        if (other == null || !isActive) return;
 
         if (other.CompareTag("Enemy"))
         {

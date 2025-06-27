@@ -22,17 +22,18 @@ public class PlayerState : MonoBehaviour
     private Animator animator;
     private Rigidbody2D rb;
     private Collider2D playerCollider;
+   private ItemPicker itemPicker;
 
     void Awake()
     {
         if (Instance == null) { Instance = this; } else { Destroy(gameObject); return; }
-        // Lấy tất cả các component cần thiết một lần
         playerHealth = GetComponent<PlayerHealth>();
         playerAttack = GetComponent<PlayerAttack>();
-        playerMovement = GetComponent<PlayerMovement>(); // Đổi tên từ PlayerMovement
+        playerMovement = GetComponent<PlayerMovement>();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         playerCollider = GetComponent<Collider2D>();
+        itemPicker = GetComponent<ItemPicker>();
     }
 
     /// <summary>
@@ -95,11 +96,17 @@ public class PlayerState : MonoBehaviour
     /// </summary>
     public void TriggerSaveGame()
     {
+        var gameData = SaveSystem.LoadGame();
         SaveSystem.SaveGame(new GameData(
             SceneManager.GetActiveScene().name,
             transform.position,
-            new int[] { playerHealth.GetCurrentHealth(), playerHealth.GetMaxHealth() },
-            playerAttack.GetAttack()
+            playerHealth.GetCurrentHealth(),
+            playerHealth.GetMaxHealth(),
+            playerAttack.GetAttack(),
+            itemPicker.GetTotalDiamonds(),
+            gameData.lastSceneName,
+            gameData.lastSceneDiamonds,
+            gameData.lastSceneKey
         ));
     }
 
@@ -108,7 +115,7 @@ public class PlayerState : MonoBehaviour
     /// </summary>
     public void ApplyLoadedData(GameData data)
     {
-        playerHealth.SetHealthData(data.playerCurrentHealth);
+        playerHealth.SetHealthData(data.playerCurrentHealth, data.playerMaxHealth);
         playerAttack.SetAttackData(data.playerAttackPower);
     }
 }

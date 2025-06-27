@@ -100,10 +100,10 @@ public class PlayerHealth : MonoBehaviour
     /// <summary>
     /// Thiết lập máu của người chơi từ dữ liệu đã lưu.
     /// </summary>
-    public void SetHealthData(int[] loadedCurrentHealth)
+    public void SetHealthData(int currentTempHealth, int maxTempHealth)
     {
-        maxHealth = loadedCurrentHealth[1];
-        currentHealth = loadedCurrentHealth[0] > 0 ? loadedCurrentHealth[0] : maxHealth;
+        maxHealth = maxTempHealth;
+        currentHealth = currentTempHealth > 0 ? currentTempHealth : maxHealth;
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
     }
 }

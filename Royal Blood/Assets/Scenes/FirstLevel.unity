@@ -90389,7 +90389,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4701179026150971892, guid: 9dee9ea46428ca54a9311c4d82d70677, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6472834308291151690, guid: 9dee9ea46428ca54a9311c4d82d70677, type: 3}
       propertyPath: m_LocalPosition.x
@@ -91673,6 +91673,10 @@ PrefabInstance:
     - target: {fileID: 7640064053500739586, guid: 08259e4fa56adf546906934b2792edd9, type: 3}
       propertyPath: m_Name
       value: CheckPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996733896553343688, guid: 08259e4fa56adf546906934b2792edd9, type: 3}
+      propertyPath: checkpointName
+      value: StartPoint
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
