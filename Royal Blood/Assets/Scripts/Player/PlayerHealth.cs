@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Quản lý máu và các tương tác liên quan đến sát thương của người chơi.
@@ -45,13 +47,28 @@ public class PlayerHealth : MonoBehaviour
 
         currentHealth -= damage;
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
-
+        if (maxHealth <= 0)
+        {
+            isDead = true;
+            StartCoroutine(Delay(3f));
+            StartCoroutine(ReloadSceneAfterDelay(5f));
+        }
         if (currentHealth <= 0)
         {
             Die();
         }
     }
 
+    IEnumerator Delay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        notificationManager.PrintText("Bạn đã thất bại trên con đường tiêu diệt quỷ vương");
+    }
+    IEnumerator ReloadSceneAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene("Main menu");
+    }
     /// <summary>
     /// Bắt đầu quá trình chết bằng cách thông báo cho PlayerState.
     /// </summary>

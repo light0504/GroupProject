@@ -74,7 +74,7 @@ public class RangeEnemy : BaseEnemy
         rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
         animator.SetBool("isWalking", false);
 
-        if (Time.time >= nextAttackTime)
+        if (Time.time >= nextAttackTime && !player.GetComponent<PlayerHealth>().IsDead())
         {
             animator.SetTrigger("Attack");
             nextAttackTime = Time.time + 1f / attackRate;
@@ -93,6 +93,7 @@ public class RangeEnemy : BaseEnemy
             arrowScript.Launch(direction);
         }
     }
+    
 
     // Vẽ thêm các gizmo đặc thù
     protected override void OnDrawGizmosSelected()

@@ -50,8 +50,6 @@ public class PlayerAttack : MonoBehaviour
         // Tăng sát thương
         attackDamage += amount;
 
-        Debug.Log($"Tăng {amount} damage. Damage hiện tại: {attackDamage}");
-
         // Kiểm tra xem trình quản lý thông báo có tồn tại không
         if (notificationManager != null)
         {
@@ -65,20 +63,15 @@ public class PlayerAttack : MonoBehaviour
 
         if (other.CompareTag("Enemy"))
         {
-            Debug.Log("Hit enemy: " + other.name);
-
             //IDamageable damageable = other.GetComponent<IDamageable>();
             //if (damageable != null)
             //{
             //    damageable.TakeDamage(attackDamage);
             //}
             BaseEnemy enemy = other.GetComponentInParent<BaseEnemy>();
-            Debug.Log("Enemy component found: " + enemy);
             if (enemy != null)
             {
                 enemy.TakeDamage(attackDamage);
-                Debug.Log("Dealt " + attackDamage + " damage to " + other.name);
-                Debug.Log("Máu của enemy = " + enemy.GetHealth());
             }
         }
     }

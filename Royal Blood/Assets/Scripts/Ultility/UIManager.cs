@@ -38,16 +38,36 @@ public class UIManager : MonoBehaviour
         }
         else
         {
-            if (diamondsText != null)
+            Debug.Log(sceneDataManager.IsBossScene);
+            Debug.Log(sceneDataManager.isBossKilled);
+            if (sceneDataManager.IsBossScene)
             {
-                diamondsText.text = $"Diamonds: {SceneDataManager.Instance.GetCurrentDiamonds()}/{SceneDataManager.Instance.GetRequiredDiamonds()}";
+                if (!sceneDataManager.isBossKilled)
+                {
+                    if (diamondsText != null)
+                    {
+                        diamondsText.text = $"Defeat BOSS: 0/1";
+                    }
+                    if (keysText != null)
+                    {
+                        keysText.text = "";
+                    }
+                }
+            }
+            else
+            {
+                if (diamondsText != null)
+                {
+                    diamondsText.text = $"Diamonds: {SceneDataManager.Instance.GetCurrentDiamonds()}/{SceneDataManager.Instance.GetRequiredDiamonds()}";
+                }
+
+                if (keysText != null)
+                {
+                    keysText.text = $"Keys: {SceneDataManager.Instance.GetCurrentKeys()}/{SceneDataManager.Instance.GetRequiredKey()}";
+                }
             }
 
-            if (keysText != null)
-            {
-                keysText.text = $"Keys: {SceneDataManager.Instance.GetCurrentKeys()}/{SceneDataManager.Instance.GetRequiredKey()}";
-            }
         }
-        
+
     }
 }

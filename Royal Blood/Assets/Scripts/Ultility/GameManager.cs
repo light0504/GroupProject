@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -21,8 +22,8 @@ public class GameManager : MonoBehaviour
             PlayerTeleporter.Instance.TargetEntryPointNameOnNextSceneLoad = null;
         }
         PlayerTeleporter.StartingCheckpointName = startingCheckpointName;
-
         SaveSystem.DeleteSaveFile();
+        SceneManager.LoadScene(firstSceneName);
     }
 
     public void ContinueGame()
@@ -31,6 +32,7 @@ public class GameManager : MonoBehaviour
         if (data != null)
         {
             PlayerTeleporter.dataToLoad = data;
+            SceneManager.LoadScene(data.lastSceneName);
         }
     }
 }

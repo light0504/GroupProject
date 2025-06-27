@@ -60,7 +60,7 @@ public class MeleeEnemy : BaseEnemy
         animator.SetBool("isWalking", false);
         rb.linearVelocity = Vector2.zero;
 
-        if (Time.time >= nextAttackTime)
+        if (Time.time >= nextAttackTime && !player.GetComponent<PlayerHealth>().IsDead())
         {
             animator.SetTrigger("Attack");
             nextAttackTime = Time.time + 1f / attackRate;
@@ -76,14 +76,11 @@ public class MeleeEnemy : BaseEnemy
         // If the player was detected...
         if (hitPlayer != null)
         {
-            Debug.Log("Player detected in attack range!");
             // ...get their controller script and call TakeDamage.
             GameObject playerGO = GameObject.FindGameObjectWithTag("Player");
             PlayerHealth player = playerGO.GetComponent<PlayerHealth>();
-            Debug.Log("Player found: " + player);
             if (player != null)
             {
-                Debug.Log("Enemy attacking player!");
                 player.TakeDamage(attackDamage);
             }
         }

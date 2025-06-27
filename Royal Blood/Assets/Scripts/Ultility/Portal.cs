@@ -16,6 +16,7 @@ public class Portal : MonoBehaviour
     [Header("Cấu hình Chuyển Scene")]
     public SceneLoader sceneLoader;
     public int sceneIndexToLoad;
+    public bool isNextSceneGate;
 
     [Header("Cấu hình Dịch Chuyển Player")]
     [Tooltip("Tên của EntryPoint trong scene đích mà người chơi sẽ đến. Phải khớp chính xác!")]
@@ -107,7 +108,23 @@ public class Portal : MonoBehaviour
     {
         if (other.CompareTag("Player") && other.IsTouching(teleportCollider))
         {
-            HandleTeleport();
+            if (isNextSceneGate)
+            {
+                if (SceneDataManager.Instance.CanMoveNextScene())
+                {
+                    HandleTeleport();
+                }
+                else
+                {
+                    GameObject player = AutoTrackPlayer.TrackPlayer();
+                    player.transform.position = entryPoint.transform.position;
+                    player.GetComponent<Noti>().PrintText("Cannot move, not unlocked this scene");
+                }
+            }
+            else
+            {
+                HandleTeleport();
+            }
         }
     }
 

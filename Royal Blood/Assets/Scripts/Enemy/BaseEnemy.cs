@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 
 // Lớp abstract không thể được kéo thả trực tiếp vào GameObject.
@@ -9,13 +10,12 @@ public abstract class BaseEnemy : MonoBehaviour
 {
     // SECTION: References & Components (chung)
     [Header("Base References")]
-    public Transform player;
     protected Animator animator;
     protected Rigidbody2D rb;
     protected EnemyHealthUI healthUI;
 
-
-    public float respawnDelay = 10f;
+    [Header("Base References")]
+    [SerializeField] private float respawnDelay = 10f;
 
     // SECTION: Movement & Navigation (chung)
     [Header("Base Movement & Navigation")]
@@ -48,6 +48,8 @@ public abstract class BaseEnemy : MonoBehaviour
     protected bool isDead = false;
     protected bool isGrounded;
 
+    protected Transform player;
+    public bool canRespawn = true;
     public event Action<int, int> OnHealthChanged;
 
     // --- UNITY LIFECYCLE METHODS ---
@@ -167,7 +169,6 @@ public abstract class BaseEnemy : MonoBehaviour
     #region DieAndRespawn
     protected void Die()
     {
-        Debug.Log(gameObject.name + " died!");
         isDead = true;
         animator.SetTrigger("Dead"); // Kích hoạt animation chết
 
@@ -179,7 +180,16 @@ public abstract class BaseEnemy : MonoBehaviour
             rb.simulated = false;
         }
         HandleItemDrop();
-        StartCoroutine(RespawnRoutine());
+        if (canRespawn)
+        {
+            
+            StartCoroutine(RespawnRoutine());
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+        
     }
 
     // Được gọi bởi Animation Event ở cuối clip animation "Dead"
@@ -196,7 +206,6 @@ public abstract class BaseEnemy : MonoBehaviour
     }
     private void Respawn()
     {
-        Debug.Log(gameObject.name + " is respawning!");
 
         // 1. Di chuyển kẻ thù về vị trí ban đầu
         transform.position = CurrentCheckpointPosition;
