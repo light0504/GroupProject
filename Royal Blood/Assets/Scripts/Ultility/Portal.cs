@@ -110,7 +110,7 @@ public class Portal : MonoBehaviour
         {
             if (isNextSceneGate)
             {
-                if (SceneDataManager.Instance.IsUnlocked())
+                if (SceneDataManager.Instance.CanMoveNextScene())
                 {
                     HandleTeleport();
                 }
@@ -118,7 +118,6 @@ public class Portal : MonoBehaviour
                 {
                     GameObject player = AutoTrackPlayer.TrackPlayer();
                     player.transform.position = entryPoint.transform.position;
-                    Debug.Log(player.transform.position);
                     player.GetComponent<Noti>().PrintText("Cannot move, not unlocked this scene");
                 }
             }

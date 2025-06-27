@@ -10,14 +10,12 @@ public abstract class BaseEnemy : MonoBehaviour
 {
     // SECTION: References & Components (chung)
     [Header("Base References")]
-    public Transform player;
     protected Animator animator;
     protected Rigidbody2D rb;
     protected EnemyHealthUI healthUI;
 
     [Header("Base References")]
     [SerializeField] private float respawnDelay = 10f;
-    [SerializeField] private bool canRespawn = true;
 
     // SECTION: Movement & Navigation (chung)
     [Header("Base Movement & Navigation")]
@@ -50,6 +48,8 @@ public abstract class BaseEnemy : MonoBehaviour
     protected bool isDead = false;
     protected bool isGrounded;
 
+    protected Transform player;
+    public bool canRespawn = true;
     public event Action<int, int> OnHealthChanged;
 
     // --- UNITY LIFECYCLE METHODS ---
@@ -169,7 +169,6 @@ public abstract class BaseEnemy : MonoBehaviour
     #region DieAndRespawn
     protected void Die()
     {
-        Debug.Log(gameObject.name + " died!");
         isDead = true;
         animator.SetTrigger("Dead"); // Kích hoạt animation chết
 
@@ -207,7 +206,6 @@ public abstract class BaseEnemy : MonoBehaviour
     }
     private void Respawn()
     {
-        Debug.Log(gameObject.name + " is respawning!");
 
         // 1. Di chuyển kẻ thù về vị trí ban đầu
         transform.position = CurrentCheckpointPosition;

@@ -137,11 +137,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6016692414069214898, guid: c8397e62b9f26bd43b067e3f08bc4c5a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.368741
+      value: 16.07
       objectReference: {fileID: 0}
     - target: {fileID: 6016692414069214898, guid: c8397e62b9f26bd43b067e3f08bc4c5a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -25.595585
+      value: -26.35
       objectReference: {fileID: 0}
     - target: {fileID: 6016692414069214898, guid: c8397e62b9f26bd43b067e3f08bc4c5a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -175,10 +175,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6314337401110552022, guid: c8397e62b9f26bd43b067e3f08bc4c5a, type: 3}
+      propertyPath: droppableItems.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6314337401110552022, guid: c8397e62b9f26bd43b067e3f08bc4c5a, type: 3}
+      propertyPath: 'droppableItems.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8807212435397764129, guid: 7008b8b1f5f242241b4eb55cab85b20f, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1182881980982991167, guid: c8397e62b9f26bd43b067e3f08bc4c5a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 81185365}
   m_SourcePrefab: {fileID: 100100000, guid: c8397e62b9f26bd43b067e3f08bc4c5a, type: 3}
 --- !u!1 &69101711
 GameObject:
@@ -313,6 +324,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1883773475}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &81185357 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1182881980982991167, guid: c8397e62b9f26bd43b067e3f08bc4c5a, type: 3}
+  m_PrefabInstance: {fileID: 28109942}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &81185365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81185357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91031dad2f9bd494d8bac0160569dcfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &222717565
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -331,11 +359,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6016692414069214898, guid: c8397e62b9f26bd43b067e3f08bc4c5a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.5
+      value: 5.25
       objectReference: {fileID: 0}
     - target: {fileID: 6016692414069214898, guid: c8397e62b9f26bd43b067e3f08bc4c5a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -26.27
+      value: -26.6
       objectReference: {fileID: 0}
     - target: {fileID: 6016692414069214898, guid: c8397e62b9f26bd43b067e3f08bc4c5a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12249,6 +12277,14 @@ PrefabInstance:
       propertyPath: nextScene
       value: The Bridge
       objectReference: {fileID: 0}
+    - target: {fileID: 8737338350004170348, guid: 0bef93e1407246b41915857252768c27, type: 3}
+      propertyPath: keysRequired
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8737338350004170348, guid: 0bef93e1407246b41915857252768c27, type: 3}
+      propertyPath: diamondsRequired
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12264,11 +12300,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1743058170058674307, guid: 08259e4fa56adf546906934b2792edd9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.12
+      value: 3.74
       objectReference: {fileID: 0}
     - target: {fileID: 1743058170058674307, guid: 08259e4fa56adf546906934b2792edd9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.82
+      value: 10.45
       objectReference: {fileID: 0}
     - target: {fileID: 1743058170058674307, guid: 08259e4fa56adf546906934b2792edd9, type: 3}
       propertyPath: m_LocalPosition.z

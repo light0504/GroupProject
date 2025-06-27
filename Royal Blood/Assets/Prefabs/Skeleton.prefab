@@ -251,6 +251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   respawnDelay: 10
+  canRespawn: 1
   moveSpeed: 2
   jumpForce: 6
   groundCheckPoint: {fileID: 1717605529273660422}
@@ -266,7 +267,6 @@ MonoBehaviour:
   - {fileID: 1863028111289472244, guid: 3271adb9799db72468ed8e6c1cbb1507, type: 3}
   - {fileID: 5800685326327270670, guid: 7898f8262ef5abc4c8f0bc54fafed8b4, type: 3}
   - {fileID: 6203359564599658934, guid: 23bc867dd88cf394bb0ed74192bca3bf, type: 3}
-  - {fileID: 8807212435397764129, guid: 7008b8b1f5f242241b4eb55cab85b20f, type: 3}
   detectionRange: 5
   attackRange: 2
   attackPoint: {fileID: 702702703404029339}

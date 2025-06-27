@@ -31,7 +31,6 @@ public class EnemyHealthUI : MonoBehaviour
 
     private void UpdateHealthUI(int currentHp, int maxHp)
     {
-        Debug.Log("Updated " + currentHp + " " + maxHp);
         if (healthSlider != null)
         {
             healthSlider.maxValue = maxHp;
