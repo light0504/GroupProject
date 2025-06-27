@@ -193,7 +193,7 @@ public abstract class BaseEnemy : MonoBehaviour
     }
 
     // Được gọi bởi Animation Event ở cuối clip animation "Dead"
-    public void OnDeathAnimationFinished()
+    public virtual void OnDeathAnimationFinished()
     {
         GetComponent<SpriteRenderer>().enabled = false;
     }
