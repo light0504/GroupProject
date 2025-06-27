@@ -23,7 +23,6 @@ public class GameManager : MonoBehaviour
         PlayerTeleporter.StartingCheckpointName = startingCheckpointName;
 
         SaveSystem.DeleteSaveFile();
-        sceneLoader.LoadSceneByName(firstSceneName);
     }
 
     public void ContinueGame()
@@ -32,7 +31,6 @@ public class GameManager : MonoBehaviour
         if (data != null)
         {
             PlayerTeleporter.dataToLoad = data;
-            sceneLoader.LoadSceneByName(data.lastSceneName);
         }
     }
 }

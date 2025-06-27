@@ -7,6 +7,7 @@ public class PlayerTeleporter : MonoBehaviour
     public static PlayerTeleporter Instance { get; private set; }
     public static GameData dataToLoad = null;
     public string TargetEntryPointNameOnNextSceneLoad { get; set; }
+
     public static string StartingCheckpointName = null;
 
     private bool hasBeenPositionedThisScene = false;
@@ -52,6 +53,7 @@ public class PlayerTeleporter : MonoBehaviour
         else if (!string.IsNullOrEmpty(StartingCheckpointName))
         {
             Debug.Log(2);
+            Debug.Log($"Starting checkpoint {StartingCheckpointName}");
             MoveToStartingCheckpoint();
         }
         else if (!string.IsNullOrEmpty(TargetEntryPointNameOnNextSceneLoad))
