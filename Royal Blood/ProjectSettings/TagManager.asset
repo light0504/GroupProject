@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - Portal
+  - Enemy
+  - Pickable
   layers:
   - Default
   - TransparentFX
@@ -13,9 +15,9 @@ TagManager:
   - Water
   - UI
   - BackGround
+  - Player
   - Enemy
   - NoColider
-  - 
   - 
   - 
   - 
@@ -56,6 +58,9 @@ TagManager:
     locked: 0
   - name: Items
     uniqueID: 3846251667
+    locked: 0
+  - name: Enemy
+    uniqueID: 244781821
     locked: 0
   - name: Player
     uniqueID: 871789637

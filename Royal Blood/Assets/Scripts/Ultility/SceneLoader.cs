@@ -1,83 +1,55 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement; // Quan trọng: Namespace để quản lý Scene
+using UnityEngine.SceneManagement;
 
 #if UNITY_EDITOR
-using UnityEditor; // Quan trọng: Namespace cho SceneAsset, chỉ dùng trong Editor
+using UnityEditor;
 #endif
 
-public class SceneLoader: MonoBehaviour
+public class SceneLoader : MonoBehaviour
 {
-    // Mảng các Scene Asset để kéo thả trong Inspector (chỉ hoạt động trong Editor)
 #if UNITY_EDITOR
-    [Tooltip("Kéo các Scene Asset bạn muốn có thể load vào đây. Tên Scene sẽ tự động được cập nhật cho mảng 'Scene Names To Load'.")]
+    [Tooltip("Kéo các Scene Asset vào đây. Tên scene sẽ tự động được điền vào mảng bên dưới.")]
     public SceneAsset[] sceneAssetsToLoad;
 #endif
 
-    [Tooltip("Mảng tên các Scene có thể load. Được tự động điền từ 'Scene Assets To Load' hoặc có thể nhập thủ công.")]
+    [Tooltip("Danh sách tên các scene có thể được tải. Tự động cập nhật từ mảng Scene Assets ở trên.")]
     public string[] sceneNamesToLoad;
 
-    public void LoadConfiguredSceneFromArray(int arrayIndex)
+    public void LoadConfiguredSceneFromArray(int index)
     {
-        if (sceneNamesToLoad == null || arrayIndex < 0 || arrayIndex >= sceneNamesToLoad.Length)
-        {
-            return;
-        }
-
-        string sceneToLoad = sceneNamesToLoad[arrayIndex];
-        if (string.IsNullOrEmpty(sceneToLoad))
-        {
-            return;
-        }
-
-        SceneManager.LoadScene(sceneToLoad);
+        if (sceneNamesToLoad == null || index < 0 || index >= sceneNamesToLoad.Length || string.IsNullOrEmpty(sceneNamesToLoad[index])) return;
+        SceneManager.LoadScene(sceneNamesToLoad[index]);
     }
 
-    // Hàm để thoát game
+    public void LoadSceneByName(string sceneName)
+    {
+        if (string.IsNullOrEmpty(sceneName)) return;
+        SceneManager.LoadScene(sceneName);
+    }
+
+
+    /// <summary>
+    /// Thoát khỏi trò chơi.
+    /// </summary>
     public void QuitGame()
     {
-        Debug.Log("Đang thoát game...");
+        Debug.Log("SceneLoader: Đang thoát game...");
         Application.Quit();
 
 #if UNITY_EDITOR
-        // Dòng này để dừng Play Mode trong Editor khi nhấn Quit (không ảnh hưởng đến build)
         UnityEditor.EditorApplication.isPlaying = false;
 #endif
     }
 
-    // OnValidate được gọi trong Editor khi script được load hoặc một giá trị thay đổi trong Inspector.
-    // Chúng ta dùng nó để tự động cập nhật mảng sceneNamesToLoad khi mảng sceneAssetsToLoad thay đổi.
 #if UNITY_EDITOR
     void OnValidate()
     {
         if (sceneAssetsToLoad != null)
         {
-            // Đảm bảo mảng sceneNamesToLoad có cùng kích thước với sceneAssetsToLoad
-            if (sceneNamesToLoad == null || sceneNamesToLoad.Length != sceneAssetsToLoad.Length)
-            {
-                sceneNamesToLoad = new string[sceneAssetsToLoad.Length];
-            }
-
-            // Cập nhật tên trong sceneNamesToLoad từ các SceneAsset
+            sceneNamesToLoad = new string[sceneAssetsToLoad.Length];
             for (int i = 0; i < sceneAssetsToLoad.Length; i++)
             {
-                if (sceneAssetsToLoad[i] != null)
-                {
-                    sceneNamesToLoad[i] = sceneAssetsToLoad[i].name;
-                }
-                else
-                {
-                    if (sceneNamesToLoad.Length > i) // Đảm bảo không vượt quá giới hạn nếu mảng vừa được tạo
-                    {
-                        sceneNamesToLoad[i] = null; // Hoặc string.Empty
-                    }
-                }
-            }
-        }
-        else
-        {
-            if (sceneNamesToLoad != null && sceneNamesToLoad.Length > 0)
-            {
-                sceneNamesToLoad = new string[0];
+                sceneNamesToLoad[i] = (sceneAssetsToLoad[i] != null) ? sceneAssetsToLoad[i].name : "";
             }
         }
     }
