@@ -21,23 +21,17 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheckPoint;
     public float groundCheckRadius = 0.2f;
     public LayerMask whatIsGround;
-    private bool isGrounded;
+    private bool isGrounded = false;
 
     [Header("Dashing")]
     public float dashSpeed = 20f;
     public float dashDuration = 0.2f;
     public float dashCooldown = 1f;
 
-    private bool isDashing;
+    private bool isDashing = false;
     private float dashCooldownTimer;
 
-    [Header("Attacking")]
-    public Transform attackPoint;
-    public float attackRange = 0.5f;
-    public int attackDamage = 40;
-    public LayerMask enemyLayers;
-
-    private bool isAttacking;
+    private bool isAttacking = false;
 
     void Awake()
     {
@@ -137,37 +131,12 @@ public class PlayerMovement : MonoBehaviour
         animator.SetTrigger("Attack");
     }
 
-    public void TakeHit()
-    {
-        animator.SetTrigger("TakeHit");
-    }
-
-    public void Die()
-    {
-        animator.SetBool("isDeath", true);
-    }
-
     private void FlipCharacter()
     {
         if ((isFacingRight && moveInput < 0) || (!isFacingRight && moveInput > 0))
         {
             isFacingRight = !isFacingRight;
             transform.Rotate(0f, 180f, 0f);
-        }
-    }
-
-    public void DealDamageToEnemies()
-    {
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
-
-        foreach (Collider2D enemy in hitEnemies)
-        {
-            Debug.Log("We hit " + enemy.name);
-            // EnemyHealth enemyHealth = enemy.GetComponent<EnemyHealth>();
-            // if (enemyHealth != null)
-            // {
-            //     enemyHealth.TakeDamage(attackDamage);
-            // }
         }
     }
 
@@ -184,4 +153,6 @@ public class PlayerMovement : MonoBehaviour
             Gizmos.DrawWireSphere(groundCheckPoint.position, groundCheckRadius);
         }
     }
+
+    public bool GetDash() => isDashing;
 }

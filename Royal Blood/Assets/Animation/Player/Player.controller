@@ -215,7 +215,7 @@ AnimatorStateTransition:
   m_TransitionOffset: 0
   m_ExitTime: 0.75
   m_HasExitTime: 0
-  m_HasFixedDuration: 0
+  m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
@@ -553,7 +553,7 @@ AnimatorStateMachine:
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 200, y: 90, z: 0}
+  m_AnyStatePosition: {x: 210, y: 100, z: 0}
   m_EntryPosition: {x: -30, y: 250, z: 0}
   m_ExitPosition: {x: 700, y: 110, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
