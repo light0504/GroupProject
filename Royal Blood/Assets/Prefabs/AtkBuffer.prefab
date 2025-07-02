@@ -141,6 +141,7 @@ MonoBehaviour:
   itemPrefab: {fileID: 8844607198849399740}
   dropChance: 0.3
   pullSpeed: 8
+  atk: 2
 --- !u!95 &7393347713221238943
 Animator:
   serializedVersion: 7
