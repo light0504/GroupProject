@@ -38,16 +38,21 @@ public class SceneDataManager : MonoBehaviour
         //Nếu không, coi như đã hoàn thành nhiệm vụ.
         if (gameData != null)
         {
-            if (gameData.nextScene == currentSceneName)
-            {
-                diamondCollected = gameData.lastSceneDiamonds;
-                keysCollected = gameData.lastSceneKey;
-            }
-            else
+            if (gameData.unlockedScenes.Contains(currentSceneName))
             {
                 diamondCollected = diamondsRequired;
                 keysCollected = keysRequired;
                 isBossKilled = true;
+                
+            }
+            else
+            {
+                diamondCollected = gameData.lastSceneDiamonds;
+                keysCollected = gameData.lastSceneKey;
+                currentSceneData.collectedDiamonds = gameData.lastSceneDiamonds;
+                currentSceneData.collectedKeys = gameData.lastSceneKey;
+                currentSceneData.lastSceneUnlocked = null;
+                currentSceneData.nextScene = gameData.nextScene;
             }
         }
         uIManager.UpdateCollectiblesUI();
@@ -78,10 +83,6 @@ public class SceneDataManager : MonoBehaviour
     public bool IsUnlocked()
     {
         var gameData = SaveSystem.LoadGame();
-        if(gameData == null)
-        {
-            return currentSceneData.lastSceneUnlocked == currentSceneName;
-        }
         return gameData != null && gameData.unlockedScenes.Contains(currentSceneName);
     }
     
@@ -99,10 +100,13 @@ public class SceneDataManager : MonoBehaviour
 
     public void CollectKey()
     {
-        keysCollected++;
-        currentSceneData.collectedKeys = keysCollected;
-        SaveTemporary();
-        uIManager.UpdateCollectiblesUI();
+        if (!IsUnlocked())
+        {
+            keysCollected++;
+            currentSceneData.collectedKeys = keysCollected;
+            SaveTemporary();
+            uIManager.UpdateCollectiblesUI();
+        }
     }
 
     private void SaveTemporary()

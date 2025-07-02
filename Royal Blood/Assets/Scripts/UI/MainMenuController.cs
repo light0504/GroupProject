@@ -11,7 +11,7 @@ public class MainMenuController : MonoBehaviour
     [SerializeField] private SceneLoader sceneLoader;
 
     [Header("New Game Configuration")]
-    [SerializeField] private string firstLevelSceneName = "FirstLevel";
+    [SerializeField] private string firstLevelSceneName = "The Castle";
     [SerializeField] private string startingCheckpointName = "StartPoint";
 
     void Start()
