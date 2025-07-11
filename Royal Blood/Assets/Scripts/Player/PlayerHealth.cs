@@ -110,6 +110,14 @@ public class PlayerHealth : MonoBehaviour
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
     }
 
+    public void HealPercent(float percent)
+    {
+        if (percent <= 0) return;
+        currentHealth += (int)(maxHealth * percent);
+        if (currentHealth > maxHealth)
+            currentHealth = maxHealth;
+    }
+
     public int GetCurrentHealth() => currentHealth;
 
     public int GetMaxHealth() => maxHealth; 
