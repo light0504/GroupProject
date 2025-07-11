@@ -47,6 +47,7 @@ public class PlayerState : MonoBehaviour
         playerAttack.IncreaseAttack(-2);
         playerHealth.maxHealth -= 20;
         StartCoroutine(RespawnRoutine());
+        playerHealth.CheckLose();
     }
 
     private IEnumerator RespawnRoutine()
