@@ -312,7 +312,10 @@ GameObject:
   - component: {fileID: 1117730359}
   - component: {fileID: 1117730358}
   - component: {fileID: 1117730357}
+<<<<<<< HEAD
+=======
   - component: {fileID: 1117730361}
+>>>>>>> 8778dc4ee595fb80b263b39c5dc7d355b7c45772
   - component: {fileID: 1117730360}
   m_Layer: 0
   m_Name: Main Camera
@@ -395,6 +398,9 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
+--- !u!114 &1117730360
+=======
 --- !u!328 &1117730360
 VideoPlayer:
   m_ObjectHideFlags: 0
@@ -432,6 +438,7 @@ VideoPlayer:
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
 --- !u!114 &1117730361
+>>>>>>> 8778dc4ee595fb80b263b39c5dc7d355b7c45772
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -475,6 +482,8 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+<<<<<<< HEAD
+=======
 --- !u!1 &1370041784
 GameObject:
   m_ObjectHideFlags: 0
@@ -1011,6 +1020,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+>>>>>>> 8778dc4ee595fb80b263b39c5dc7d355b7c45772
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
