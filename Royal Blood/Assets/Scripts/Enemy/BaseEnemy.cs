@@ -240,6 +240,7 @@ public abstract class BaseEnemy : MonoBehaviour
 
         foreach (var dropItem in droppableItems)
         {
+            if(dropItem == null || dropItem.itemPrefab == null) continue;
 
             if (UnityEngine.Random.Range(0f, 1f) <= dropItem.dropChance)
             {

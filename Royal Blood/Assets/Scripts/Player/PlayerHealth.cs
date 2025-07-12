@@ -33,6 +33,10 @@ public class PlayerHealth : MonoBehaviour
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
     }
 
+    private void Update()
+    {
+        
+    }
     /// <summary>
     /// Xử lý việc người chơi nhận sát thương.
     /// </summary>
@@ -47,18 +51,21 @@ public class PlayerHealth : MonoBehaviour
 
         currentHealth -= damage;
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
-        if (maxHealth <= 0)
-        {
-            isDead = true;
-            StartCoroutine(Delay(3f));
-            StartCoroutine(ReloadSceneAfterDelay(5f));
-        }
         if (currentHealth <= 0)
         {
             Die();
         }
     }
 
+    public void CheckLose()
+    {
+        if (maxHealth <= 0)
+        {
+            isDead = true;
+            StartCoroutine(Delay(1f));
+            StartCoroutine(ReloadSceneAfterDelay(5f));
+        }
+    }
     IEnumerator Delay(float delay)
     {
         yield return new WaitForSeconds(delay);
@@ -108,6 +115,14 @@ public class PlayerHealth : MonoBehaviour
             notificationManager.PrintText($"Tăng +{amount} Máu!");
         }
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
+    }
+
+    public void HealPercent(float percent)
+    {
+        if (percent <= 0) return;
+        currentHealth += (int)(maxHealth * percent);
+        if (currentHealth > maxHealth)
+            currentHealth = maxHealth;
     }
 
     public int GetCurrentHealth() => currentHealth;

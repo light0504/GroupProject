@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 510e73beea7f5db419cdca3db08d8593, type: 3}
-  m_Color: {r: 0.10617697, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.04495008, g: 0.4245283, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -139,8 +139,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 8844607198849399740}
-  dropChance: 0.5
+  dropChance: 0.4
   pullSpeed: 8
+  heal: 10
 --- !u!95 &6114753231322362039
 Animator:
   serializedVersion: 7

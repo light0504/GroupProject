@@ -193,9 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c35df15d74dece41976487470f0c26f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   respawnDelay: 10
-  canRespawn: 1
   moveSpeed: 2
   jumpForce: 6
   groundCheckPoint: {fileID: 5163470895245032033}
@@ -206,11 +204,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   attackRate: 1
-  maxHealth: 100
+  maxHealth: 600
   droppableItems:
   - {fileID: 5800685326327270670, guid: 7898f8262ef5abc4c8f0bc54fafed8b4, type: 3}
   - {fileID: 1863028111289472244, guid: 3271adb9799db72468ed8e6c1cbb1507, type: 3}
   - {fileID: 6203359564599658934, guid: 23bc867dd88cf394bb0ed74192bca3bf, type: 3}
+  - {fileID: 7658835507804595861, guid: 36f6f939a88ab704cba36161404cef4d, type: 3}
+  canRespawn: 1
   detectionRange: 5
   attackRange: 1.5
   attackPoint: {fileID: 6154854489950282162}
