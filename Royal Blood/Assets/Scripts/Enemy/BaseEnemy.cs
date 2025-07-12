@@ -193,7 +193,7 @@ public abstract class BaseEnemy : MonoBehaviour
     }
 
     // Được gọi bởi Animation Event ở cuối clip animation "Dead"
-    public void OnDeathAnimationFinished()
+    public virtual void OnDeathAnimationFinished()
     {
         GetComponent<SpriteRenderer>().enabled = false;
     }
@@ -240,6 +240,7 @@ public abstract class BaseEnemy : MonoBehaviour
 
         foreach (var dropItem in droppableItems)
         {
+            if(dropItem == null || dropItem.itemPrefab == null) continue;
 
             if (UnityEngine.Random.Range(0f, 1f) <= dropItem.dropChance)
             {

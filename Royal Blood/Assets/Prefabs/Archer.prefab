@@ -266,7 +266,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   attackRate: 0.5
-  maxHealth: 60
+  maxHealth: 600
   droppableItems:
   - {fileID: 1863028111289472244, guid: 3271adb9799db72468ed8e6c1cbb1507, type: 3}
   - {fileID: 5800685326327270670, guid: 7898f8262ef5abc4c8f0bc54fafed8b4, type: 3}
