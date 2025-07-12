@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2704721441084603262}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: GroundCheckPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7721319056014329580}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: AttackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 5317582958304798562}
   - component: {fileID: 6991414979608923565}
   - component: {fileID: 6340993368542757109}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Spear Knight
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -289,7 +289,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1936072632875136739}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: ObstacleCheckPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -319,21 +319,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7456200040256596988}
     m_Modifications:
-    - target: {fileID: 391718869880228511, guid: ad3dbf04e17c5754cb6311c98c198511, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1619074938785491007, guid: ad3dbf04e17c5754cb6311c98c198511, type: 3}
-      propertyPath: m_Layer
-      value: 7
+    - target: {fileID: 3003306315889186134, guid: ad3dbf04e17c5754cb6311c98c198511, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3352214490014345655, guid: ad3dbf04e17c5754cb6311c98c198511, type: 3}
       propertyPath: m_Name
       value: EnemyHealthBar
-      objectReference: {fileID: 0}
-    - target: {fileID: 3352214490014345655, guid: ad3dbf04e17c5754cb6311c98c198511, type: 3}
-      propertyPath: m_Layer
-      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4904868976192819943, guid: ad3dbf04e17c5754cb6311c98c198511, type: 3}
       propertyPath: m_Pivot.x
@@ -415,21 +407,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5108304850747548680, guid: ad3dbf04e17c5754cb6311c98c198511, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 244781821
-      objectReference: {fileID: 0}
     - target: {fileID: 5387357807707627274, guid: ad3dbf04e17c5754cb6311c98c198511, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5757077872485013678, guid: ad3dbf04e17c5754cb6311c98c198511, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8235031253304454596, guid: ad3dbf04e17c5754cb6311c98c198511, type: 3}
-      propertyPath: m_Layer
-      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

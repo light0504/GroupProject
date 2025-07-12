@@ -161,6 +161,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 8844607198849399740}
-  dropChance: 0.2
+  dropChance: 1
   pullSpeed: 8
-  heal: 0.15
+  heal: 0.3

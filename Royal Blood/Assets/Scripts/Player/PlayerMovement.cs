@@ -80,6 +80,13 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public void ClearInput()
+    {
+        isDashing = false;
+        isAttacking = false;
+        rb.linearVelocity = Vector2.zero;
+    }
+
     private void UpdateAnimatorParameters()
     {
         animator.SetBool("isRunning", moveInput != 0 && isGrounded);

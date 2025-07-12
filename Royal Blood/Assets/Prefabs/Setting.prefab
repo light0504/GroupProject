@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4099312313733746166}
   - component: {fileID: 3469149762380935561}
   - component: {fileID: 4532918346878845102}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: MainMenuButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142,7 +142,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1993773034418366663}
   - component: {fileID: 4034636634025020691}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 7051891836754976744}
   - component: {fileID: 1081711031979709013}
   - component: {fileID: 6467667197411327811}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: BackGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 1018650513960861034}
   - component: {fileID: 3742433804699708432}
   - component: {fileID: 970768395561168094}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: BindingButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -386,7 +386,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8492884675638405797}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Navigation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -424,7 +424,7 @@ GameObject:
   - component: {fileID: 4415574924964368841}
   - component: {fileID: 5836454345258811799}
   - component: {fileID: 6593286659713588264}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SettingTxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -497,7 +497,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6472834308291151690}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Setting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -534,7 +534,7 @@ GameObject:
   - component: {fileID: 1314967751295145685}
   - component: {fileID: 8941982056968580088}
   - component: {fileID: 3636307428291991282}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SettingCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -638,7 +638,7 @@ GameObject:
   - component: {fileID: 9184223962839559522}
   - component: {fileID: 4307436214880410246}
   - component: {fileID: 3525491911708602100}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SaveButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1004,7 +1004,7 @@ GameObject:
   - component: {fileID: 3903470470111214232}
   - component: {fileID: 6202552068408797642}
   - component: {fileID: 851701971145347574}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Close
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1136,7 +1136,7 @@ GameObject:
   - component: {fileID: 2120321334868656031}
   - component: {fileID: 6655955953158791992}
   - component: {fileID: 5626047502860356095}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SoundButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1295,6 +1295,10 @@ PrefabInstance:
     - target: {fileID: 8787449913981088146, guid: 7dd6698003d38934bab0ce5bcc9c0178, type: 3}
       propertyPath: m_Name
       value: Notification Controller
+      objectReference: {fileID: 0}
+    - target: {fileID: 8787449913981088146, guid: 7dd6698003d38934bab0ce5bcc9c0178, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

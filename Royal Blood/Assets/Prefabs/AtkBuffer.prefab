@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 8844607198849399740}
-  dropChance: 0.3
+  dropChance: 0.4
   pullSpeed: 8
   atk: 2
 --- !u!95 &7393347713221238943

@@ -60,7 +60,7 @@ public class SceneDataManager : MonoBehaviour
 
     public void BossKilled()
     {
-      
+        Debug.Log("call");
         isBossKilled = true;
         SaveTemporary();
     }

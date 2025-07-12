@@ -38,8 +38,6 @@ public class UIManager : MonoBehaviour
         }
         else
         {
-            Debug.Log(sceneDataManager.IsBossScene);
-            Debug.Log(sceneDataManager.isBossKilled);
             if (sceneDataManager.IsBossScene)
             {
                 if (!sceneDataManager.isBossKilled)

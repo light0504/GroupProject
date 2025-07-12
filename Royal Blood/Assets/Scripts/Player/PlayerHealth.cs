@@ -94,6 +94,7 @@ public class PlayerHealth : MonoBehaviour
     public void ResetState()
     {
         isDead = false;
+        playerMovement.ClearInput();
         currentHealth = maxHealth;
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
     }
@@ -123,6 +124,7 @@ public class PlayerHealth : MonoBehaviour
         currentHealth += (int)(maxHealth * percent);
         if (currentHealth > maxHealth)
             currentHealth = maxHealth;
+        OnHealthChanged?.Invoke(currentHealth, maxHealth);
     }
 
     public int GetCurrentHealth() => currentHealth;

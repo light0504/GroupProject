@@ -190,7 +190,7 @@ GameObject:
   m_Component:
   - component: {fileID: 154408438}
   - component: {fileID: 154408437}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: torch-C-01 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -277,7 +277,7 @@ GameObject:
   m_Component:
   - component: {fileID: 168922137}
   - component: {fileID: 168922136}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: torch-C-04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -365,7 +365,7 @@ GameObject:
   - component: {fileID: 187140188}
   - component: {fileID: 187140190}
   - component: {fileID: 187140189}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: OnBackGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2873,7 +2873,7 @@ GameObject:
   m_Component:
   - component: {fileID: 264454449}
   - component: {fileID: 264454448}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: torch-C-01 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3208,7 +3208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 596216901}
   - component: {fileID: 596216900}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: torch-C-03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3295,7 +3295,7 @@ GameObject:
   m_Component:
   - component: {fileID: 665528877}
   - component: {fileID: 665528876}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 03 background B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3777,7 +3777,7 @@ Transform:
   m_GameObject: {fileID: 994387355}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.2197075, y: 0.08675766, z: -10}
+  m_LocalPosition: {x: -12.000004, y: 0.08675766, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3934,7 +3934,7 @@ GameObject:
   - component: {fileID: 1085287754}
   m_Layer: 3
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18189,7 +18189,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1192761468}
   - component: {fileID: 1192761467}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: torch-A-02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18276,7 +18276,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1380446502}
   - component: {fileID: 1380446501}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: torch-C-01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18363,7 +18363,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1517913928}
   - component: {fileID: 1517913927}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: CameraBound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18724,7 +18724,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1651164452}
   - component: {fileID: 1651164451}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: torch-A-02 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18891,7 +18891,7 @@ GameObject:
   - component: {fileID: 1711576779}
   - component: {fileID: 1711576781}
   - component: {fileID: 1711576780}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Backround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31921,7 +31921,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1722837767}
   - component: {fileID: 1722837766}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: torch-C-01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32057,7 +32057,7 @@ GameObject:
   - component: {fileID: 1761455450}
   - component: {fileID: 1761455452}
   - component: {fileID: 1761455451}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: OnGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32767,7 +32767,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1848262362}
   - component: {fileID: 1848262361}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 01 background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32854,7 +32854,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1866980098}
   - component: {fileID: 1866980097}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 05 background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
