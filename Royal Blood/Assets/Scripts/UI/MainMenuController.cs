@@ -16,6 +16,8 @@ public class MainMenuController : MonoBehaviour
 
     void Start()
     {
+        
+        AutoTrackPlayer.TrackPlayer().gameObject.transform.Find("Canvas").gameObject.SetActive(false);
         if (GameManager.Instance == null)
             Debug.LogError("MainMenuController không tìm thấy GameManager.Instance!", this);
         if (notificationPopup == null)
@@ -28,20 +30,26 @@ public class MainMenuController : MonoBehaviour
 
     public void OnContinueButtonPressed()
     {
+        AutoTrackPlayer.TrackPlayer().gameObject.transform.Find("Canvas").gameObject.SetActive(true);
         GameManager.Instance.ContinueGame();
     }
 
     public void OnNewGameButtonPressed()
     {
+
         if (SaveSystem.LoadGame() != null && notificationPopup != null)
         {
             notificationPopup.ShowNotification(
                 "Starting a new game will overwrite your progress. Are you sure?",
-                () => { GameManager.Instance.StartNewGame(firstLevelSceneName, startingCheckpointName); }
+                () => {
+                    AutoTrackPlayer.TrackPlayer().gameObject.transform.Find("Canvas").gameObject.SetActive(true);
+                    GameManager.Instance.StartNewGame(firstLevelSceneName, startingCheckpointName); 
+                }
             );
         }
         else
         {
+            AutoTrackPlayer.TrackPlayer().gameObject.transform.Find("Canvas").gameObject.SetActive(true);
             GameManager.Instance.StartNewGame(firstLevelSceneName, startingCheckpointName);
         }
     }

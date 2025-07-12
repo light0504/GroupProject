@@ -173,7 +173,7 @@ GameObject:
   m_Component:
   - component: {fileID: 168458203}
   - component: {fileID: 168458202}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 03 background B (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -491,7 +491,7 @@ Transform:
   m_GameObject: {fileID: 640155135}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.83405, y: 10.123619, z: -10}
+  m_LocalPosition: {x: 28.999996, y: 10.123619, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -583,7 +583,7 @@ GameObject:
   m_Component:
   - component: {fileID: 751071439}
   - component: {fileID: 751071438}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: CameraBounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -902,7 +902,7 @@ GameObject:
   m_Component:
   - component: {fileID: 941497155}
   - component: {fileID: 941497154}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 03 background B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -990,7 +990,7 @@ GameObject:
   - component: {fileID: 943859202}
   - component: {fileID: 943859204}
   - component: {fileID: 943859203}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: OnGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3451,7 +3451,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1074170490}
   - component: {fileID: 1074170489}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 01 background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3808,7 +3808,7 @@ GameObject:
   - component: {fileID: 1174305816}
   m_Layer: 3
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12351,11 +12351,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4164593703914598509, guid: 5214d9105636b1841b2ec63ab4868f29, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 35.75
+      value: -85.8
       objectReference: {fileID: 0}
     - target: {fileID: 4164593703914598509, guid: 5214d9105636b1841b2ec63ab4868f29, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.39
+      value: 6.68
       objectReference: {fileID: 0}
     - target: {fileID: 4164593703914598509, guid: 5214d9105636b1841b2ec63ab4868f29, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12583,7 +12583,7 @@ GameObject:
   - component: {fileID: 1831571567}
   - component: {fileID: 1831571569}
   - component: {fileID: 1831571568}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: BackGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}

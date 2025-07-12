@@ -269,7 +269,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 217667282}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: GroundCheckPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -443,7 +443,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 305264680}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: AttackPointB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -474,7 +474,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 559085952}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: AttackPointA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -507,6 +507,14 @@ PrefabInstance:
     - target: {fileID: 4332805517144909934, guid: 32461cee8efed7e4f94b9f6e28acd98c, type: 3}
       propertyPath: m_Name
       value: Archer (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4332805517144909934, guid: 32461cee8efed7e4f94b9f6e28acd98c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5295240914899354742, guid: 32461cee8efed7e4f94b9f6e28acd98c, type: 3}
+      propertyPath: canRespawn
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6988563656354427572, guid: 32461cee8efed7e4f94b9f6e28acd98c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -662,6 +670,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 535835282515085063, guid: 8f3cfbef94f80244daaa7ce1fe943b0c, type: 3}
+      propertyPath: canRespawn
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3816781854722319248, guid: 8f3cfbef94f80244daaa7ce1fe943b0c, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -710,6 +722,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skeleton
       objectReference: {fileID: 0}
+    - target: {fileID: 8283472103219009149, guid: 8f3cfbef94f80244daaa7ce1fe943b0c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -730,6 +746,10 @@ PrefabInstance:
     - target: {fileID: 1182881980982991167, guid: c8397e62b9f26bd43b067e3f08bc4c5a, type: 3}
       propertyPath: m_Name
       value: Axe Knight (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1182881980982991167, guid: c8397e62b9f26bd43b067e3f08bc4c5a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6016692414069214898, guid: c8397e62b9f26bd43b067e3f08bc4c5a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -771,6 +791,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6314337401110552022, guid: c8397e62b9f26bd43b067e3f08bc4c5a, type: 3}
+      propertyPath: canRespawn
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -791,6 +815,10 @@ PrefabInstance:
     - target: {fileID: 1182881980982991167, guid: c8397e62b9f26bd43b067e3f08bc4c5a, type: 3}
       propertyPath: m_Name
       value: Axe Knight (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1182881980982991167, guid: c8397e62b9f26bd43b067e3f08bc4c5a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6016692414069214898, guid: c8397e62b9f26bd43b067e3f08bc4c5a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -832,6 +860,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6314337401110552022, guid: c8397e62b9f26bd43b067e3f08bc4c5a, type: 3}
+      propertyPath: canRespawn
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -852,6 +884,10 @@ PrefabInstance:
     - target: {fileID: 1182881980982991167, guid: c8397e62b9f26bd43b067e3f08bc4c5a, type: 3}
       propertyPath: m_Name
       value: Axe Knight (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1182881980982991167, guid: c8397e62b9f26bd43b067e3f08bc4c5a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6016692414069214898, guid: c8397e62b9f26bd43b067e3f08bc4c5a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -891,6 +927,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6016692414069214898, guid: c8397e62b9f26bd43b067e3f08bc4c5a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6314337401110552022, guid: c8397e62b9f26bd43b067e3f08bc4c5a, type: 3}
+      propertyPath: canRespawn
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1136,7 +1176,7 @@ GameObject:
   - component: {fileID: 1071170561}
   - component: {fileID: 1071170563}
   - component: {fileID: 1071170562}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ForGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1588,6 +1628,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1237812661}
     m_Modifications:
+    - target: {fileID: 391718869880228511, guid: ad3dbf04e17c5754cb6311c98c198511, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1619074938785491007, guid: ad3dbf04e17c5754cb6311c98c198511, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3003306315889186134, guid: ad3dbf04e17c5754cb6311c98c198511, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 0
@@ -1595,6 +1643,10 @@ PrefabInstance:
     - target: {fileID: 3352214490014345655, guid: ad3dbf04e17c5754cb6311c98c198511, type: 3}
       propertyPath: m_Name
       value: EnemyHealthBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 3352214490014345655, guid: ad3dbf04e17c5754cb6311c98c198511, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4904868976192819943, guid: ad3dbf04e17c5754cb6311c98c198511, type: 3}
       propertyPath: m_Pivot.x
@@ -1696,6 +1748,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5757077872485013678, guid: ad3dbf04e17c5754cb6311c98c198511, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5971567352920005880, guid: ad3dbf04e17c5754cb6311c98c198511, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -1711,6 +1767,10 @@ PrefabInstance:
     - target: {fileID: 5971567352920005880, guid: ad3dbf04e17c5754cb6311c98c198511, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 450
+      objectReference: {fileID: 0}
+    - target: {fileID: 8235031253304454596, guid: ad3dbf04e17c5754cb6311c98c198511, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2019,7 +2079,7 @@ GameObject:
   - component: {fileID: 1237812663}
   - component: {fileID: 1237812665}
   - component: {fileID: 1237812666}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Boss
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -2112,7 +2172,7 @@ Transform:
   m_GameObject: {fileID: 1237812658}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 37.77, y: -0.84, z: 0.10564064}
+  m_LocalPosition: {x: 34.8, y: 19.1, z: 0.10564064}
   m_LocalScale: {x: 30, y: 30, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2267,9 +2327,17 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6340993368542757109, guid: 3ecd616917b9d2c4496d8088d61f9dbc, type: 3}
+      propertyPath: canRespawn
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6747979314879750054, guid: 3ecd616917b9d2c4496d8088d61f9dbc, type: 3}
       propertyPath: m_Name
       value: Spear Knight
+      objectReference: {fileID: 0}
+    - target: {fileID: 6747979314879750054, guid: 3ecd616917b9d2c4496d8088d61f9dbc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7456200040256596988, guid: 3ecd616917b9d2c4496d8088d61f9dbc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22525,7 +22593,7 @@ GameObject:
   - component: {fileID: 1428671914}
   - component: {fileID: 1428671916}
   - component: {fileID: 1428671915}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ForeGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26961,6 +27029,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Archer (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4332805517144909934, guid: 32461cee8efed7e4f94b9f6e28acd98c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5295240914899354742, guid: 32461cee8efed7e4f94b9f6e28acd98c, type: 3}
+      propertyPath: canRespawn
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6988563656354427572, guid: 32461cee8efed7e4f94b9f6e28acd98c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 28.278118
@@ -27026,13 +27102,17 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 3160923799397698424, guid: 5214d9105636b1841b2ec63ab4868f29, type: 3}
+      propertyPath: maxHealth
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 3854824666326596543, guid: 5214d9105636b1841b2ec63ab4868f29, type: 3}
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3951592632787921953, guid: 5214d9105636b1841b2ec63ab4868f29, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3959563363970507100, guid: 5214d9105636b1841b2ec63ab4868f29, type: 3}
       propertyPath: m_Layer
@@ -27100,7 +27180,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7274522297861067947, guid: 5214d9105636b1841b2ec63ab4868f29, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7373367091879093077, guid: 5214d9105636b1841b2ec63ab4868f29, type: 3}
       propertyPath: m_Layer
@@ -27130,6 +27210,14 @@ PrefabInstance:
     - target: {fileID: 4332805517144909934, guid: 32461cee8efed7e4f94b9f6e28acd98c, type: 3}
       propertyPath: m_Name
       value: Archer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4332805517144909934, guid: 32461cee8efed7e4f94b9f6e28acd98c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5295240914899354742, guid: 32461cee8efed7e4f94b9f6e28acd98c, type: 3}
+      propertyPath: canRespawn
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6988563656354427572, guid: 32461cee8efed7e4f94b9f6e28acd98c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -27196,6 +27284,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Axe Knight (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1182881980982991167, guid: c8397e62b9f26bd43b067e3f08bc4c5a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6016692414069214898, guid: c8397e62b9f26bd43b067e3f08bc4c5a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 67.427505
@@ -27234,6 +27326,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6016692414069214898, guid: c8397e62b9f26bd43b067e3f08bc4c5a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6314337401110552022, guid: c8397e62b9f26bd43b067e3f08bc4c5a, type: 3}
+      propertyPath: canRespawn
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -27323,7 +27419,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1768582424}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: ObstacleCheckPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27449,7 +27545,7 @@ GameObject:
   - component: {fileID: 1863242913}
   - component: {fileID: 1863242915}
   - component: {fileID: 1863242914}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BackGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62133,9 +62229,45 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 712798591749798070, guid: 32461cee8efed7e4f94b9f6e28acd98c, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2454041676413049758, guid: 32461cee8efed7e4f94b9f6e28acd98c, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2620173832328272762, guid: 32461cee8efed7e4f94b9f6e28acd98c, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3537920347000420670, guid: 32461cee8efed7e4f94b9f6e28acd98c, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3779805618108064849, guid: 32461cee8efed7e4f94b9f6e28acd98c, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4332805517144909934, guid: 32461cee8efed7e4f94b9f6e28acd98c, type: 3}
       propertyPath: m_Name
       value: Archer (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4332805517144909934, guid: 32461cee8efed7e4f94b9f6e28acd98c, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4332805517144909934, guid: 32461cee8efed7e4f94b9f6e28acd98c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5295240914899354742, guid: 32461cee8efed7e4f94b9f6e28acd98c, type: 3}
+      propertyPath: canRespawn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6136610311784791237, guid: 32461cee8efed7e4f94b9f6e28acd98c, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6988563656354427572, guid: 32461cee8efed7e4f94b9f6e28acd98c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -62177,9 +62309,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7531166506095659439, guid: 32461cee8efed7e4f94b9f6e28acd98c, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7900042424113352203, guid: 32461cee8efed7e4f94b9f6e28acd98c, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7955045114369566483, guid: 32461cee8efed7e4f94b9f6e28acd98c, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -62196,7 +62336,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1991334166}
   - component: {fileID: 1991334165}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: CameraBounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62280,6 +62420,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Axe Knight
       objectReference: {fileID: 0}
+    - target: {fileID: 1182881980982991167, guid: c8397e62b9f26bd43b067e3f08bc4c5a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6016692414069214898, guid: c8397e62b9f26bd43b067e3f08bc4c5a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 49.3191
@@ -62320,6 +62464,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6314337401110552022, guid: c8397e62b9f26bd43b067e3f08bc4c5a, type: 3}
+      propertyPath: canRespawn
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -62339,7 +62487,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2033420476}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: AttackPointC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62456,6 +62604,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Axe Knight (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1182881980982991167, guid: c8397e62b9f26bd43b067e3f08bc4c5a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6016692414069214898, guid: c8397e62b9f26bd43b067e3f08bc4c5a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 52.838127
@@ -62494,6 +62646,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6016692414069214898, guid: c8397e62b9f26bd43b067e3f08bc4c5a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6314337401110552022, guid: c8397e62b9f26bd43b067e3f08bc4c5a, type: 3}
+      propertyPath: canRespawn
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

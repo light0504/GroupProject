@@ -33,7 +33,10 @@ public class Arrow : MonoBehaviour
     // H�m n�y ???c g?i khi m?i t�n va ch?m v?i m?t ??i t??ng kh�c c� Collider2D
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        Debug.Log("Hit " + hitInfo.gameObject);
+        if (hitInfo.CompareTag("Ground"))
+        {
+            Destroy(gameObject);
+        }
         // 1. Check if the object we hit has a PlayerController script.
         if (hitInfo.CompareTag("Player"))
         {
@@ -54,5 +57,6 @@ public class Arrow : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+        
     }
 }

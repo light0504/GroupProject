@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 2655157961845033823}
   - component: {fileID: 4438060263285910486}
   - component: {fileID: 4646531320374618365}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: TextBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -186,7 +186,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textDisplayed: Insert Text
   destinationText: {fileID: 2440710738136700177}
-  canReview: 0
   trackRadius: 0
 --- !u!1 &5730740575470457005
 GameObject:

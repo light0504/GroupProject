@@ -118,7 +118,7 @@ public class Portal : MonoBehaviour
                 {
                     GameObject player = AutoTrackPlayer.TrackPlayer();
                     player.transform.position = entryPoint.transform.position;
-                    player.GetComponent<Noti>().PrintText("Cannot move, not unlocked this scene");
+                    player.GetComponent<Noti>().PrintText("Không thể dịch chuyển, hãy tiêu diệt quái vật!");
                 }
             }
             else

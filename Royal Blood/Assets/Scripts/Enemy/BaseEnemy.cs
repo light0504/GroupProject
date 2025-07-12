@@ -54,6 +54,10 @@ public abstract class BaseEnemy : MonoBehaviour
 
     // --- UNITY LIFECYCLE METHODS ---
 
+    protected void RaiseHealthChanged()
+    {
+        OnHealthChanged?.Invoke(currentHealth, maxHealth);
+    }
     protected virtual void Awake()
     {
         animator = GetComponent<Animator>();
@@ -129,7 +133,7 @@ public abstract class BaseEnemy : MonoBehaviour
     }
 
     #region Action
-    protected void Jump()
+    protected virtual void Jump()
     {
         if (!isGrounded) return;
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
@@ -153,7 +157,7 @@ public abstract class BaseEnemy : MonoBehaviour
     #endregion
     #region HEALTH
 
-    public void TakeDamage(int damage)
+    public virtual void TakeDamage(int damage)
     {
         if (isDead) return;
         currentHealth -= damage;
@@ -246,6 +250,7 @@ public abstract class BaseEnemy : MonoBehaviour
             {
                 GameObject itemInstance = Instantiate(dropItem.itemPrefab, transform.position, Quaternion.identity);
 
+                
                 if (itemInstance.TryGetComponent<BaseItem>(out var itemScript))
                 {
                     itemScript.Initialize(itemInstance.transform.position);

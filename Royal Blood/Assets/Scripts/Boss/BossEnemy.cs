@@ -42,18 +42,35 @@ public class BossEnemy : BaseEnemy
 
     }
 
+    public override void TakeDamage(int damage)
+    {
+        if (isDead) return;
+        currentHealth -= damage;
+        RaiseHealthChanged();
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
     private void IdleBehavior()
     {
         animator.SetBool("isWalking", false);
         rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
     }
 
+    protected override void Jump()
+    {
+        if (!isGrounded) return;
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+    }
+
     private void ChaseBehavior()
     {
-        if (IsObstacleAhead() && isGrounded)
-        {
-            Jump();
-        }
+        //if (IsObstacleAhead() && isGrounded)
+        //{
+        //    this.Jump();
+        //}
 
         animator.SetBool("isWalking", true);
         Vector2 direction = (player.position - transform.position).normalized;
@@ -130,6 +147,7 @@ public class BossEnemy : BaseEnemy
     public void OnBossDeathAnimationFinished()
     {
         GetComponent<SpriteRenderer>().enabled = false;
+        Debug.Log("Call death");
         SceneDataManager.Instance.BossKilled();
         Destroy(gameObject);
     }
