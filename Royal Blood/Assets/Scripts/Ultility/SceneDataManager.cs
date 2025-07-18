@@ -62,6 +62,7 @@ public class SceneDataManager : MonoBehaviour
     {
         Debug.Log("call");
         isBossKilled = true;
+        uIManager.UpdateCollectiblesUI();
         SaveTemporary();
     }
     private void LoadSceneData()

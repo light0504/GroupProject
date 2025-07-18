@@ -147,7 +147,6 @@ public class BossEnemy : BaseEnemy
     public void OnBossDeathAnimationFinished()
     {
         GetComponent<SpriteRenderer>().enabled = false;
-        Debug.Log("Call death");
         SceneDataManager.Instance.BossKilled();
         Destroy(gameObject);
     }

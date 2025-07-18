@@ -6,6 +6,11 @@ public class Trap : MonoBehaviour
     private TilemapCollider2D TilemapCollider2D;
     private bool isWarning = false;
 
+    [Header("Sát thương gây ra")]
+    [Tooltip("Sát thương gây ra cho người chơi và quái vật")]
+    [SerializeField]private int playerDamage = 50;
+    [SerializeField]private int enemyDamage = 200;
+
     private void Start()
     {
         TilemapCollider2D = GetComponent<TilemapCollider2D>();
@@ -16,7 +21,7 @@ public class Trap : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(10);
+            collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(playerDamage);
             if (!isWarning)
             {
                 collision.gameObject.GetComponent<Noti>().PrintText("Cẩn thận cạm bẫy, hãy tận dụng để tiêu diệt quái vật");
@@ -25,7 +30,7 @@ public class Trap : MonoBehaviour
         }
         if (collision.CompareTag("Enemy"))
         {
-            collision.gameObject.GetComponent<BaseEnemy>().TakeDamage(50);
+            collision.gameObject.GetComponent<BaseEnemy>().TakeDamage(enemyDamage);
         }
     }
 }

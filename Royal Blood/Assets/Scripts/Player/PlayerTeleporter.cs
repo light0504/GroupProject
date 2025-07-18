@@ -47,18 +47,15 @@ public class PlayerTeleporter : MonoBehaviour
 
         if (dataToLoad != null)
         {
-            Debug.Log(1);
             ApplyLoadedData();
         }
         else if (!string.IsNullOrEmpty(StartingCheckpointName))
         {
-            Debug.Log(2);
             Debug.Log($"Starting checkpoint {StartingCheckpointName}");
             MoveToStartingCheckpoint();
         }
         else if (!string.IsNullOrEmpty(TargetEntryPointNameOnNextSceneLoad))
         {
-            Debug.Log(3);
             TryPositionPlayerAtEntryPoint();
         }
 
@@ -94,7 +91,7 @@ public class PlayerTeleporter : MonoBehaviour
 
         hasBeenPositionedThisScene = false;
 
-        Debug.Log($"PlayerTeleporter: Đang tìm kiếm EntryPoint có tên '{TargetEntryPointNameOnNextSceneLoad}'...");
+        //Debug.Log($"PlayerTeleporter: Đang tìm kiếm EntryPoint có tên '{TargetEntryPointNameOnNextSceneLoad}'...");
 
         EntryPoint[] allEntryPoints = FindObjectsOfType<EntryPoint>();
         bool foundTarget = false;
@@ -110,7 +107,7 @@ public class PlayerTeleporter : MonoBehaviour
                     rb.linearVelocity = Vector2.zero;
                 }
 
-                Debug.Log($"Thành công! Player đã được dịch chuyển đến EntryPoint '{entryPoint.entryName}'.");
+                //Debug.Log($"Thành công! Player đã được dịch chuyển đến EntryPoint '{entryPoint.entryName}'.");
                 foundTarget = true;
                 break;
             }
@@ -118,7 +115,7 @@ public class PlayerTeleporter : MonoBehaviour
 
         if (!foundTarget)
         {
-            Debug.LogWarning($"LỖI: Không tìm thấy EntryPoint nào có tên '{TargetEntryPointNameOnNextSceneLoad}' trong scene '{SceneManager.GetActiveScene().name}'. Player sẽ giữ nguyên vị trí.");
+            //Debug.LogWarning($"LỖI: Không tìm thấy EntryPoint nào có tên '{TargetEntryPointNameOnNextSceneLoad}' trong scene '{SceneManager.GetActiveScene().name}'. Player sẽ giữ nguyên vị trí.");
         }
 
         TargetEntryPointNameOnNextSceneLoad = null;

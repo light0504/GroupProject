@@ -189,11 +189,6 @@ public abstract class BaseEnemy : MonoBehaviour
             
             StartCoroutine(RespawnRoutine());
         }
-        else
-        {
-            Destroy(gameObject);
-        }
-        
     }
 
     // Được gọi bởi Animation Event ở cuối clip animation "Dead"
