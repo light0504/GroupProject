@@ -46,8 +46,12 @@ public class PlayerState : MonoBehaviour
         noti.PrintText("Dưới sự nguyền rủa của quỷ vương Giảm 20 máu và 2 ATK");
         playerAttack.IncreaseAttack(-2);
         playerHealth.maxHealth -= 20;
-        StartCoroutine(RespawnRoutine());
         playerHealth.CheckLose();
+        if (!playerHealth.isLoose)
+        {
+            StartCoroutine(RespawnRoutine());
+        }
+        
     }
 
     private IEnumerator RespawnRoutine()
