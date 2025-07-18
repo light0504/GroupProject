@@ -75,8 +75,6 @@ public class FakePortal : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        if (UnityEditor.Selection.activeGameObject != gameObject) return;
-
         if (entryPoint != null)
         {
             Gizmos.color = Color.cyan;
