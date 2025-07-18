@@ -13,6 +13,7 @@ public class PlayerHealth : MonoBehaviour
     public int maxHealth = 100;
     private int currentHealth;
     private bool isDead = false;
+    public bool isLoose = false;
 
     [Header("Dependencies")]
     private PlayerMovement playerMovement;
@@ -61,10 +62,15 @@ public class PlayerHealth : MonoBehaviour
     {
         if (maxHealth <= 0)
         {
-            isDead = true;
+            isLoose = true;
             StartCoroutine(Delay(1f));
             StartCoroutine(ReloadSceneAfterDelay(5f));
         }
+        else
+        {
+            isLoose = false;
+        }
+        
     }
     IEnumerator Delay(float delay)
     {
