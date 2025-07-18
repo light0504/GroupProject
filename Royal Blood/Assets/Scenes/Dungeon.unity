@@ -408,7 +408,7 @@ GameObject:
   - component: {fileID: 82830593}
   - component: {fileID: 82830592}
   - component: {fileID: 82830591}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Map1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83535,7 +83535,7 @@ GameObject:
   - component: {fileID: 1189552439}
   - component: {fileID: 1189552438}
   - component: {fileID: 1189552437}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Map2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83551,7 +83551,7 @@ Transform:
   m_GameObject: {fileID: 1189552435}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.065, y: 1.3725, z: -0.088569075}
+  m_LocalPosition: {x: 0.09, y: 1.22, z: -0.088569075}
   m_LocalScale: {x: 5.335702, y: 4.666968, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

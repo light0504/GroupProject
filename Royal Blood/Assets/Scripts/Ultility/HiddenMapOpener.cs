@@ -14,6 +14,7 @@ public class HiddenMapOpener : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            Debug.Log("Player has entered the hidden map area. Revealing mappppp...");
             if (SceneDataManager.Instance.IsUnlocked())
             {
                 Destroy(gameObject);
