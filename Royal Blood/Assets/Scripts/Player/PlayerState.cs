@@ -43,7 +43,7 @@ public class PlayerState : MonoBehaviour
         playerCollider.enabled = false;
         playerMovement.enabled = false;
         animator.SetBool("isDeath", true);
-        noti.PrintText("Dưới sự nguyền rủa của quỷ vương Giảm 20 máu và 2 ATK");
+        noti.PrintText("Under the Demon King's curse, lose 20 Health and 2 ATK.");
         playerAttack.IncreaseAttack(-2);
         playerHealth.maxHealth -= 20;
         playerHealth.CheckLose();

@@ -75,7 +75,7 @@ public class PlayerHealth : MonoBehaviour
     IEnumerator Delay(float delay)
     {
         yield return new WaitForSeconds(delay);
-        notificationManager.PrintText("Bạn đã thất bại trên con đường tiêu diệt quỷ vương");
+        notificationManager.PrintText("You have failed on the path to defeat the Demon King.");
     }
     IEnumerator ReloadSceneAfterDelay(float delay)
     {
@@ -119,7 +119,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (notificationManager != null)
         {
-            notificationManager.PrintText($"Tăng +{amount} Máu!");
+            notificationManager.PrintText($"Increase +{amount} Health!");
         }
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
     }

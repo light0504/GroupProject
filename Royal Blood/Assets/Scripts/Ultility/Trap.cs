@@ -24,7 +24,7 @@ public class Trap : MonoBehaviour
             collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(playerDamage);
             if (!isWarning)
             {
-                collision.gameObject.GetComponent<Noti>().PrintText("Cẩn thận cạm bẫy, hãy tận dụng để tiêu diệt quái vật");
+                collision.gameObject.GetComponent<Noti>().PrintText("Watch out for traps, use them to defeat the monsters.");
                 isWarning = true;
             } 
         }

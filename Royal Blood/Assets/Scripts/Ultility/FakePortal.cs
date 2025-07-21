@@ -112,13 +112,13 @@ public class FakePortal : MonoBehaviour
                 {
                     GameObject player = AutoTrackPlayer.TrackPlayer();
                     player.transform.position = entryPoint.transform.position;
-                    player.GetComponent<Noti>().PrintText("Có vẻ cánh cổng đã bị hỏng, mau đi tìm cánh cổng mới");
+                    player.GetComponent<Noti>().PrintText("It looks like the gate is broken; hurry and find a new one.");
                 }
                 else
                 {
                     GameObject player = AutoTrackPlayer.TrackPlayer();
                     player.transform.position = entryPoint.transform.position;
-                    player.GetComponent<Noti>().PrintText("Không thể dịch chuyển, hãy tiêu diệt quái vật!");
+                    player.GetComponent<Noti>().PrintText("Cannot teleport, defeat the monsters first!");
                 }
             }
         }

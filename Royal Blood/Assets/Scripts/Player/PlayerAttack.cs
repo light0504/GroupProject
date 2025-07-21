@@ -54,7 +54,7 @@ public class PlayerAttack : MonoBehaviour
         if (notificationManager != null)
         {
             // Gọi hàm PrintText để hiển thị thông báo
-            notificationManager.PrintText($"Tăng +{amount} Sát thương! (Hiện tại: {attackDamage})");
+            notificationManager.PrintText($"Increase +{amount} Damage! (Current: {attackDamage})");
         }
     }
     private void OnTriggerEnter2D(Collider2D other)
