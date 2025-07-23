@@ -74,9 +74,9 @@ public class PlayerTeleporter : MonoBehaviour
 
     private void MoveToStartingCheckpoint()
     {
-        Checkpoint[] allCheckpoints = FindObjectsOfType<Checkpoint>();
+        Checkpoint[] allCheckpoints = FindObjectsByType<Checkpoint>(FindObjectsSortMode.None);
         foreach (var checkpoint in allCheckpoints)
-        {
+        {   
             if (checkpoint.checkpointName == StartingCheckpointName)
             {
                 transform.position = checkpoint.transform.position;
@@ -93,7 +93,7 @@ public class PlayerTeleporter : MonoBehaviour
 
         //Debug.Log($"PlayerTeleporter: Đang tìm kiếm EntryPoint có tên '{TargetEntryPointNameOnNextSceneLoad}'...");
 
-        EntryPoint[] allEntryPoints = FindObjectsOfType<EntryPoint>();
+        EntryPoint[] allEntryPoints = FindObjectsByType<EntryPoint>(FindObjectsSortMode.None);
         bool foundTarget = false;
 
         foreach (var entryPoint in allEntryPoints)

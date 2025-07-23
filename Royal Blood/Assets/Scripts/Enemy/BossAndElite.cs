@@ -3,11 +3,11 @@ using UnityEngine;
 public class BossAndElite : MonoBehaviour
 {
     private BaseEnemy baseEnemy;
-    void Start()
+    void Update()
     {
         baseEnemy = GetComponent<BaseEnemy>();
         baseEnemy.canRespawn = false;
-        if(SceneDataManager.Instance.IsUnlocked())
+        if(SceneDataManager.Instance.CanMoveNextScene())
             Destroy(gameObject);
     }
 }
