@@ -27,10 +27,7 @@ public class Portal : MonoBehaviour
     public TextMeshProUGUI destinationText;
 
     [Header("Vị trí Xuất hiện")]
-    [Tooltip("Kéo GameObject EntryPoint là con của Portal này vào đây.")]
-    public Transform entryPoint;
-
-    [Tooltip("Hướng người chơi sẽ xuất hiện so với tâm của portal.")]
+    [Tooltip("Hướng người chơi sẽ xuất hiện nếu không thể vượt.")]
     public EntryPointDirection entryDirection;
 
     private const float ENTRY_DISTANCE = 4.0f;
@@ -52,37 +49,21 @@ public class Portal : MonoBehaviour
         }
     }
 
-    private void OnValidate()
+    private Vector3 GetTeleDirection()
     {
-        if (entryPoint == null) return;
-
+        Vector3 direction = gameObject.transform.position;
         switch (entryDirection)
         {
             case EntryPointDirection.Top:
-                entryPoint.localPosition = new Vector3(0, ENTRY_DISTANCE, 0);
-                break;
+                return new Vector3(direction.x, direction.y + 4, direction.z);//y + 4
             case EntryPointDirection.Bottom:
-                entryPoint.localPosition = new Vector3(0, -ENTRY_DISTANCE, 0);
-                break;
+                return new Vector3(direction.x, direction.y - 4, direction.z);//y - 4
             case EntryPointDirection.Left:
-                entryPoint.localPosition = new Vector3(-ENTRY_DISTANCE, 0, 0);
-                break;
+                return new Vector3(direction.x - 4, direction.y, direction.z);//x - 4
             case EntryPointDirection.Right:
-                entryPoint.localPosition = new Vector3(ENTRY_DISTANCE, 0, 0);
-                break;
+                return new Vector3(direction.x + 4, direction.y, direction.z);//x + 4
         }
-    }
-
-    private void OnDrawGizmos()
-    {
-        if (entryPoint != null)
-        {
-            Gizmos.color = Color.cyan;
-            Gizmos.DrawSphere(entryPoint.position, 0.5f);
-
-            Gizmos.color = Color.yellow;
-            Gizmos.DrawLine(transform.position, entryPoint.position);
-        }
+        return direction;
     }
 
     // --- Xử lý va chạm ---
@@ -115,7 +96,7 @@ public class Portal : MonoBehaviour
                 else
                 {
                     GameObject player = AutoTrackPlayer.TrackPlayer();
-                    player.transform.position = entryPoint.transform.position;
+                    player.transform.position = GetTeleDirection();
                     player.GetComponent<Noti>().PrintText("Không thể dịch chuyển, hãy tiêu diệt quái vật!");
                 }
             }

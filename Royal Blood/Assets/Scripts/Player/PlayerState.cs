@@ -18,6 +18,7 @@ public class PlayerState : MonoBehaviour
     private ItemPicker itemPicker;
     private Noti noti;
 
+    public bool IsHideWelcomeText { get; set;}
     void Awake()
     {
         if (Instance == null) Instance = this;
@@ -100,4 +101,5 @@ public class PlayerState : MonoBehaviour
         playerHealth.SetHealthData(data.playerCurrentHealth, data.playerMaxHealth);
         playerAttack.SetAttackData(data.playerAttackPower);
     }
+
 }

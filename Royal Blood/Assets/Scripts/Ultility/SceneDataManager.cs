@@ -55,12 +55,12 @@ public class SceneDataManager : MonoBehaviour
                 currentSceneData.nextScene = gameData.nextScene;
             }
         }
+        SaveTemporary();
         uIManager.UpdateCollectiblesUI();
     }
 
     public void BossKilled()
     {
-        Debug.Log("call");
         isBossKilled = true;
         uIManager.UpdateCollectiblesUI();
         SaveTemporary();

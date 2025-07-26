@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Pickable
   - Ground
+  - TextBlock
   layers:
   - Default
   - TransparentFX

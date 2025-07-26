@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Axe Knight
       objectReference: {fileID: 0}
+    - target: {fileID: 1182881980982991167, guid: c8397e62b9f26bd43b067e3f08bc4c5a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6016692414069214898, guid: c8397e62b9f26bd43b067e3f08bc4c5a, type: 3}
       propertyPath: m_LocalScale.x
       value: 7.5820403
@@ -492,7 +496,7 @@ Transform:
   m_GameObject: {fileID: 326257751}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.95, y: -9.39, z: -10}
+  m_LocalPosition: {x: -0.1, y: -8.1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -595,6 +599,10 @@ PrefabInstance:
     - target: {fileID: 5365662439587980435, guid: e5bc2a9d1cb983f40ab60a8848f34d09, type: 3}
       propertyPath: m_Name
       value: Please
+      objectReference: {fileID: 0}
+    - target: {fileID: 5365662439587980435, guid: e5bc2a9d1cb983f40ab60a8848f34d09, type: 3}
+      propertyPath: m_TagString
+      value: TextBlock
       objectReference: {fileID: 0}
     - target: {fileID: 6135207915842132302, guid: e5bc2a9d1cb983f40ab60a8848f34d09, type: 3}
       propertyPath: m_Pivot.x
@@ -740,6 +748,10 @@ PrefabInstance:
     - target: {fileID: 5365662439587980435, guid: e5bc2a9d1cb983f40ab60a8848f34d09, type: 3}
       propertyPath: m_Name
       value: Let'Go
+      objectReference: {fileID: 0}
+    - target: {fileID: 5365662439587980435, guid: e5bc2a9d1cb983f40ab60a8848f34d09, type: 3}
+      propertyPath: m_TagString
+      value: TextBlock
       objectReference: {fileID: 0}
     - target: {fileID: 6135207915842132302, guid: e5bc2a9d1cb983f40ab60a8848f34d09, type: 3}
       propertyPath: m_Pivot.x
@@ -947,6 +959,10 @@ PrefabInstance:
     - target: {fileID: 5365662439587980435, guid: e5bc2a9d1cb983f40ab60a8848f34d09, type: 3}
       propertyPath: m_Name
       value: Congrat
+      objectReference: {fileID: 0}
+    - target: {fileID: 5365662439587980435, guid: e5bc2a9d1cb983f40ab60a8848f34d09, type: 3}
+      propertyPath: m_TagString
+      value: TextBlock
       objectReference: {fileID: 0}
     - target: {fileID: 6135207915842132302, guid: e5bc2a9d1cb983f40ab60a8848f34d09, type: 3}
       propertyPath: m_Pivot.x
@@ -29308,11 +29324,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 12.087048, y: 2.4902458}
   m_EdgeRadius: 0
---- !u!4 &769446897 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7772609694837789827, guid: fe15dfcf704c61044bbbfba504c63bf4, type: 3}
-  m_PrefabInstance: {fileID: 5633242087455511169}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &791732367
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29396,6 +29407,10 @@ PrefabInstance:
     - target: {fileID: 5365662439587980435, guid: e5bc2a9d1cb983f40ab60a8848f34d09, type: 3}
       propertyPath: m_Name
       value: Monster Intro
+      objectReference: {fileID: 0}
+    - target: {fileID: 5365662439587980435, guid: e5bc2a9d1cb983f40ab60a8848f34d09, type: 3}
+      propertyPath: m_TagString
+      value: TextBlock
       objectReference: {fileID: 0}
     - target: {fileID: 6135207915842132302, guid: e5bc2a9d1cb983f40ab60a8848f34d09, type: 3}
       propertyPath: m_Pivot.x
@@ -29542,6 +29557,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Key
       objectReference: {fileID: 0}
+    - target: {fileID: 5365662439587980435, guid: e5bc2a9d1cb983f40ab60a8848f34d09, type: 3}
+      propertyPath: m_TagString
+      value: TextBlock
+      objectReference: {fileID: 0}
     - target: {fileID: 6135207915842132302, guid: e5bc2a9d1cb983f40ab60a8848f34d09, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -29686,6 +29705,10 @@ PrefabInstance:
     - target: {fileID: 5365662439587980435, guid: e5bc2a9d1cb983f40ab60a8848f34d09, type: 3}
       propertyPath: m_Name
       value: Jump
+      objectReference: {fileID: 0}
+    - target: {fileID: 5365662439587980435, guid: e5bc2a9d1cb983f40ab60a8848f34d09, type: 3}
+      propertyPath: m_TagString
+      value: TextBlock
       objectReference: {fileID: 0}
     - target: {fileID: 6135207915842132302, guid: e5bc2a9d1cb983f40ab60a8848f34d09, type: 3}
       propertyPath: m_Pivot.x
@@ -29832,6 +29855,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Attack
       objectReference: {fileID: 0}
+    - target: {fileID: 5365662439587980435, guid: e5bc2a9d1cb983f40ab60a8848f34d09, type: 3}
+      propertyPath: m_TagString
+      value: TextBlock
+      objectReference: {fileID: 0}
     - target: {fileID: 6135207915842132302, guid: e5bc2a9d1cb983f40ab60a8848f34d09, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -29977,6 +30004,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoubleJump
       objectReference: {fileID: 0}
+    - target: {fileID: 5365662439587980435, guid: e5bc2a9d1cb983f40ab60a8848f34d09, type: 3}
+      propertyPath: m_TagString
+      value: TextBlock
+      objectReference: {fileID: 0}
     - target: {fileID: 6135207915842132302, guid: e5bc2a9d1cb983f40ab60a8848f34d09, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -30104,11 +30135,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8737338350004170348, guid: 0bef93e1407246b41915857252768c27, type: 3}
       propertyPath: keysRequired
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8737338350004170348, guid: 0bef93e1407246b41915857252768c27, type: 3}
       propertyPath: diamondsRequired
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -30174,6 +30205,10 @@ PrefabInstance:
     - target: {fileID: 8283472103219009149, guid: 8f3cfbef94f80244daaa7ce1fe943b0c, type: 3}
       propertyPath: m_Name
       value: Skeleton
+      objectReference: {fileID: 0}
+    - target: {fileID: 8283472103219009149, guid: 8f3cfbef94f80244daaa7ce1fe943b0c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -30747,6 +30782,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Archer
       objectReference: {fileID: 0}
+    - target: {fileID: 4332805517144909934, guid: 32461cee8efed7e4f94b9f6e28acd98c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5295240914899354742, guid: 32461cee8efed7e4f94b9f6e28acd98c, type: 3}
       propertyPath: maxHealth
       value: 300
@@ -30940,7 +30979,7 @@ Transform:
   m_GameObject: {fileID: 1377247701}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.949999, y: -9.389999, z: -10}
+  m_LocalPosition: {x: -0.10000038, y: -8.1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -108711,6 +108750,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mission
       objectReference: {fileID: 0}
+    - target: {fileID: 5365662439587980435, guid: e5bc2a9d1cb983f40ab60a8848f34d09, type: 3}
+      propertyPath: m_TagString
+      value: TextBlock
+      objectReference: {fileID: 0}
     - target: {fileID: 6135207915842132302, guid: e5bc2a9d1cb983f40ab60a8848f34d09, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -108916,6 +108959,10 @@ PrefabInstance:
     - target: {fileID: 5365662439587980435, guid: e5bc2a9d1cb983f40ab60a8848f34d09, type: 3}
       propertyPath: m_Name
       value: Dash
+      objectReference: {fileID: 0}
+    - target: {fileID: 5365662439587980435, guid: e5bc2a9d1cb983f40ab60a8848f34d09, type: 3}
+      propertyPath: m_TagString
+      value: TextBlock
       objectReference: {fileID: 0}
     - target: {fileID: 6135207915842132302, guid: e5bc2a9d1cb983f40ab60a8848f34d09, type: 3}
       propertyPath: m_Pivot.x
@@ -109182,11 +109229,15 @@ PrefabInstance:
     - target: {fileID: 4646531320374618365, guid: e5bc2a9d1cb983f40ab60a8848f34d09, type: 3}
       propertyPath: textDisplayed
       value: Bravo, now your mission in here is done, let go another place, the world
-        is big you know
+        is big you know <br>YOU CANT COME BACK
       objectReference: {fileID: 0}
     - target: {fileID: 5365662439587980435, guid: e5bc2a9d1cb983f40ab60a8848f34d09, type: 3}
       propertyPath: m_Name
       value: AfterBattleForMission
+      objectReference: {fileID: 0}
+    - target: {fileID: 5365662439587980435, guid: e5bc2a9d1cb983f40ab60a8848f34d09, type: 3}
+      propertyPath: m_TagString
+      value: TextBlock
       objectReference: {fileID: 0}
     - target: {fileID: 6135207915842132302, guid: e5bc2a9d1cb983f40ab60a8848f34d09, type: 3}
       propertyPath: m_Pivot.x
@@ -109785,11 +109836,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4164593703914598509, guid: 5214d9105636b1841b2ec63ab4868f29, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.95
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4164593703914598509, guid: 5214d9105636b1841b2ec63ab4868f29, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.39
+      value: -8.1
       objectReference: {fileID: 0}
     - target: {fileID: 4164593703914598509, guid: 5214d9105636b1841b2ec63ab4868f29, type: 3}
       propertyPath: m_LocalPosition.z
@@ -110198,6 +110249,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Welcome
       objectReference: {fileID: 0}
+    - target: {fileID: 5365662439587980435, guid: e5bc2a9d1cb983f40ab60a8848f34d09, type: 3}
+      propertyPath: m_TagString
+      value: TextBlock
+      objectReference: {fileID: 0}
     - target: {fileID: 6135207915842132302, guid: e5bc2a9d1cb983f40ab60a8848f34d09, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -110286,7 +110341,7 @@ PrefabInstance:
     - target: {fileID: 2271215190662164575, guid: fe15dfcf704c61044bbbfba504c63bf4, type: 3}
       propertyPath: entryPoint
       value: 
-      objectReference: {fileID: 769446897}
+      objectReference: {fileID: 0}
     - target: {fileID: 2271215190662164575, guid: fe15dfcf704c61044bbbfba504c63bf4, type: 3}
       propertyPath: sceneLoader
       value: 

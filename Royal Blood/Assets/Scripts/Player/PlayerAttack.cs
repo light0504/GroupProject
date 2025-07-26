@@ -3,7 +3,9 @@
 public class PlayerAttack : MonoBehaviour
 {
     private bool isActive = false;
-    private int attackDamage = 40;
+
+    [Tooltip("PlayerAttack")]
+    [SerializeField] private int attackDamage = 40;
 
     [SerializeField] private Collider2D attackCollider;
     [SerializeField] private float activeDuration = 0.2f; // Thời gian hitbox tồn tại
